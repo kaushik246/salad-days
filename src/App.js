@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 
 import './styles.scss'
 
-import MoviesList from './components/MoviesList'
-import PeopleList from './components/PeopleList'
+
+import Items from './components/Items'
+
 
 const mapStateToProps = (state) => {
   return {
@@ -16,9 +17,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <p className="header main-title">Welcome to Stars Wars Fan Page</p>
-        <PeopleList dispatch={this.props.dispatch} />
-        <MoviesList dispatch={this.props.dispatch} />
+        <Items/>
       </div>
     )
   }

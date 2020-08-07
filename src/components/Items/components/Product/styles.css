@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 275px;
+  height: 275px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+}
+
+.product-container {
+	padding: 5px;
+}
+
+img {
+  position: absolute;
+  width: 275px;
+  height: 275px;
+  left: 0;
+}
+
+.product-details {
+	padding-top: 10px;
+}
+
+.button {
+  position: absolute;
+  width: 275px;
+  left:0;
+  top: 240px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+  font-size: 10px;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color:black;
+  border: solid 1px black;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+
+.title
+.brand {
+		padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: left;
+}
+
+.price {
+		padding-top: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: left;
+}
