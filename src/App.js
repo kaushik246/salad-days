@@ -5,6 +5,7 @@ import './styles.scss'
 
 import MoviesList from './components/MoviesList'
 import PeopleList from './components/PeopleList'
+import Step1Component from './components/Step1Component'
 
 const mapStateToProps = (state) => {
   return {
@@ -16,9 +17,9 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <p className="header main-title">Welcome to Stars Wars Fan Page</p>
-        <PeopleList dispatch={this.props.dispatch} />
-        <MoviesList dispatch={this.props.dispatch} />
+        {/* <PeopleList dispatch={this.props.dispatch} /> */}
+        {/* <MoviesList dispatch={this.props.dispatch} /> */}
+        <Step1Component dispatch={this.props.dispatch} />
       </div>
     )
   }
