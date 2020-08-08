@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './styles.scss';
+import './styles.scss'
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return {}
 }
 
 class Header extends Component {
@@ -41,20 +40,23 @@ class Header extends Component {
     })
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <div className="step-component-header">
         <div className="step-component-title primary--title">STEP 1 OF 3</div>
-        <div className="step-component-title secondary--title">CHOOSE YOUR BOX COLOR</div>
-        <div className="step-component-description">Welcome to the easiest way to send someone a custom gift, in 3 simple steps. Add to cart and repeat for multiple boxes, or update your quantity in the cart.</div>
+        <div className="step-component-title secondary--title">
+          CHOOSE YOUR BOX COLOR
+        </div>
+        <div className="step-component-description">
+          Welcome to the easiest way to send someone a custom gift, in 3 simple
+          steps. Add to cart and repeat for multiple boxes, or update your
+          quantity in the cart.
+        </div>
       </div>
     )
   }
 }
 
-export default connect(
-  mapStateToProps
-)(Header)
+export default connect(mapStateToProps)(Header)

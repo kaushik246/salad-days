@@ -1,16 +1,15 @@
 .selected-items-images-container {
-    padding: 10px;
-    min-height: 250px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    .item-image {
-        padding: 5px;
-    }
-    img{
-        position: relative;
-        width: 150px;
-        height: 150px;
-        left: 0;
-    }
+  padding: 10px;
+  min-height: 250px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  .item-image {
+    padding: 5px;
+  }
+  img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 0;
+  }
 }
-

@@ -72,7 +72,8 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "arrowParens": "always"
+    "arrowParens": "always",
+    "tabWidth": 4
   },
   "jest": {
     "setupFiles": [

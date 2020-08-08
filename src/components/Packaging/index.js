@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Header from '../generic/Header';
-import './styles.scss';
+import Header from '../generic/Header'
+import './styles.scss'
 
 class Packaging extends Component {
   static defaultProps = {
@@ -69,10 +69,7 @@ class Packaging extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return {}
 }
 
-export default connect(
-  mapStateToProps
-)(Packaging)
+export default connect(mapStateToProps)(Packaging)
