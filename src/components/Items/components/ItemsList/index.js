@@ -4,6 +4,12 @@ import './styles.scss'
 
 import Product from '../Product';
 
+const mapStateToProps = (state, ownProps) => {
+	return {
+		selectedProducts: state.items.selectedProducts
+	}
+}
+
 class ItemsList extends Component {
 	render() {
 		return (
@@ -19,7 +25,7 @@ class ItemsList extends Component {
 						removeFromBox={this.props.removeFromBox}
 						title={product.title}
 						key={product.title}
-						selectedQuantity={product.selectedQuantity}
+						selectedQuantity={this.props.selectedProducts[product.title] ? this.props.selectedProducts[product.title]['count'] : 0}
 					/>
 					))
 				}
@@ -28,4 +34,4 @@ class ItemsList extends Component {
 	}
 }
 
-export default ItemsList;
+export default connect(mapStateToProps,{})(ItemsList);

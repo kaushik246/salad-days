@@ -3,72 +3,22 @@ import './styles.scss';
 
 class SelectedImages extends Component {
     render() {
+        console.log(this.props.selectedProducts)
         return (
             <div className="selected-items-images-container">
-                <div className="item-image">
-                    <a>
-                        <img 
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
-                <div className="item-image">
-                    <a>
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753"
-                            className="box-image"
-                        />
-                    </a>
-                </div>
+            {this.props.selectedProducts.map((product) => {
+                return (
+                    <div className="item-image" key={product.title}>
+                        <a>
+                            <img
+                                src={product.image}
+                                className="box-image"
+                                key="product.title"
+                            />
+                        </a>
+                    </div>
+                )
+            })}
             </div>
         );
     }

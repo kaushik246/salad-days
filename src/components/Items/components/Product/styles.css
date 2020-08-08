@@ -44,14 +44,29 @@ img {
   font-size: 10px;
 }
 
-.button a {
-  width: 200px;
-  padding: 12px 48px;
+.button .decrease {
+  padding: 12px 12px;
   text-align: center;
   color:black;
   border: solid 1px black;
   z-index: 1;
 }
+
+.button .main {
+  padding: 12px 80px;
+  text-align: center;
+  color:black;
+  z-index: 1;
+}
+
+.button .increase {
+  padding: 12px 12px;
+  text-align: center;
+  color:black;
+  border: solid 1px black;
+  z-index: 1;
+}
+
 
 .container:hover .button {
   opacity: 1;

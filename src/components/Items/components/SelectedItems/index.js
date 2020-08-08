@@ -27,17 +27,20 @@ class SelectedItems extends Component {
                         <div className="size-meter">
                             <p className="box-size-text">
                                 BIG
-                            </p>
+                            </p> 
                         </div>
                     </div>               
                 </div>
                 <div className="selected-items-data">
                     <div className="selected-items-images">
                         <SelectedImages
+                            selectedProducts={Object.values(this.props.selectedProducts)}
                         />
                     </div>
                     <div className="selected-items-contents">
                         <BoxContents
+                            selectedProducts={Object.values(this.props.selectedProducts)}
+                            removeFromBox={this.props.removeFromBox}
                         />
                     </div>
                 </div>

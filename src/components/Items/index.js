@@ -14,7 +14,7 @@ import './styles.scss';
 const mapStateToProps = (state) => {
     return {
         productList: state.items.productList,
-        selectedProductsList: state.items.selectedProductsList
+        selectedProducts: state.items.selectedProducts
     }
 }
 
@@ -23,10 +23,11 @@ class Items extends Component {
         this.props.fetchProductsList(true)
     }
     render() {
+        console.log(this.props.selectedProducts)
         return (
             <div className="item-selection-step">
                 <SelectedItems
-                    selectedProductsList={this.props.selectedProductsList}
+                    selectedProducts={this.props.selectedProducts}
                     addToBox={this.props.addToBox}
                     removeFromBox={this.props.removeFromBox}
                 />
@@ -35,6 +36,7 @@ class Items extends Component {
                     productList={this.props.productList}
                     addToBox={this.props.addToBox}
                     removeFromBox={this.props.removeFromBox}
+                    selectedProducts={this.props.selectedProducts}
                 />
             </div>
         );
