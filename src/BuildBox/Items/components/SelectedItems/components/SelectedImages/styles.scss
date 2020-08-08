@@ -1,0 +1,37 @@
+.selected-items-images-container {
+  padding: 10px;
+  min-height: 250px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  .item-image {
+    padding: 5px;
+    max-height: 150px;
+    display: flex;
+    img {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      left: 0;
+      display: block;
+    }
+  .count-badge {
+    position: relative;
+    margin-left: -10px;
+    margin-top: -10px;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    width: auto;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    border: solid 1px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 18px;
+    }
+  }
+}
+
