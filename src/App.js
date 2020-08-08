@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 
 import './styles.scss'
 
-
 import Items from './components/Items'
-
 
 const mapStateToProps = (state) => {
   return {

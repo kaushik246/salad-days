@@ -1,0 +1,93 @@
+.movie-data-table {
+  max-height: 200px;
+  margin-top: 9px;
+  border-radius: 3px;
+  width: 100%;
+  .name-cell {
+    text-align: center;
+    font-size: 13px;
+    word-wrap: break-word;
+    white-space: normal;
+    height: 100%;
+  }
+  .name-cell-head {
+    text-align: center;
+    color: rgb(57, 132, 201);
+    font-size: 13px;
+    word-wrap: break-word;
+    white-space: nor mal;
+    height: 100%;
+  }
+}
+
+.build-a-box-step-1-component{
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  .step-component-title{
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: none;
+    border-bottom: none;
+    box-sizing: border-box;
+  }
+  .primary--title{
+    color: rgba(0,0,0,0.5);
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .secondary--title{
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .step-component-description{
+    line-height: 1.65;
+    font-weight: 300;
+    font-size: 13px;
+    font-family: "sofia-pro",sans-serif;
+    color: #000;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  .step-1-box-selection-wrapper{
+    display: flex;
+    justify-content: center;
+    .black-box{
+      background: url("https://cdn.shopify.com/s/files/1/0558/2845/files/black_box.jpg?v=1589316612")
+    }
+    .white-box{
+      background: url("https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616");;
+    }
+    .selected-box-image{
+      height: 500px;
+      width: 500px;
+      margin: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .selected-box-name{
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 45px;
+      border-radius: 0;
+      font-weight: 600;
+      padding: 0 20px;
+      font-size: 10px;
+      margin: 0 30px;
+    }
+  }
+}
