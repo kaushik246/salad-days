@@ -29,6 +29,7 @@ class SelectedItems extends Component {
           <div className="selected-items-images">
             <SelectedImages
               selectedProducts={Object.values(this.props.selectedProducts)}
+              removeFromBox={this.props.removeFromBox}
             />
           </div>
           <div className="selected-items-contents">

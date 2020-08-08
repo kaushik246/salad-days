@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import ItemsList from './components/ItemsList'
 import SelectedItems from './components/SelectedItems'
+import Header from '../generic/Header'
 import { fetchProductsList, addToBox, removeFromBox } from './actions'
 
 import './styles.scss'
@@ -19,9 +20,13 @@ class Items extends Component {
     this.props.fetchProductsList(true)
   }
   render() {
-    console.log(this.props.selectedProducts)
     return (
       <div className="item-selection-step">
+        <Header
+          step={2}
+          secondaryTitle="CHOOSE YOUR ITEMS"
+          description="We’ve hand-selected the best products in one place. Select from the items below and fill up your box!"
+        />
         <SelectedItems
           selectedProducts={this.props.selectedProducts}
           addToBox={this.props.addToBox}

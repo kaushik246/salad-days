@@ -3,7 +3,6 @@ import './styles.scss'
 
 class SelectedImages extends Component {
   render() {
-    console.log(this.props.selectedProducts)
     return (
       <div className="selected-items-images-container">
         {this.props.selectedProducts.map((product) => {
@@ -16,6 +15,7 @@ class SelectedImages extends Component {
                   key="product.title"
                 />
               </a>
+              <div className="count-badge">{product.count}</div>
             </div>
           )
         })}
