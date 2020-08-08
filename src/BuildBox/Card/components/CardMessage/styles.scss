@@ -1,0 +1,33 @@
+.card-message-container {
+    display: flex;
+    position: relative;
+    .card-selected {
+        .card-image {
+            max-width: 350px;
+            max-height: 350px;
+            .card-image-selected {
+                img {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+        .change-card-button {
+            text-align: center;
+        }
+    }
+    .card-message-data {
+        flex: 5;
+        .card-message-to-from {
+            .card-message-to {
+
+            }
+            .card-message-from {
+
+            }
+        }
+        .card-message-description {
+
+        }
+    }
+}

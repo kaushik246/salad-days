@@ -2,7 +2,6 @@ import {
     CARD_REQUEST_PRODUCT_LIST,
     CARD_RECEIVE_PRODUCT_LIST,
     CARD_ADD_TO_BOX,
-    ITEMS_REMOVE_FROM_BOX
 } from './actions'
 
 const defaultState = {
@@ -28,7 +27,11 @@ const defaultState = {
             title: 'Product 5'
         }
     ],
-    selectedCard: {},
+    selectedCard: {
+        image:
+            'https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A0884_Cropped_400x400.jpg?v=1531094633',
+        title: 'Product 4'
+    },
     dataIsFetching: false
 }
 
@@ -43,29 +46,17 @@ const card = (state = defaultState, action) => {
             return {
                 ...state,
                 dataIsFetching: action.dataIsFetching,
-                cardsList: defaultState.productList // action.productList
+                cardsList: defaultState.productList, // action.productList
+                selectedCard: defaultState.selectedCard
             }
-        case ITEMS_ADD_TO_BOX:
-            let newSelectedProducts = state.selectedProducts
-            if (state.selectedProducts.hasOwnProperty(action.product.title)) {
-                newSelectedProducts[action.product.title]['count'] += 1
-            } else {
-                newSelectedProducts[action.product.title] = {
-                    count: 1,
-                    title: action.product.title,
-                    price: action.product.price,
-                    image: action.product.image
-                }
-            }
+        case CARD_ADD_TO_BOX:
             return {
                 ...state,
-                selectedProducts: newSelectedProducts
+                selectedCard: action.card
             }
-        case ITEMS_REMOVE_FROM_BOX:
-            return state
         default:
             return state
     }
 }
 
-export default items
+export default card

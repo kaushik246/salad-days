@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './styles.scss'
 import Items from './Items'
 import Packaging from './Packaging'
+import Card from './Card'
+
 
 export class BuildBox extends Component {
     render() {
@@ -14,6 +16,7 @@ export class BuildBox extends Component {
                     <Items />
                 </div>}
                 <div className="build-box-card">
+                    <Card/>
                 </div>
             </div>
         )

@@ -4,10 +4,12 @@ import thunk from 'redux-thunk'
 
 import app from './reducers'
 import items from './BuildBox/Items/reducers'
+import card from './BuildBox/Card/reducers'
 
 const appReducers = {
 	app,
-	items
+  items,
+  card
 }
 
 const rootReducer = combineReducers({
