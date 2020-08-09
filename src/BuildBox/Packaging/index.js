@@ -4,38 +4,6 @@ import Header from '../generic/Header'
 import './styles.scss'
 
 class Packaging extends Component {
-  static defaultProps = {
-    name: 'Star Wars Characters'
-  }
-
-  state = {
-    search: ''
-  }
-
-  filterTable = (search, data) => {
-    if (!data) return undefined
-    if (!search) return data
-
-    const terms = search.toLowerCase().split(' ')
-
-    return terms.reduce((filtered, term) => {
-      return filtered.filter((name) => {
-        return name.name && name.name.toLowerCase().includes(term)
-      })
-    }, data)
-  }
-
-  searchChanged = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  clearSearch = (key) => {
-    this.setState({
-      search: ''
-    })
-  }
 
   render() {
     return (

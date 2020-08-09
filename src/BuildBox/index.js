@@ -10,16 +10,21 @@ export class BuildBox extends Component {
       <div className="build-box-container">
         {true && (
           <div className="build-box-packaging">
-            <Packaging />
+            <Packaging
+            />
           </div>
         )}
         {true && (
           <div className="build-box-ietms">
-            <Items />
+            <Items 
+            items={this.props.items}
+            />
           </div>
         )}
         <div className="build-box-card">
-          <Card />
+          <Card 
+            card={this.props.card}
+          />
         </div>
       </div>
     )
