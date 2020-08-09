@@ -3,12 +3,11 @@ import { connect } from 'react-redux'
 import './styles.scss'
 import BuildBox from './BuildBox'
 
-import { fetchProductsList, addToBox, removeFromBox } from './actions'
 export class App extends Component {
   render() {
     return (
       <div>
-        <BuildBox {...this.props}/>
+        <BuildBox />
       </div>
     )
   }
@@ -16,13 +15,8 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.app.user,
-    items: state.items
+    user: state.app.user
   }
 }
 
-export default connect(mapStateToProps,{
-  fetchProductsList,
-  addToBox,
-  removeFromBox
-})(App)
+export default connect(mapStateToProps)(App)

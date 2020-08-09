@@ -5,7 +5,6 @@ import Product from '../Product'
 
 class ItemsList extends Component {
   render() {
-    console.log(this.props.selectedProducts);
     return (
       <div className="item-list-container">
         {this.props.productList.map((product) => (
