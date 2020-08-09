@@ -48,6 +48,26 @@ const defaultState = {
       title: 'Product 6'
     }
   ],
+  boxesList: [
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616',
+      price: 100,
+      discountPrice: 40,
+      quantity: 0,
+      title: 'White Box',
+      type: 'box'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0558/2845/files/black_box.jpg?v=1589316612',
+      price: 100,
+      discountPrice: 40,
+      quantity: 0,
+      title: 'Black Box',
+      type: 'box'
+    }
+  ],
   selectedProducts: {},
   dataIsFetching: false
 }
@@ -67,14 +87,23 @@ const items = (state = defaultState, action) => {
       }
     case ITEMS_ADD_TO_BOX:
       let newSelectedProducts = state.selectedProducts
-      if (state.selectedProducts.hasOwnProperty(action.product.title)) {
-        newSelectedProducts[action.product.title]['count'] += 1
-      } else {
-        newSelectedProducts[action.product.title] = {
-          count: 1,
+      if (action.product.type && action.product.type === 'box') {
+        newSelectedProducts[action.product.type] = {
+          count: 0,
           title: action.product.title,
           price: action.product.price,
           image: action.product.image
+        }
+      } else {
+        if (state.selectedProducts.hasOwnProperty(action.product.title)) {
+          newSelectedProducts[action.product.title]['count'] += 1
+        } else {
+          newSelectedProducts[action.product.title] = {
+            count: 1,
+            title: action.product.title,
+            price: action.product.price,
+            image: action.product.image
+          }
         }
       }
       return {
