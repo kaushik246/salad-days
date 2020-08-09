@@ -9,6 +9,7 @@ import { fetchProductsList, addToBox, removeFromBox } from './actions'
 import './styles.scss'
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
     productList: state.items.productList,
     selectedProducts: state.items.selectedProducts
