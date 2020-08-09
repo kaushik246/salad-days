@@ -40,7 +40,7 @@ class Packaging extends Component {
   render() {
     return (
       <div className="build-a-box-step-1-component">
-        <Header 
+        <Header
           step={1}
           secondaryTitle="CHOOSE YOUR BOX COLOR"
           description="Welcome to the easiest way to send someone a custom gift, in 3 simple steps. Add to cart and repeat for multiple boxes, or update your quantity in the cart."

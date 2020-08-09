@@ -1,18 +1,18 @@
-.card-list-container{
-    //position: absolute;
-    display: inline-flex;
-    .card-image-component{
-        width: 225px;
-        height: 225px;
-        cursor: pointer; 
-        .card-image {
-            padding: 5px;
-            width: 225px;
-            height: 225px;
-            position: relative;
-        }
-        .card-footer-text {
-            text-align: center;
-        }
+.card-list-container {
+  //position: absolute;
+  display: inline-flex;
+  .card-image-component {
+    width: 225px;
+    height: 225px;
+    cursor: pointer;
+    .card-image {
+      padding: 5px;
+      width: 225px;
+      height: 225px;
+      position: relative;
     }
+    .card-footer-text {
+      text-align: center;
+    }
+  }
 }

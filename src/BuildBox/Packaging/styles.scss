@@ -1,35 +1,35 @@
-.build-a-box-step-1-component{
-    max-width: 1180px;
-    margin: 0 auto;
-    text-align: center;
-    .step-1-box-selection-wrapper{
-      display: flex;
-      justify-content: center;
-      .black-box{
-        background: url("https://cdn.shopify.com/s/files/1/0558/2845/files/black_box.jpg?v=1589316612")
-      }
-      .white-box{
-        background: url("https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616");;
-      }
-      .selected-box-image{
-        height: 500px;
-        width: 500px;
-        margin: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .selected-box-name{
-        background-color: #000;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        line-height: 45px;
-        border-radius: 0;
-        font-weight: 600;
-        padding: 0 20px;
-        font-size: 10px;
-        margin: 0 30px;
-      }
+.build-a-box-step-1-component {
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  .step-1-box-selection-wrapper {
+    display: flex;
+    justify-content: center;
+    .black-box {
+      background: url('https://cdn.shopify.com/s/files/1/0558/2845/files/black_box.jpg?v=1589316612');
+    }
+    .white-box {
+      background: url('https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616');
+    }
+    .selected-box-image {
+      height: 500px;
+      width: 500px;
+      margin: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .selected-box-name {
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 45px;
+      border-radius: 0;
+      font-weight: 600;
+      padding: 0 20px;
+      font-size: 10px;
+      margin: 0 30px;
     }
   }
+}

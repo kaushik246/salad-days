@@ -7,21 +7,21 @@ import items from './BuildBox/Items/reducers'
 import card from './BuildBox/Card/reducers'
 
 const appReducers = {
-	app,
+  app,
   items,
   card
 }
 
 const rootReducer = combineReducers({
-	...appReducers
+  ...appReducers
 })
 
 let middleware = [thunk]
 if (process.env.NODE_ENV !== 'production') {
-	const { logger } = require('redux-logger')
-	middleware = [...middleware, logger]
+  const { logger } = require('redux-logger')
+  middleware = [...middleware, logger]
 }
 
 export const configureStore = (defaultState) => {
-	return createStore(rootReducer, applyMiddleware(...middleware))
+  return createStore(rootReducer, applyMiddleware(...middleware))
 }

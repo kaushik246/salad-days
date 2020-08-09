@@ -14,24 +14,23 @@
       left: 0;
       display: block;
     }
-  .count-badge {
-    position: relative;
-    margin-left: -10px;
-    margin-top: -10px;
-    top: 0;
-    right: 0;
-    font-size: 12px;
-    width: auto;
-    height: 20px;
-    width: 20px;
-    font-weight: bold;
-    color: black;
-    background: white;
-    border: solid 1px;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 18px;
+    .count-badge {
+      position: relative;
+      margin-left: -10px;
+      margin-top: -10px;
+      top: 0;
+      right: 0;
+      font-size: 12px;
+      width: auto;
+      height: 20px;
+      width: 20px;
+      font-weight: bold;
+      color: black;
+      background: white;
+      border: solid 1px;
+      text-align: center;
+      border-radius: 10px;
+      line-height: 18px;
     }
   }
 }
-
