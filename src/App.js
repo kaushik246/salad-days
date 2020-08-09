@@ -7,7 +7,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <BuildBox/>
+        <BuildBox />
       </div>
     )
   }

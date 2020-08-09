@@ -7,13 +7,14 @@ const mapStateToProps = (state) => {
 }
 
 class Header extends Component {
-
   componentDidMount() {}
 
   render() {
     return (
       <div className="step-component-header">
-        <div className="step-component-title primary--title">STEP {this.props.step} OF 3</div>
+        <div className="step-component-title primary--title">
+          STEP {this.props.step} OF 3
+        </div>
         <div className="step-component-title secondary--title">
           {this.props.secondaryTitle}
         </div>

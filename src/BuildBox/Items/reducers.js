@@ -48,22 +48,22 @@ const defaultState = {
       title: 'Product 6'
     }
   ],
-  selectedProducts:
-    {
-      'Product 4': {
-        count: 1,
-        image:
-          'https://cdn.shopify.com/s/files/1/0558/2845/products/49216187_072_b_400x400.jpeg?v=1556667066',
-        title: 'Product 4',
-        price: 11
-      },
-      'Product 1': {
-        image: 'https://cdn.shopify.com/s/files/1/0558/2845/products/Prima_R_R_1500x_e57c9d18-56db-4e1f-8c29-c47dcd4ffc06_400x400.jpg?v=1595457079',
-        price: 1000,
-        title: 'Product 2',
-        count: 9
-      }
+  selectedProducts: {
+    'Product 4': {
+      count: 1,
+      image:
+        'https://cdn.shopify.com/s/files/1/0558/2845/products/49216187_072_b_400x400.jpeg?v=1556667066',
+      title: 'Product 4',
+      price: 11
     },
+    'Product 1': {
+      image:
+        'https://cdn.shopify.com/s/files/1/0558/2845/products/Prima_R_R_1500x_e57c9d18-56db-4e1f-8c29-c47dcd4ffc06_400x400.jpg?v=1595457079',
+      price: 1000,
+      title: 'Product 2',
+      count: 9
+    }
+  },
   dataIsFetching: false
 }
 
