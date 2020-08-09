@@ -9,10 +9,7 @@ import { fetchProductsList, addToBox, removeFromBox } from './actions'
 import './styles.scss'
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
-    productList: state.items.productList,
-    selectedProducts: state.items.selectedProducts
   }
 }
 
@@ -29,16 +26,16 @@ class Items extends Component {
           description="We’ve hand-selected the best products in one place. Select from the items below and fill up your box!"
         />
         <SelectedItems
-          selectedProducts={this.props.selectedProducts}
+          selectedProducts={this.props.items.selectedProducts}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
         />
         <hr />
         <ItemsList
-          productList={this.props.productList}
+          productList={this.props.items.productList}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
-          selectedProducts={this.props.selectedProducts}
+          selectedProducts={this.props.items.selectedProducts}
         />
       </div>
     )

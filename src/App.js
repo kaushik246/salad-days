@@ -7,7 +7,10 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <BuildBox />
+        <BuildBox 
+          items={this.props.items}
+          card={this.props.card}
+        />
       </div>
     )
   }
@@ -15,7 +18,9 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.app.user
+    user: state.app.user,
+    items: state.items,
+    card: state.card
   }
 }
 

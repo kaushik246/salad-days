@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import './styles.scss'
 import Product from '../Product'
 
@@ -30,13 +29,5 @@ class ItemsList extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    selectedProducts: state.items.selectedProducts
-  }
-}
 
-export default connect(
-  mapStateToProps,
-  {}
-)(ItemsList)
+export default ItemsList
