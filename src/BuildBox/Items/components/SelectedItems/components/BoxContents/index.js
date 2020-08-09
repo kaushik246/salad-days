@@ -3,6 +3,7 @@ import './styles.scss'
 
 class BoxContents extends Component {
   render() {
+    console.log(this.props.selectedProducts)
     return (
       <div className="box-contents-container">
         <div className="box-contents-title">Box Contents</div>

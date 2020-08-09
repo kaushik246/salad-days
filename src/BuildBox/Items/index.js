@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import ItemsList from './components/ItemsList'
 import SelectedItems from './components/SelectedItems'
 import Header from '../generic/Header'
+import { fetchProductsList, addToBox, removeFromBox } from './actions'
 
 import './styles.scss'
 
@@ -28,20 +29,27 @@ class Items extends Component {
           description="We’ve hand-selected the best products in one place. Select from the items below and fill up your box!"
         />
         <SelectedItems
-          selectedProducts={this.props.items.selectedProducts}
+          selectedProducts={this.props.selectedProducts}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
         />
         <hr />
         <ItemsList
-          productList={this.props.items.productList}
+          productList={this.props.productList}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
-          selectedProducts={this.props.items.selectedProducts}
+          selectedProducts={this.props.selectedProducts}
         />
       </div>
     )
   }
 }
 
-export default Items
+export default connect(
+  mapStateToProps,
+  {
+    fetchProductsList,
+    addToBox,
+    removeFromBox
+  }
+)(Items)
