@@ -6,6 +6,8 @@ class SelectedImages extends Component {
     return (
       <div className="selected-items-images-container">
         {this.props.selectedProducts.map((product) => {
+          var badgeClassName = 'count-badge'
+          if (product.count == 0) badgeClassName += ' hide'
           return (
             <div className="item-image" key={product.title}>
               <a>
@@ -15,7 +17,7 @@ class SelectedImages extends Component {
                   key="product.title"
                 />
               </a>
-              <div className="count-badge">{product.count}</div>
+              <div className={badgeClassName}>{product.count}</div>
             </div>
           )
         })}
