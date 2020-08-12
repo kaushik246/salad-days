@@ -11,12 +11,7 @@ class SelectedItems extends Component {
         <div className="selected-items-meter">
           <div className="box-size">
             <div className="size-meter">
-              <p className="box-size-text">MINI</p>
-            </div>
-          </div>
-          <div className="box-size">
-            <div className="size-meter">
-              <p className="box-size-text">REGULAR</p>
+              <p className="box-size-text">SMALL</p>
             </div>
           </div>
           <div className="box-size">
