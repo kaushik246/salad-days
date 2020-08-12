@@ -51,20 +51,20 @@ const defaultState = {
   boxesList: [
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616',
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/files/smallBox.jpg?v=1597245981',
       price: 100,
       discountPrice: 40,
       quantity: 0,
-      title: 'White Box',
+      title: 'Small Box',
       type: 'box'
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/files/black_box.jpg?v=1589316612',
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/files/smallBox_1080x.jpg?v=1597245981',
       price: 100,
       discountPrice: 40,
       quantity: 0,
-      title: 'Black Box',
+      title: 'Big Box',
       type: 'box'
     }
   ],
