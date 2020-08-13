@@ -4,7 +4,6 @@ import './styles.scss'
 import BuildBox from './BuildBox'
 import Stepper from './Stepper';
 import Cart from './Cart';
-
 import { setCurrentStep } from './Stepper/actions';
 
 export class App extends Component {
