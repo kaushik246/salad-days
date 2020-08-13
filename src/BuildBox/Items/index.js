@@ -5,6 +5,7 @@ import ItemsList from './components/ItemsList'
 import SelectedItems from './components/SelectedItems'
 import Header from '../generic/Header'
 import { fetchProductsList, addToBox, removeFromBox } from './actions'
+import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
 
@@ -29,6 +30,7 @@ class Items extends Component {
           selectedProducts={this.props.items.selectedProducts}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
+          setCurrentStep={this.props.setCurrentStep}
         />
         <hr />
         <ItemsList
@@ -47,6 +49,7 @@ export default connect(
   {
     fetchProductsList,
     addToBox,
-    removeFromBox
+    removeFromBox,
+    setCurrentStep
   }
 )(Items)

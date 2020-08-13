@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types';
+import { setCurrentStep } from './actions';
 
-export default class Step extends Component {
+class Step extends Component {
     constructor() {
         super();
         this.getStyles = this.getStyles.bind(this);
@@ -131,13 +133,17 @@ export default class Step extends Component {
             <div style={styles.step}>
                 <div style={circleStyle}>
                     {active || completed ? (
-                        <a href={href} onClick={onClick} style={styles.index}/>
+                        <a href={href} onClick={() => {
+                            this.props.setCurrentStep(index)
+                        }} style={styles.index}/>
                     ) : (
                             <span style={styles.index}/>
                         )}
                 </div>
                 {active || completed ? (
-                    <div href={href} onClick={onClick}>
+                    <div href={href} onClick={() => {
+                        this.props.setCurrentStep(index)
+                    }}>
                         <div style={titleStyle}>{title}</div>
                         <div style={titleStyle}>{subTitle}</div>
                     </div>
@@ -212,3 +218,14 @@ Step.propTypes = {
     lineMarginOffset: PropTypes.number,
     defaultBorderWidth: PropTypes.number
 };
+
+const mapStateToProps = (state) => {
+    return {
+        stepper: state.stepper,
+    }
+}
+
+export default connect(mapStateToProps,
+    {
+        setCurrentStep
+    })(Step)

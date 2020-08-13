@@ -12,6 +12,7 @@
       background: url('https://cdn.shopify.com/s/files/1/0558/2845/files/box-nude_230ba32c-fa36-492b-9847-73bdf756460c.jpg?v=1589316616');
     }
     .selected-box-image {
+      cursor: pointer;
       height: 500px;
       width: 500px;
       margin: 30px;
@@ -20,6 +21,7 @@
       background-size: cover!important;
     }
     .selected-box-name {
+      cursor: pointer;
       background-color: #5fc3ca;
       color: #fff;
       text-transform: uppercase;

@@ -6,12 +6,14 @@ import app from './reducers'
 import items from './BuildBox/Items/reducers'
 import card from './BuildBox/Card/reducers'
 import cart from './Cart/reducers'
+import stepper from './Stepper/reducers'
 
 const appReducers = {
   app,
   items,
   card,
-  cart
+  cart,
+  stepper,
 }
 
 const rootReducer = combineReducers({
