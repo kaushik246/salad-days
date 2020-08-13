@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Header from '../generic/Header'
 import './styles.scss'
 import { addToBox } from '../Items/actions'
+import { setCurrentStep } from './../../Stepper/actions'
 
 class Packaging extends Component {
   render() {
@@ -20,6 +21,7 @@ class Packaging extends Component {
                 className="selected-box-container"
                 onClick={() => {
                   this.props.addToBox(box)
+                  this.props.setCurrentStep(1)
                 }}
               >
                 <div
@@ -45,6 +47,7 @@ const mapStateToProps = (state) => {
 export default connect(
   mapStateToProps,
   {
-    addToBox
+    addToBox,
+    setCurrentStep
   }
 )(Packaging)

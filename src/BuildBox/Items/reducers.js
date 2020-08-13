@@ -8,50 +8,45 @@ import {
 const defaultState = {
   productList: [
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/products/Prima_R_R_1500x_e57c9d18-56db-4e1f-8c29-c47dcd4ffc06_400x400.jpg?v=1595457079',
+      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
       title: 'Product 2'
     },
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/products/HONEY_LAPCOS_FACE_MASK_ON_BOXFOX_400x400.jpg?v=1584646872',
+      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
       title: 'Product 3'
     },
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A0884_Cropped_400x400.jpg?v=1531094633',
+      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
       title: 'Product 4'
     },
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/products/49216187_072_b_400x400.jpeg?v=1556667066',
+      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 2000,
       discountPrice: 1500,
-      quantity: 0,
+      quantity: 2,
       title: 'Product 5'
     },
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0558/2845/products/49216187_072_b_400x400.jpeg?v=1556667066',
+      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 2000,
       discountPrice: 1500,
-      quantity: 0,
+      quantity: 7,
       title: 'Product 6'
     }
   ],
   boxesList: [
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/files/smallBox.jpg?v=1597245981',
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/smallBox_1024x1024@2x.jpg?v=1597324938',
       price: 100,
       discountPrice: 40,
       quantity: 0,
@@ -60,7 +55,7 @@ const defaultState = {
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/files/smallBox_1080x.jpg?v=1597245981',
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/bigBox_1024x1024@2x.jpg?v=1597324938',
       price: 100,
       discountPrice: 40,
       quantity: 0,

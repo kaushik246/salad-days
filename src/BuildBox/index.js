@@ -8,24 +8,26 @@ export class BuildBox extends Component {
   render() {
     return (
       <div className="build-box-container">
-        {true && (
+        {this.props.stepper.currentStep === 0 && (
           <div className="build-box-packaging">
             <Packaging items={this.props.items}
             />
           </div>
         )}
-        {true && (
+        {this.props.stepper.currentStep === 1 && (
           <div className="build-box-ietms">
             <Items 
             items={this.props.items}
             />
           </div>
         )}
-        <div className="build-box-card">
-          <Card 
-            card={this.props.card}
-          />
-        </div>
+        {this.props.stepper.currentStep === 2 && (
+          <div className="build-box-card">
+            <Card 
+              card={this.props.card}
+            />
+          </div>
+        )}
       </div>
     )
   }

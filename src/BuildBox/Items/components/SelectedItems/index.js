@@ -31,6 +31,7 @@ class SelectedItems extends Component {
             <BoxContents
               selectedProducts={Object.values(this.props.selectedProducts)}
               removeFromBox={this.props.removeFromBox}
+              setCurrentStep={this.props.setCurrentStep}
             />
           </div>
         </div>
