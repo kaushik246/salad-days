@@ -6,7 +6,7 @@ class Product extends Component {
     return (
       <div className="product-container">
         <div className="container">
-          <img className="image" src={this.props.image} />
+          <img className="product-image image" src={this.props.image} />
           <div className="overlay" />
           {this.props.quantity === 0 ? (
             <div className="button product-sold-out">
