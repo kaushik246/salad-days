@@ -17,12 +17,14 @@ const defaultState = {
       title: 'Card 2'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
       title: 'Card 3'
     }
   ],
   selectedCard: {
-    image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
+    image:
+      'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
     title: 'Card 3'
   },
   dataIsFetching: false

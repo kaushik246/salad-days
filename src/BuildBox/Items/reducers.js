@@ -8,35 +8,40 @@ import {
 const defaultState = {
   productList: [
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
       title: 'Product 2'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
       title: 'Product 3'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
       title: 'Product 4'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 2000,
       discountPrice: 1500,
       quantity: 2,
       title: 'Product 5'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
       price: 2000,
       discountPrice: 1500,
       quantity: 7,
