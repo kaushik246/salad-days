@@ -12,10 +12,10 @@ class CardMessage extends Component {
             <div className="card-image">
               <img
                 className="card-image-selected"
-                src="https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A0884_Cropped_400x400.jpg?v=1531094633"
+                src={this.props.selectedCard.image}
               />
             </div>
-            <div className="change-card-button">(Change Card)</div>
+            <div className="change-card-button" onClick={() => this.props.updateCardInBox()}>(Change Card)</div>
           </div>
           <div className="card-msg-data">
             <div className="card-msg-to-from">
@@ -69,7 +69,7 @@ class CardMessage extends Component {
                   BOXFOX for you to write yourself!
                 </span>
               </div>
-              <div class="card-msg-completed add-to-cart">Add to Cart</div>
+              <div className="card-msg-completed add-to-cart" onClick={() => this.props.setCurrentStep(3)}>Add to Cart</div>
             </div>
           </div>
         </div>

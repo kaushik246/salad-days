@@ -1,7 +1,9 @@
 import {
   CARD_REQUEST_PRODUCT_LIST,
   CARD_RECEIVE_PRODUCT_LIST,
-  CARD_ADD_TO_BOX
+  CARD_ADD_TO_BOX,
+  UPDATE_CARD_IN_BOX,
+  UPDATE_MESSAGE_FIELDS
 } from './actions'
 
 const defaultState = {
@@ -22,12 +24,12 @@ const defaultState = {
       title: 'Card 3'
     }
   ],
-  selectedCard: {
-    image:
-      'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
-    title: 'Card 3'
-  },
-  dataIsFetching: false
+  selectedCard: null,
+  dataIsFetching: false,
+  changeCard: false,
+  to: '',
+  from: '',
+  message: ''
 }
 
 const card = (state = defaultState, action) => {
@@ -47,8 +49,17 @@ const card = (state = defaultState, action) => {
     case CARD_ADD_TO_BOX:
       return {
         ...state,
-        selectedCard: action.card
+        selectedCard: action.card,
+        changeCard: false
       }
+    case UPDATE_CARD_IN_BOX:
+      return {
+        ...state,
+        changeCard: true
+      }
+    case UPDATE_MESSAGE_FIELDS:
+      state[action.fieldType] = action.fieldValue;
+      return state
     default:
       return state
   }

@@ -1,6 +1,8 @@
 export const CARD_REQUEST_PRODUCT_LIST = 'CARD_REQUEST_PRODUCT_LIST'
 export const CARD_RECEIVE_PRODUCT_LIST = 'CARD_RECEIVE_PRODUCT_LIST'
 export const CARD_ADD_TO_BOX = 'CARD_ADD_TO_BOX'
+export const UPDATE_CARD_IN_BOX = 'UPDATE_CARD_IN_BOX'
+export const UPDATE_MESSAGE_FIELDS = 'UPDATE_MESSAGE_FIELDS'
 
 export const requestCardList = (dataIsFetching) => {
   return {
@@ -45,5 +47,19 @@ export const addToBox = (card) => {
   return {
     type: CARD_ADD_TO_BOX,
     card
+  }
+}
+
+export const updateCardInBox = () => {
+  return {
+    type: UPDATE_CARD_IN_BOX,
+  }
+}
+
+export const updateMessageFields = (fieldType, fieldValue) => {
+  return {
+    type: UPDATE_MESSAGE_FIELDS,
+    fieldType,
+    fieldValue
   }
 }
