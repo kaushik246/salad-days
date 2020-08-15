@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Header from '../generic/Header'
-import './styles.scss'
 import { addToBox } from '../Items/actions'
 import { setCurrentStep } from './../../Stepper/actions'
+
+import './styles.scss'
+import './responsive.css'
 
 class Packaging extends Component {
   render() {

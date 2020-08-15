@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './styles.scss'
+import './responsive.css'
 
 class Product extends Component {
   render() {
