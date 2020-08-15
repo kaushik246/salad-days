@@ -10,6 +10,7 @@ import {
   updateCardInBox,
   updateMessageFields
 } from './actions'
+
 import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
