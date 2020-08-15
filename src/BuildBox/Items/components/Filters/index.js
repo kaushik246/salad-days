@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Select from 'react-select'
+import './responsive.css'
 
 const groupStyles = {
   display: 'flex',

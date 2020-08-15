@@ -15,6 +15,7 @@ import { setCurrentStep } from './../../Stepper/actions'
 import { addBoxToCart } from './../../Cart/actions'
 
 import './styles.scss'
+import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {}

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './styles.scss'
 import Stepper from './../Stepper'
 import Items from './Items'
 import Packaging from './Packaging'
 import Card from './Card'
 import Done from './Done'
 import { setCurrentStep } from './../Stepper/actions'
+import './styles.scss'
+import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {

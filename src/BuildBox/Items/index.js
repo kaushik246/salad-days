@@ -8,6 +8,7 @@ import { fetchProductsList, addToBox, removeFromBox } from './actions'
 import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
+import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {}
