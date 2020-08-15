@@ -11,12 +11,28 @@ class SelectedItems extends Component {
         <div className="selected-items-meter">
           <div className="box-size">
             <div className="size-meter">
-              <p className="box-size-text">SMALL</p>
+              <p
+                className={`box-size-text ${
+                  this.props.selectedBox === 'Small Box'
+                    ? 'selected-box'
+                    : 'non-selected-box'
+                }`}
+              >
+                SMALL
+              </p>
             </div>
           </div>
           <div className="box-size">
             <div className="size-meter">
-              <p className="box-size-text">BIG</p>
+              <p
+                className={`box-size-text ${
+                  this.props.selectedBox === 'Big Box'
+                    ? 'selected-box'
+                    : 'non-selected-box'
+                }`}
+              >
+                BIG
+              </p>
             </div>
           </div>
         </div>
@@ -32,6 +48,8 @@ class SelectedItems extends Component {
               selectedProducts={Object.values(this.props.selectedProducts)}
               removeFromBox={this.props.removeFromBox}
               setCurrentStep={this.props.setCurrentStep}
+              subTotal={this.props.subTotal}
+              selectedBox={this.props.selectedBox}
             />
           </div>
         </div>

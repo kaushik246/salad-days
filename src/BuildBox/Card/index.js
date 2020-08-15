@@ -12,6 +12,7 @@ import {
 } from './actions'
 
 import { setCurrentStep } from './../../Stepper/actions'
+import { addBoxToCart } from './../../Cart/actions'
 
 import './styles.scss'
 
@@ -46,6 +47,7 @@ class Card extends Component {
             from={this.props.card.from}
             message={this.props.card.message}
             setCurrentStep={this.props.setCurrentStep}
+            addBoxToCart={this.props.addBoxToCart}
           />
         )}
       </div>
@@ -60,6 +62,7 @@ export default connect(
     addToBox,
     updateCardInBox,
     updateMessageFields,
-    setCurrentStep
+    setCurrentStep,
+    addBoxToCart
   }
 )(Card)

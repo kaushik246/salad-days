@@ -68,8 +68,11 @@ const defaultState = {
       type: 'box'
     }
   ],
+  selectedBox: null,
   selectedProducts: {},
-  dataIsFetching: false
+  dataIsFetching: false,
+  selectedItemsCount: 0,
+  subTotal: 0
 }
 
 const items = (state = defaultState, action) => {
@@ -94,6 +97,12 @@ const items = (state = defaultState, action) => {
           price: action.product.price,
           image: action.product.image
         }
+        return {
+          ...state,
+          selectedItemsCount: state.selectedItemsCount + 1,
+          selectedProducts: newSelectedProducts,
+          selectedBox: action.product.title
+        }
       } else {
         if (state.selectedProducts.hasOwnProperty(action.product.title)) {
           newSelectedProducts[action.product.title]['count'] += 1
@@ -105,10 +114,12 @@ const items = (state = defaultState, action) => {
             image: action.product.image
           }
         }
-      }
-      return {
-        ...state,
-        selectedProducts: newSelectedProducts
+        return {
+          ...state,
+          selectedItemsCount: state.selectedItemsCount + 1,
+          selectedProducts: newSelectedProducts,
+          subTotal: state.subTotal + action.product.price
+        }
       }
     case ITEMS_REMOVE_FROM_BOX:
       return state
