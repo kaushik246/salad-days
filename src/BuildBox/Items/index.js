@@ -10,8 +10,7 @@ import { setCurrentStep } from './../../Stepper/actions'
 import './styles.scss'
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return {}
 }
 
 class Items extends Component {

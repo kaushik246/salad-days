@@ -13,7 +13,7 @@ const appReducers = {
   items,
   card,
   cart,
-  stepper,
+  stepper
 }
 
 const rootReducer = combineReducers({
