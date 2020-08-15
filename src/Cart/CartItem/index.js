@@ -1,53 +1,38 @@
-
 import React, { Component } from 'react'
 import './styles.scss'
 
 export class CartItem extends Component {
-    render() {
-        return (
-            <div className="cart-item-container">
-                <div className="cart-item-image-contents">
-                    <div className="item-image">
-                        <img className="box-item-image" src={this.props.item.image} />
-                    </div>
-                    <div className="cart-item-contents">
-                        <div className="item-title-container">
-                            <div className="item-title">
-                                BUILD A FOXBOX
-                            </div>
-                            <div className="item-title-subtext">
-                                Original Creme/Small
-                            </div>
-                        </div>
-                        <div className="item-message">
-                            Card Message: Leave on Outside
-                        </div>
-                        <div className="item-card">
-                            Card: Happy Birthday
-                        </div>
-                        <div className="item-contents">
-                            Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold Corkscrew,
-                            Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold Corkscrew,
-                            Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold Corkscrew,
-                            Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold Corkscrew
-                        </div>
-                        <div className="item-remove">
-                            Remove
-                        </div>
-                    </div>
-                </div>
-                <div className="cart-item-price">
-                    100
-                </div>
-                <div className="cart-item-quantity">
-                    1
-                </div>
-                <div className="cart-item-subtotal">
-                    1000
-                </div>
+  render() {
+    return (
+      <div className="cart-item-container">
+        <div className="cart-item-image-contents">
+          <div className="item-image">
+            <img className="box-item-image" src={this.props.item.image} />
+          </div>
+          <div className="cart-item-contents">
+            <div className="item-title-container">
+              <div className="item-title">BUILD A FOXBOX</div>
+              <div className="item-title-subtext">Original Creme/Small</div>
             </div>
-        )
-    }
+            <div className="item-message">Card Message: Leave on Outside</div>
+            <div className="item-card">Card: Happy Birthday</div>
+            <div className="item-contents">
+              Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
+              Corkscrew, Gift Box Contents: 1 x Gold Corkscrew, Gift Box
+              Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
+              Corkscrew, Gift Box Contents: 1 x Gold Corkscrew, Gift Box
+              Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
+              Corkscrew
+            </div>
+            <div className="item-remove">Remove</div>
+          </div>
+        </div>
+        <div className="cart-item-price">100</div>
+        <div className="cart-item-quantity">1</div>
+        <div className="cart-item-subtotal">1000</div>
+      </div>
+    )
+  }
 }
 
 export default CartItem

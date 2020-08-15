@@ -1,59 +1,54 @@
 .cart-item-container {
+  display: flex;
+  position: relative;
+  .cart-item-image-contents {
+    flex: 2;
     display: flex;
     position: relative;
-;
-    .cart-item-image-contents {
-        flex: 2;
-        display: flex;
-        position: relative;
-        .item-image{
-            flex: 1;
-            vertical-align: middle;
+    .item-image {
+      flex: 1;
+      vertical-align: middle;
 
-            .box-item-image {
-            max-width: 100px;
-            max-height: 100px;
-            margin-top: 40px;            }
+      .box-item-image {
+        max-width: 100px;
+        max-height: 100px;
+        margin-top: 40px;
+      }
+    }
+    .cart-item-contents {
+      flex: 2;
+      .item-title-container {
+        .item-title {
+          font-size: 15px;
+          text-transform: uppercase;
         }
-        .cart-item-contents {
-           flex: 2;
-           .item-title-container {
-               .item-title {
-                    font-size: 15px;
-                    text-transform: uppercase;
-               }
-               .item-title-subtext {
-                   font-size: 13px;
-               }
-           }
-           .item-message {
-
-           }
-           .item-card {
-
-           }
-           .item-contents {
-
-           }
-           .item-remove {
-               font-size: 13px;
-               text-transform: uppercase;
-               color: grey;
-           }
-
+        .item-title-subtext {
+          font-size: 13px;
         }
+      }
+      .item-message {
+      }
+      .item-card {
+      }
+      .item-contents {
+      }
+      .item-remove {
+        font-size: 13px;
+        text-transform: uppercase;
+        color: grey;
+      }
     }
-    .cart-item-price {
-        flex: 1;
-        text-align: center;
-    }
-    .cart-item-quantity {
-        flex: 1;
-        text-align: center;
-
-    }
-    .cart-item-subtotal {
-        flex: 1;
-        text-align: center;
-    }
+  }
+  .cart-item-price {
+    flex: 1;
+    text-align: center;
+  }
+  .cart-item-quantity {
+    flex: 1;
+    text-align: center;
+  }
+  .cart-item-subtotal {
+    flex: 1;
+    text-align: center;
+  }
 }

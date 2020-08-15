@@ -4,15 +4,18 @@ import { connect } from 'react-redux'
 import CardList from './components/CardList'
 import CardMessage from './components/CardMessage'
 import Header from '../generic/Header'
-import { fetchCardList, addToBox, updateCardInBox, updateMessageFields } from './actions'
+import {
+  fetchCardList,
+  addToBox,
+  updateCardInBox,
+  updateMessageFields
+} from './actions'
 import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
 
 const mapStateToProps = (state) => {
-  return {
-
-  }
+  return {}
 }
 
 class Card extends Component {

@@ -6,8 +6,7 @@ import Items from './Items'
 import Packaging from './Packaging'
 import Card from './Card'
 import Done from './Done'
-import { setCurrentStep } from './../Stepper/actions';
-
+import { setCurrentStep } from './../Stepper/actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -15,7 +14,7 @@ const mapStateToProps = (state) => {
     items: state.items,
     card: state.card,
     cart: state.cart,
-    stepper: state.stepper,
+    stepper: state.stepper
   }
 }
 
@@ -34,22 +33,17 @@ export class BuildBox extends Component {
         />
         {this.props.stepper.currentStep === 0 && (
           <div className="build-box-packaging">
-            <Packaging items={this.props.items}
-            />
+            <Packaging items={this.props.items} />
           </div>
         )}
         {this.props.stepper.currentStep === 1 && (
           <div className="build-box-ietms">
-            <Items 
-            items={this.props.items}
-            />
+            <Items items={this.props.items} />
           </div>
         )}
         {this.props.stepper.currentStep === 2 && (
           <div className="build-box-card">
-            <Card 
-              card={this.props.card}
-            />
+            <Card card={this.props.card} />
           </div>
         )}
         {this.props.stepper.currentStep === 3 && (
@@ -62,4 +56,7 @@ export class BuildBox extends Component {
   }
 }
 
-export default connect(mapStateToProps, { setCurrentStep }) (BuildBox);
+export default connect(
+  mapStateToProps,
+  { setCurrentStep }
+)(BuildBox)

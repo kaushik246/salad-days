@@ -19,7 +19,8 @@ const defaultState = {
       title: 'Card 2'
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
       title: 'Card 3'
     }
   ],
@@ -57,7 +58,7 @@ const card = (state = defaultState, action) => {
         changeCard: true
       }
     case UPDATE_MESSAGE_FIELDS:
-      state[action.fieldType] = action.fieldValue;
+      state[action.fieldType] = action.fieldValue
       return state
     default:
       return state
