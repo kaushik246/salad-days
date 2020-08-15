@@ -19,7 +19,6 @@ export class Cart extends Component {
         {this.props.cart.cartItems.map((item) => (
           <CartItem item={item} />
         ))}
-
         <div className="cart-footer-container">
           <div className="cart-checkout-subtotal-container">
             <div className="cart-subtotal">SUBTOTAL: 1000</div>
