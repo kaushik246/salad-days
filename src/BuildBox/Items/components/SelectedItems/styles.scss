@@ -10,12 +10,19 @@
         padding: 1px;
         margin: 0;
         .box-size-text {
-          background-color: #5fc3ca;
           font-size: 12px;
           padding: 10px;
           text-align: center;
           color: #ffffff;
           margin: 0px;
+        }
+        .selected-box {
+          background-color: #5fc3ca !important;
+          color: #ffffff;
+        }
+        .non-selected-box {
+          background-color: #ffffff !important;
+          color: #000000;
         }
       }
     }

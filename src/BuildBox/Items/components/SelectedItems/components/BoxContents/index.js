@@ -23,7 +23,16 @@ class BoxContents extends Component {
                   className={boxItemRemoveClass}
                   onClick={this.props.removeFromBox(product)}
                 >
-                  x
+                  {product.count !== 0 && (
+                    <button
+                      type="button"
+                      class="close"
+                      aria-label="Close"
+                      className="remove-item-button"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  )}
                 </div>
               </div>
             )
@@ -31,9 +40,11 @@ class BoxContents extends Component {
         </div>
         <div className="box-contents-sub-section">
           <div className="box-contents-sub-title">
-            Current Packaging | Regular
+            Current Packaging | {this.props.selectedBox}
           </div>
-          <div className="box-contents-sub-total">Box Subtotal: $33.00</div>
+          <div className="box-contents-sub-total">
+            Box Subtotal: Rs. {this.props.subTotal}
+          </div>
           <div
             className="complete-box-button"
             onClick={() => this.props.setCurrentStep(2)}

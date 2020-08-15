@@ -24,8 +24,13 @@
         text-align: right;
       }
       .box-item-remove {
-        flex: 1;
+        flex: 2;
         text-align: center;
+        .remove-item-button {
+          background-color: white;
+          border: none;
+          cursor: pointer;
+        }
       }
     }
   }

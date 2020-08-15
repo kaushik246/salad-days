@@ -14,17 +14,25 @@ export class CartItem extends Component {
               <div className="item-title">BUILD A FOXBOX</div>
               <div className="item-title-subtext">Original Creme/Small</div>
             </div>
-            <div className="item-message">Card Message: Leave on Outside</div>
-            <div className="item-card">Card: Happy Birthday</div>
+
+            <div className="item-card">
+              <b>Card: </b>Card: Happy Birthday
+            </div>
             <div className="item-contents">
-              Gift Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
-              Corkscrew, Gift Box Contents: 1 x Gold Corkscrew, Gift Box
-              Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
+              <b>Gift Box Contents: </b> 1 x Gold Corkscrew, Gift Box Contents:
+              1 x Gold Corkscrew, Gift Box Contents: 1 x Gold Corkscrew, Gift
+              Box Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
               Corkscrew, Gift Box Contents: 1 x Gold Corkscrew, Gift Box
               Contents: 1 x Gold Corkscrew, Gift Box Contents: 1 x Gold
               Corkscrew
             </div>
-            <div className="item-remove">Remove</div>
+            <div
+              className="item-remove"
+              type="button"
+              onClick={() => console.log('Hello')}
+            >
+              Remove
+            </div>
           </div>
         </div>
         <div className="cart-item-price">100</div>

@@ -10,6 +10,7 @@ import {
 const defaultState = {
   cartItems: [
     {
+      quantity: 1,
       type: 'BUILD A BOX',
       image:
         'https://cdn.shopify.com/s/files/1/0558/2845/products/7A1A3039_Cropped_1_87da068e-12a0-42f7-801b-87115ccbc63c.jpg?v=1542406753',

@@ -19,23 +19,27 @@
       flex: 2;
       .item-title-container {
         .item-title {
-          font-size: 15px;
+          font-size: 20px;
           text-transform: uppercase;
+          padding-bottom: 5px;
         }
         .item-title-subtext {
-          font-size: 13px;
+          font-size: 12px;
+          font-weight: 300;
+          padding-bottom: 20px;
         }
       }
-      .item-message {
-      }
       .item-card {
+        font-weight: 200;
       }
       .item-contents {
+        font-weight: 200;
       }
       .item-remove {
-        font-size: 13px;
+        font-size: 9px;
         text-transform: uppercase;
         color: grey;
+        cursor: pointer;
       }
     }
   }

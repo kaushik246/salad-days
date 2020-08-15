@@ -26,10 +26,12 @@ class Items extends Component {
           description="We’ve hand-selected the best products in one place. Select from the items below and fill up your box!"
         />
         <SelectedItems
+          selectedBox={this.props.items.selectedBox}
           selectedProducts={this.props.items.selectedProducts}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
           setCurrentStep={this.props.setCurrentStep}
+          subTotal={this.props.items.subTotal}
         />
         <hr />
         <ItemsList

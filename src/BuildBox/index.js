@@ -8,13 +8,13 @@ import Card from './Card'
 import Done from './Done'
 import { setCurrentStep } from './../Stepper/actions'
 
-
 const mapStateToProps = (state) => {
   return {
     user: state.app.user,
     items: state.items,
     card: state.card,
-    cart: state.cart,    stepper: state.stepper
+    cart: state.cart,
+    stepper: state.stepper
   }
 }
 
