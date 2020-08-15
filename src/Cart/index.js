@@ -1,16 +1,23 @@
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './styles.scss'
 
 import CartHeader from './CartHeader'
 import CartItem from './CartItem'
+
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart,
+    }
+}
 
 export class Cart extends Component {
     render() {
         return (
             <div className="cart-main-container">
                 <CartHeader/>
-                {true && this.props.cart.cartItems.map((item) => (
+                {this.props.cart.cartItems.map((item) => (
                     <CartItem
                         item={item}
                     />
@@ -31,4 +38,4 @@ export class Cart extends Component {
     }
 }
 
-export default Cart
+export default connect(mapStateToProps, {  })(Cart);

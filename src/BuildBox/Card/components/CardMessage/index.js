@@ -69,7 +69,7 @@ class CardMessage extends Component {
                   BOXFOX for you to write yourself!
                 </span>
               </div>
-              <div class="card-msg-completed add-to-cart">Add to Cart</div>
+              <div className="card-msg-completed add-to-cart" onClick={() => this.props.setCurrentStep(3)}>Add to Cart</div>
             </div>
           </div>
         </div>

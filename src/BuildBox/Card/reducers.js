@@ -2,7 +2,8 @@ import {
   CARD_REQUEST_PRODUCT_LIST,
   CARD_RECEIVE_PRODUCT_LIST,
   CARD_ADD_TO_BOX,
-  UPDATE_CARD_IN_BOX
+  UPDATE_CARD_IN_BOX,
+  UPDATE_MESSAGE_FIELDS
 } from './actions'
 
 const defaultState = {
@@ -25,6 +26,9 @@ const defaultState = {
   selectedCard: null,
   dataIsFetching: false,
   changeCard: false,
+  to: '',
+  from: '',
+  message: ''
 }
 
 const card = (state = defaultState, action) => {
@@ -52,6 +56,9 @@ const card = (state = defaultState, action) => {
         ...state,
         changeCard: true
       }
+    case UPDATE_MESSAGE_FIELDS:
+      state[action.fieldType] = action.fieldValue;
+      return state
     default:
       return state
   }

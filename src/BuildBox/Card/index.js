@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import CardList from './components/CardList'
 import CardMessage from './components/CardMessage'
 import Header from '../generic/Header'
-import { fetchCardList, addToBox, updateCardInBox } from './actions'
+import { fetchCardList, addToBox, updateCardInBox, updateMessageFields } from './actions'
+import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
 
@@ -36,6 +37,11 @@ class Card extends Component {
             cardList={this.props.card.cardsList}
             updateCardInBox={this.props.updateCardInBox}
             selectedCard={this.props.card.selectedCard}
+            updateMessageFields={this.props.updateMessageFields}
+            to={this.props.card.to}
+            from={this.props.card.from}
+            message={this.props.card.message}
+            setCurrentStep={this.props.setCurrentStep}
           />
         )}
       </div>
@@ -48,6 +54,8 @@ export default connect(
   {
     fetchCardList,
     addToBox,
-    updateCardInBox
+    updateCardInBox,
+    updateMessageFields,
+    setCurrentStep
   }
 )(Card)
