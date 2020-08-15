@@ -58,7 +58,7 @@ const card = (state = defaultState, action) => {
         changeCard: true
       }
     case UPDATE_MESSAGE_FIELDS:
-      state[action.fieldType] = action.fieldValue;
+      state[action.fieldType] = action.fieldValue
       return state
     default:
       return state

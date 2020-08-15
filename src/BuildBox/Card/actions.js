@@ -52,7 +52,7 @@ export const addToBox = (card) => {
 
 export const updateCardInBox = () => {
   return {
-    type: UPDATE_CARD_IN_BOX,
+    type: UPDATE_CARD_IN_BOX
   }
 }
 

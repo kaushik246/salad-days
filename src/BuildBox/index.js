@@ -6,7 +6,7 @@ import Items from './Items'
 import Packaging from './Packaging'
 import Card from './Card'
 import Done from './Done'
-import { setCurrentStep } from './../Stepper/actions';
+import { setCurrentStep } from './../Stepper/actions'
 
 
 const mapStateToProps = (state) => {
@@ -14,8 +14,7 @@ const mapStateToProps = (state) => {
     user: state.app.user,
     items: state.items,
     card: state.card,
-    cart: state.cart,
-    stepper: state.stepper,
+    cart: state.cart,    stepper: state.stepper
   }
 }
 
@@ -57,4 +56,7 @@ export class BuildBox extends Component {
   }
 }
 
-export default connect(mapStateToProps, { setCurrentStep }) (BuildBox);
+export default connect(
+  mapStateToProps,
+  { setCurrentStep }
+)(BuildBox)

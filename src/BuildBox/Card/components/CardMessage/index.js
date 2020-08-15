@@ -15,7 +15,12 @@ class CardMessage extends Component {
                 src={this.props.selectedCard.image}
               />
             </div>
-            <div className="change-card-button" onClick={() => this.props.updateCardInBox()}>(Change Card)</div>
+            <div
+              className="change-card-button"
+              onClick={() => this.props.updateCardInBox()}
+            >
+              (Change Card)
+            </div>
           </div>
           <div className="card-msg-data">
             <div className="card-msg-to-from">
@@ -69,7 +74,12 @@ class CardMessage extends Component {
                   BOXFOX for you to write yourself!
                 </span>
               </div>
-              <div className="card-msg-completed add-to-cart" onClick={() => this.props.setCurrentStep(3)}>Add to Cart</div>
+              <div
+                className="card-msg-completed add-to-cart"
+                onClick={() => this.props.setCurrentStep(3)}
+              >
+                Add to Cart
+              </div>
             </div>
           </div>
         </div>

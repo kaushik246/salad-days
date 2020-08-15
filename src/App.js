@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 import BuildBox from './BuildBox'
-import Stepper from './Stepper';
-import Cart from './Cart';
-import { setCurrentStep } from './Stepper/actions';
+import Stepper from './Stepper'
+import Cart from './Cart'
+import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
 
 export class App extends Component {
@@ -25,10 +25,13 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.app.user,
+    user: state.app.user
   }
 }
 
 export default withRouter(
-  connect(mapStateToProps, { setCurrentStep })(App)
-);
+  connect(
+    mapStateToProps,
+    { setCurrentStep }
+  )(App)
+)
