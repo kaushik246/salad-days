@@ -34,7 +34,10 @@ class BoxContents extends Component {
             Current Packaging | Regular
           </div>
           <div className="box-contents-sub-total">Box Subtotal: $33.00</div>
-          <div className="complete-box-button" onClick={() => this.props.setCurrentStep(2)}>
+          <div
+            className="complete-box-button"
+            onClick={() => this.props.setCurrentStep(2)}
+          >
             <p className="complete-box-button-text">COMPLETE BOX</p>
           </div>
         </div>
