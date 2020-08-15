@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <div className="step-component-header">
         <div className="step-component-title primary--title">
-          STEP {this.props.step} OF 3
+          STEP {this.props.step} OF 4
         </div>
         <div className="step-component-title secondary--title">
           {this.props.secondaryTitle}

@@ -76,7 +76,7 @@ class CardMessage extends Component {
               </div>
               <div
                 className="card-msg-completed add-to-cart"
-                onClick={() => this.props.addBoxToCart()}
+                onClick={() => this.props.setCurrentStep(3)}
               >
                 Add to Cart
               </div>
