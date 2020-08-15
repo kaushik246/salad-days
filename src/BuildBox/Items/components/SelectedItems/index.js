@@ -3,6 +3,7 @@ import './styles.scss'
 
 import SelectedImages from './components/SelectedImages'
 import BoxContents from './components/BoxContents'
+import './responsive.css'
 
 class SelectedItems extends Component {
   render() {

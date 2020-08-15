@@ -4,6 +4,7 @@ import Header from '../generic/Header'
 import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
+import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {}

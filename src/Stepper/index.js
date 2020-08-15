@@ -2,14 +2,10 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 
 import Step from './Step'
+import './styles.scss'
+import './responsive.css'
 
 const styles = {
-  root: {
-    width: '1180px',
-    minHeight: 0,
-    padding: 0,
-    margin: '0px auto'
-  },
   stepper: {
     display: 'table',
     width: '100%',
@@ -52,8 +48,8 @@ function Stepper({
   defaultBorderWidth
 }) {
   return (
-    <div style={styles.root}>
-      <div style={styles.stepper}>
+    <div className="stepper-component-wrapper">
+      <div className="stepper-component-container" style={styles.stepper}>
         {steps.map((step, index) => (
           <Step
             key={index}

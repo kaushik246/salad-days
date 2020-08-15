@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
+import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {}

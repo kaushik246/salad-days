@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './styles.scss'
+import './responsive.css'
 
 export class CartHeader extends Component {
   render() {
