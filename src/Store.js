@@ -7,13 +7,15 @@ import items from './BuildBox/Items/reducers'
 import card from './BuildBox/Card/reducers'
 import cart from './Cart/reducers'
 import stepper from './Stepper/reducers'
+import shop from './Shop/reducers'
 
 const appReducers = {
   app,
   items,
   card,
   cart,
-  stepper
+  stepper,
+  shop
 }
 
 const rootReducer = combineReducers({

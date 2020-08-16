@@ -1,0 +1,12 @@
+.shop-main-container {
+  max-width: 1180px;
+  margin: 0px auto;
+  .shop-header-container {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  .shop-items-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

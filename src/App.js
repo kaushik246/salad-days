@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 import BuildBox from './BuildBox'
-import Stepper from './Stepper'
+import Shop from './Shop'
 import Cart from './Cart'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
@@ -17,6 +17,8 @@ export class App extends Component {
           <Route exact path="/buildBox" component={BuildBox} />
           {/*Cart*/}
           <Route exact path="/cart" component={Cart} />
+          {/*Shop*/}
+          <Route exact path="/shop" component={Shop} />
         </Switch>
       </Fragment>
     )
