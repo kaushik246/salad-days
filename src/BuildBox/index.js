@@ -44,12 +44,12 @@ export class BuildBox extends Component {
         )}
         {this.props.stepper.currentStep === 2 && (
           <div className="build-box-card">
-            <Card card={this.props.card} />
+            <Card card={this.props.card} items={this.props.items} />
           </div>
         )}
         {this.props.stepper.currentStep === 3 && (
           <div className="build-box-card">
-            <Done />
+            <Done history={this.props.history} />
           </div>
         )}
       </div>

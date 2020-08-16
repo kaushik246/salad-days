@@ -2,12 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Header from '../generic/Header'
 import { setCurrentStep } from './../../Stepper/actions'
+import { clearItems } from './../Items/actions'
+import { clearCard } from './../Card/actions'
 
 import './styles.scss'
 import './responsive.css'
 
 const mapStateToProps = (state) => {
-  return {}
+  return {
+    card: state.card,
+    items: state.items
+  }
 }
 
 class Done extends Component {
@@ -21,10 +26,19 @@ class Done extends Component {
           description="Please wait a moment while we prepare your custom gift box!"
         />
         <div className="cart-new-box-buttons">
-          <p className="cart-button">VIEW CART</p>
+          <p
+            className="cart-button"
+            onClick={() => this.props.history.push('/cart')}
+          >
+            VIEW CART
+          </p>
           <p
             className="new-box-button"
-            onClick={() => this.props.setCurrentStep(0)}
+            onClick={() => {
+              this.props.clearCard()
+              this.props.clearItems()
+              this.props.setCurrentStep(0)
+            }}
           >
             BUILD ANOTHER BOX
           </p>
@@ -37,6 +51,8 @@ class Done extends Component {
 export default connect(
   mapStateToProps,
   {
-    setCurrentStep
+    setCurrentStep,
+    clearCard,
+    clearItems
   }
 )(Done)

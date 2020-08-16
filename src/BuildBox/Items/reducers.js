@@ -2,7 +2,8 @@ import {
   ITEMS_REQUEST_PRODUCT_LIST,
   ITEMS_RECEIVE_PRODUCT_LIST,
   ITEMS_ADD_TO_BOX,
-  ITEMS_REMOVE_FROM_BOX
+  ITEMS_REMOVE_FROM_BOX,
+  ITEMS_CLEAR_FROM_BOX
 } from './actions'
 
 const defaultState = {
@@ -122,7 +123,27 @@ const items = (state = defaultState, action) => {
         }
       }
     case ITEMS_REMOVE_FROM_BOX:
-      return state
+      let afterDecreasingCount = state.selectedProducts
+      if (state.selectedProducts.hasOwnProperty(action.product.title)) {
+        afterDecreasingCount[action.product.title]['count'] -= 1
+        if (afterDecreasingCount[action.product.title]['count'] === 0) {
+          delete afterDecreasingCount[action.product.title]
+        }
+      }
+      return {
+        ...state,
+        selectedItemsCount: state.selectedItemsCount - 1,
+        selectedProducts: afterDecreasingCount,
+        subTotal: state.subTotal - action.product.price
+      }
+    case ITEMS_CLEAR_FROM_BOX:
+      return {
+        ...state,
+        selectedBox: null,
+        selectedProducts: {},
+        subTotal: 0,
+        selectedItemsCount: 0
+      }
     default:
       return state
   }

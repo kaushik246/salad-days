@@ -4,6 +4,29 @@ import './styles.scss'
 import './responsive.css'
 
 class CardMessage extends Component {
+  addToCartHandler = (
+    selectedProducts,
+    to,
+    from,
+    message,
+    selectedCard,
+    selectedBox
+  ) => {
+    this.props.addBoxToCart({
+      quantity: 1,
+      type: 'BUILD A BOX',
+      card: selectedCard.title,
+      selectedProducts: Object.values(selectedProducts),
+      cardData: {
+        to: to,
+        from: from,
+        message: message,
+        selectedCard: selectedCard
+      },
+      selectedBox: selectedBox
+    })
+  }
+
   render() {
     var remainingCharacters = 120
     return (
@@ -77,7 +100,17 @@ class CardMessage extends Component {
               </div>
               <div
                 className="card-msg-completed add-to-cart"
-                onClick={() => this.props.setCurrentStep(3)}
+                onClick={() => {
+                  this.addToCartHandler(
+                    this.props.selectedProducts,
+                    this.props.to,
+                    this.props.from,
+                    this.props.message,
+                    this.props.selectedCard,
+                    this.props.selectedBox
+                  )
+                  this.props.setCurrentStep(3)
+                }}
               >
                 Add to Cart
               </div>
