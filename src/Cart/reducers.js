@@ -21,9 +21,10 @@ const defaultState = {
       items: [
         {
           name: 'Product 1',
-          quantity: 1
+          count: 1
         }
-      ]
+      ],
+      price: 100
     }
   ],
   cartPrice: 100,
