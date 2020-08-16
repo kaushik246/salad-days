@@ -49,6 +49,8 @@ class Card extends Component {
             message={this.props.card.message}
             setCurrentStep={this.props.setCurrentStep}
             addBoxToCart={this.props.addBoxToCart}
+            selectedProducts={this.props.items.selectedProducts}
+            selectedBox={this.props.items.selectedBox}
           />
         )}
       </div>

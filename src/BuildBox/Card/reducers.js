@@ -3,7 +3,8 @@ import {
   CARD_RECEIVE_PRODUCT_LIST,
   CARD_ADD_TO_BOX,
   UPDATE_CARD_IN_BOX,
-  UPDATE_MESSAGE_FIELDS
+  UPDATE_MESSAGE_FIELDS,
+  CARD_CLEAR_FROM_BOX
 } from './actions'
 
 const defaultState = {
@@ -60,6 +61,14 @@ const card = (state = defaultState, action) => {
     case UPDATE_MESSAGE_FIELDS:
       state[action.fieldType] = action.fieldValue
       return state
+    case CARD_CLEAR_FROM_BOX:
+      return {
+        ...state,
+        selectedCard: null,
+        to: '',
+        from: '',
+        message: ''
+      }
     default:
       return state
   }

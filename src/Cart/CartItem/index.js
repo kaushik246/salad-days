@@ -17,7 +17,7 @@ export class CartItem extends Component {
             </div>
 
             <div className="item-card">
-              <b>Card: </b>Card: Happy Birthday
+              <b>Card: </b> Happy Birthday
             </div>
             <div className="item-contents">
               <b>Gift Box Contents: </b> 1 x Gold Corkscrew, Gift Box Contents:
