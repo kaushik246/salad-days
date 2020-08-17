@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 
+import BoxInfo from './BoxInfo'
+import BoxAttributes from './BoxAttributes'
+
 class BoxDetail extends Component {
   componentDidMount() {
     //this.props.fetchShopItems()
@@ -16,6 +19,8 @@ class BoxDetail extends Component {
           </div>
           <div className="box-detail-info">
             <div className="box-name">CABANA</div>
+              <BoxInfo/>
+              <BoxAttributes/>
           </div>
         </div>
       </div>
