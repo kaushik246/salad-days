@@ -12,6 +12,9 @@ class CardMessage extends Component {
     selectedCard,
     selectedBox
   ) => {
+    to = document.querySelector("#card-msg-to-input").value;
+    from = document.querySelector("#card-msg-from-input").value;
+    message = document.querySelector("#card-msg-content").value;
     this.props.addBoxToCart({
       quantity: 1,
       type: 'BUILD A BOX',
@@ -53,7 +56,7 @@ class CardMessage extends Component {
                   To
                 </div>
                 <input
-                  id="card-msg-from-input"
+                  id="card-msg-to-input"
                   className="card-msg-input"
                   type="text"
                   placeholder="To"
@@ -64,7 +67,7 @@ class CardMessage extends Component {
                   From
                 </div>
                 <input
-                  id="card-msg-to-input"
+                  id="card-msg-from-input"
                   className="card-msg-input"
                   type="text"
                   placeholder="From"
