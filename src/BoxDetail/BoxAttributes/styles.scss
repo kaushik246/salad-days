@@ -1,0 +1,39 @@
+.box-attributes-main-container {
+  .quantity-field-container {
+    text-align: center;
+    padding-bottom: 10px;
+    .quantity-title {
+      font-size: 12px
+    }
+  }
+  .pick-card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px dashed #ddd;
+    cursor: pointer;
+    .pick-card-title {
+      font-size: 13px;
+    }
+  }
+  .cart-button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+
+
+    .cart-button-title {
+      font-size: 13px;
+    }
+  }
+}
+
+.pick-card-container :hover {
+  background-color: #5fc3ca;  
+}

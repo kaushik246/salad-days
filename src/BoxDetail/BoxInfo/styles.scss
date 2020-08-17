@@ -1,0 +1,26 @@
+.box-info-main-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .description-button-container {
+    text-align: center;
+    font-size: 12px;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    .description-content {
+      padding-top: 10px;
+      max-height: 200px;
+      padding-bottom: 10px;
+    }
+  }
+  .includes-button-container {
+    text-align: center;
+    font-size: 12px;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    .includes-content {
+      padding-top: 10px;
+      max-height: 200px;
+      padding-bottom: 10px;
+    }
+  }
+}
