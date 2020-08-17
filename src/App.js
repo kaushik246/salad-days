@@ -4,6 +4,7 @@ import './styles.scss'
 import BuildBox from './BuildBox'
 import Shop from './Shop'
 import Cart from './Cart'
+import BoxDetail from './BoxDetail'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
 
@@ -15,6 +16,8 @@ export class App extends Component {
           {/*Build A Box*/}
           <Route exact path="/" component={BuildBox} />
           <Route exact path="/buildBox" component={BuildBox} />
+          {/*Box Detail */}
+          <Route exact path="/product" component={BoxDetail} />
           {/*Cart*/}
           <Route exact path="/cart" component={Cart} />
           {/*Shop*/}

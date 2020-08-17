@@ -6,7 +6,7 @@ import { fetchShopItems } from './actions'
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.shop
+    shop: state.shop
   }
 }
 
@@ -19,20 +19,14 @@ export class Shop extends Component {
       <div className="shop-main-container">
         <div className="shop-header-container">Products</div>
         <div className="shop-items-container">
-          {
+          {this.props.shop.shopItems.map((item) => (
             <ShopItem
-              quantity={1}
-              image="https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651"
-              price={100}
-              title="Shop Item 1"
+              quantity={item.quantity}
+              image={item.image}
+              price={item.price}
+              title={item.title}
             />
-          }
-          <ShopItem
-            quantity={0}
-            image="https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651"
-            price={110}
-            title="Shop Item 2"
-          />
+          ))}
         </div>
       </div>
     )

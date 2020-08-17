@@ -26,7 +26,8 @@ class CardMessage extends Component {
         message: message,
         selectedCard: selectedCard
       },
-      selectedBox: selectedBox
+      selectedBox: selectedBox,
+      price: 0
     })
   }
 
