@@ -6,6 +6,12 @@ export const CART_CHECKOUT = 'CART_CHECKOUT'
 export const CART_UPDATE_SUBTOTAL = 'CART_UPDATE_SUBTOTAL'
 
 export const addBoxToCart = (box) => {
+  var cartInJson = JSON.stringify(box);
+  localStorage.setItem('cartValue', cartInJson);
+  /* ---------------------------
+  To get item from localStorage. Use following command
+  var getItem = localStorage.getItem('cartValue');
+  */
   return {
     type: CART_ADD_BOX,
     box
