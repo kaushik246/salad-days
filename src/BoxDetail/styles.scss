@@ -8,10 +8,12 @@
     display: flex;
     .box-detail-slider {
       flex: 2;
+      padding-left: 30px;
     }
     .box-detail-info {
       flex: 1;
       text-align: center;
+      padding-left: 30px;
     }
   }
 }

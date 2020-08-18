@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 
+import ImageSlider from './ImageSlider'
 import BoxInfo from './BoxInfo'
 import BoxAttributes from './BoxAttributes'
 
@@ -15,7 +16,7 @@ class BoxDetail extends Component {
         <div className="box-detail-header-container">Home</div>
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
-
+            <ImageSlider/>
           </div>
           <div className="box-detail-info">
             <div className="box-name">CABANA</div>
