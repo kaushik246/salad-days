@@ -1,7 +1,4 @@
 .giftbox-progress-bar {
-  max-width: 1180px;
-  margin: 0 auto;
-  position: relative;
   .wrapper {
     width: 25%;
     .bar {
@@ -11,8 +8,9 @@
 }
 
 .stepper-component-wrapper {
-  width: '1180px';
+  max-width: 1180px;
   min-height: 0;
   padding: 0;
-  margin: '0px auto';
+  margin: 0px auto;
+  font-size: 14px;
 }

@@ -29,12 +29,13 @@
   }
   .selected-items-data {
     display: flex;
+    min-height: 300px;
     .selected-items-images {
       width: 60%;
-      min-height: 100px;
       border: solid 0.2px #eaeaea;
     }
     .selected-items-contents {
+      font-size: 12px;
       width: 40%;
       border: solid 0.2px #eaeaea;
     }
