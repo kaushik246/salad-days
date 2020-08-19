@@ -14,6 +14,11 @@
   src: local('BrandonGrotesque Regular'), url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'JaneAustine';
+  src: local('JaneAustine'), url('./fonts/JaneAust.ttf') format('truetype');
+}
+
 body {
   font-family: 'BrandonGrotesque-Regular';
 }
