@@ -22,7 +22,9 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-
+    .product-container {
+        margin: auto;
+    }
 }
 
 /* #Mobile (Landscape)

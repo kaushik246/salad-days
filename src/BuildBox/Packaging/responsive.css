@@ -22,7 +22,28 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-
+  .build-a-box-step-1-component .step-1-box-selection-wrapper {
+    display: block;
+  }
+  .build-a-box-step-1-component
+    .step-1-box-selection-wrapper
+    .selected-box-image {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+  }
+  .build-a-box-step-1-component
+    .step-1-box-selection-wrapper
+    .selected-box-name {
+    width: 320px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .build-a-box-step-1-component
+    .step-1-box-selection-wrapper
+    .selected-box-container {
+    margin-bottom: 20px;
+  }
 }
 
 /* #Mobile (Landscape)
