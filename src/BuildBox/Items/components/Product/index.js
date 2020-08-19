@@ -20,7 +20,8 @@ class Product extends Component {
               <a
                 href="#"
                 className="text"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault()
                   this.props.addToBox(this.props.product)
                 }}
               >
@@ -38,7 +39,8 @@ class Product extends Component {
               <a
                 className="decrease"
                 href="#"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault()
                   this.props.removeFromBox(this.props.product)
                 }}
               >
@@ -50,7 +52,8 @@ class Product extends Component {
               <a
                 className="increase"
                 href="#"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault()
                   this.props.addToBox(this.props.product)
                 }}
               >

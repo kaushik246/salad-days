@@ -8,3 +8,12 @@
 .main-title {
   padding-bottom: 10px;
 }
+
+@font-face {
+  font-family: 'BrandonGrotesque Regular';
+  src: local('BrandonGrotesque Regular'), url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'BrandonGrotesque-Regular';
+}

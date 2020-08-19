@@ -9,44 +9,95 @@ import {
 const defaultState = {
   productList: [
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
-      price: 1000,
-      discountPrice: 800,
-      quantity: 9,
-      title: 'Product 2'
-    },
-    {
-      image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
-      price: 5000,
-      discountPrice: 4000,
-      quantity: 6,
-      title: 'Product 3'
-    },
-    {
-      image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
-      price: 4000,
-      discountPrice: 2500,
-      quantity: 11,
-      title: 'Product 4'
-    },
-    {
-      image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_10_1024x1024@2x.jpg?v=1597864271',
       price: 2000,
       discountPrice: 1500,
       quantity: 2,
-      title: 'Product 5'
+      title: 'Tin Can 10'
     },
     {
-      image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Product_1_1024x1024@2x.jpg?v=1597324651',
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_9_1024x1024@2x.jpg?v=1597864271',
       price: 2000,
       discountPrice: 1500,
       quantity: 7,
-      title: 'Product 6'
+      title: 'Tin Can 9'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_8_1024x1024@2x.jpg?v=1597864272',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 8'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_7_1024x1024@2x.jpg?v=1597864272',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 7'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_6_1024x1024@2x.jpg?v=1597864272',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 6'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_5_1024x1024@2x.jpg?v=1597864271',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 5'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_4_1024x1024@2x.jpg?v=1597864271',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 4'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_3_1024x1024@2x.jpg?v=1597864272',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 3'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_2_1024x1024@2x.jpg?v=1597864272',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 2'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Tin_Can_1_1024x1024@2x.jpg?v=1597864271',
+      price: 2000,
+      discountPrice: 1500,
+      quantity: 7,
+      title: 'Tin Can 1'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Sanitizer_Bottle_1024x1024@2x.jpg?v=1597864271',
+      price: 1000,
+      discountPrice: 800,
+      quantity: 9,
+      title: 'Sanitizer Bottle'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Mug_1024x1024@2x.jpg?v=1597864271',
+      price: 5000,
+      discountPrice: 4000,
+      quantity: 6,
+      title: 'Mugs'
+    },
+    {
+      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/Chopping_Board_1024x1024@2x.jpg?v=1597864273',
+      price: 4000,
+      discountPrice: 2500,
+      quantity: 11,
+      title: 'Chopping Board'
     }
   ],
   boxesList: [
