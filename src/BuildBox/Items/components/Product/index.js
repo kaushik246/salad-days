@@ -36,29 +36,31 @@ class Product extends Component {
             </div>
           ) : (
             <div className="button product-exists">
-              <a
-                className="decrease"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault()
-                  this.props.removeFromBox(this.props.product)
-                }}
-              >
-                -
-              </a>
-              <a className="main" href="#">
-                {this.props.selectedQuantity} IN BOX
-              </a>
-              <a
-                className="increase"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault()
-                  this.props.addToBox(this.props.product)
-                }}
-              >
-                +
-              </a>
+              <div className="product-listing">
+                <a
+                  className="decrease"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    this.props.removeFromBox(this.props.product)
+                  }}
+                >
+                  -
+                </a>
+                <a className="main" href="#">
+                  {this.props.selectedQuantity} IN BOX
+                </a>
+                <a
+                  className="increase"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    this.props.addToBox(this.props.product)
+                  }}
+                >
+                  +
+                </a>
+              </div>
             </div>
           )}
         </div>
