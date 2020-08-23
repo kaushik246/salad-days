@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
+import BoxMessage from '../BoxMessage'
 
 const BoxAttributes = () => {
   const [quantity, setQuantity] = useState(1)
