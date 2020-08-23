@@ -16,12 +16,12 @@ class BoxDetail extends Component {
         <div className="box-detail-header-container">Home</div>
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
-            <ImageSlider/>
+            <ImageSlider />
           </div>
           <div className="box-detail-info">
             <div className="box-name">CABANA</div>
-              <BoxInfo/>
-              <BoxAttributes/>
+            <BoxInfo />
+            <BoxAttributes />
           </div>
         </div>
       </div>
