@@ -4,19 +4,21 @@
   .description-button-container {
     text-align: center;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border-bottom-color: black;
     border-bottom-width: 1px;
     letter-spacing: 1px;
     .description-content {
       padding-top: 10px;
       max-height: 200px;
-      padding-bottom: 10px;
+      font-size: 13px;
+      font-weight: 400px;
     }
   }
   .includes-button-container {
     text-align: center;
     font-size: 12px;
+    margin-bottom: 30px;
     border-bottom-color: black;
     border-bottom-width: 1px;
     letter-spacing: 1px;
@@ -24,7 +26,8 @@
     .includes-content {
       padding-top: 10px;
       max-height: 200px;
-      padding-bottom: 10px;
+      font-size: 13px;
+      font-weight: 400px;
     }
   }
 }
