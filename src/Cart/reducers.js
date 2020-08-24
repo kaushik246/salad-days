@@ -9,7 +9,7 @@ import {
 
 const defaultState = {
   cartItems: [],
-  cartPrice: 100,
+  cartPrice: 0,
   dataIsFetching: false
 }
 
@@ -28,7 +28,8 @@ const cart = (state = defaultState, action) => {
     case CART_ADD_BOX:
       return {
         ...state,
-        cartItems: [...state.cartItems, action.box]
+        cartItems: [...state.cartItems, action.box],
+        cartPrice: state.cartPrice + (action.quantity*action.price)
       }
     case CART_REMOVE_BOX:
       return {
@@ -43,7 +44,7 @@ const cart = (state = defaultState, action) => {
     case CART_UPDATE_SUBTOTAL:
       return {
         ...state,
-        cartPrice: 100
+        cartPrice: action.cartPrice
       }
     default:
       return state

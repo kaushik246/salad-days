@@ -8,18 +8,18 @@ export class CartItem extends Component {
     console.log(items)
     let itemsString = ' '
     items.map((item) => {
-      itemsString += `${item.count} x ${item.title},`
+      if (item.count === 0) itemsString = `${item.title},`
+      else itemsString += ` ${item.count} x ${item.title},`
     })
     return itemsString
   }
 
   render() {
-    console.log(this.props.item)
     return (
       <div className="cart-item-container">
         <div className="cart-item-image-contents">
           <div className="item-image">
-            <img className="box-item-image" src={this.props.item.image} />
+            <img className="box-item-image" src={this.props.item.selectedBoxImage} />
           </div>
           <div className="cart-item-contents">
             <div className="item-title-container">
@@ -44,7 +44,7 @@ export class CartItem extends Component {
         </div>
       <div className="cart-item-price">{this.props.item.price}</div>
         <div className="cart-item-quantity">{this.props.item.quantity}</div>
-        <div className="cart-item-subtotal">{this.props.item.subTotal}</div>
+        <div className="cart-item-subtotal">{this.props.item.price * this.props.item.quantity}</div>
       </div>
     )
   }

@@ -11,18 +11,43 @@ const defaultState = {
   cardsList: [
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_3_1024x1024@2x.jpg?v=1597324651',
-      title: 'Card 1'
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_1_1024x1024@2x.jpg?v=1598077368',
+      title: 'You are Awesome'
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_2_1024x1024@2x.jpg?v=1597324651',
-      title: 'Card 2'
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_2_1024x1024@2x.jpg?v=1598077367',
+      title: 'Make a Wish'
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0450/1913/6168/products/Card_1_1024x1024@2x.jpg?v=1597324651',
-      title: 'Card 3'
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_3_1024x1024@2x.jpg?v=1598077368',
+      title: 'Love You'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_4_1024x1024@2x.jpg?v=1598077368',
+      title: 'Happy Birthday'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_5_1024x1024@2x.jpg?v=1598077368',
+      title: 'Love You'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_6_1024x1024@2x.jpg?v=1598077369',
+      title: 'Blank Card'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_6_1024x1024@2x.jpg?v=1598077369',
+      title: 'Happy Anniversary'
+    },
+    {
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/cardmorckup_6_1024x1024@2x.jpg?v=1598077369',
+      title: 'Happy Anniversary'
     }
   ],
   selectedCard: null,

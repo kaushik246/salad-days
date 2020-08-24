@@ -1,7 +1,7 @@
 .container {
   position: relative;
-  width: 225px;
-  height: 225px;
+  width: 257px;
+  height: 257px;
   cursor: pointer;
 }
 
@@ -20,31 +20,22 @@
 }
 
 .product-container {
-  padding: 5px;
-  padding-bottom: 30px;
+  padding-left: 30px;
+  margin-bottom: 30px;
 }
 
 img.product-image {
   position: absolute;
-  width: 225px;
-  height: 225px;
+  width: 257px;
+  height: 257px;
   left: 0;
 }
 
 .product-details {
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.button {
-  position: absolute;
-  width: 225px;
-  left: 0;
-  top: 190px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  font-size: 10px;
-}
 
 .button .text {
   padding: 12px 40px;
@@ -60,15 +51,16 @@ img.product-image {
   opacity: 1;
 }
 
-.title .brand {
-  padding-bottom: 5px;
+.title {
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 13px;
   text-align: left;
+  letter-spacing: 1px;
 }
 
 .price {
-  padding-top: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 13px;
   text-align: left;
