@@ -44,3 +44,35 @@
     }
   }
 }
+
+.selected-items-instructions{
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 10px
+}
+.selected-items-instructions:hover{
+  background-color:#5fc3ca;
+}
+
+.selected-items-instructions a:hover{
+  color: white;
+}
+.selected-items-instructions a{
+  padding: 10px;
+  text-decoration-line: none;
+  text-align: center;
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.selected-items-instructions.none{
+  display: none;
+}
+
+.selected-items-instructions-wrap{
+  padding: 15px;
+}
+

@@ -39,6 +39,16 @@ class SelectedItems extends Component {
         </div>
         <div className="selected-items-data">
           <div className="selected-items-images">
+            <div className="selected-items-instructions-wrap"> 
+            <div className={`selected-items-instructions ${
+                  this.props.selectedItemsCount > 1
+                    ? 'none'
+                    : 'show'
+                }`}>
+              <a href="#product-items-list-container">
+                Start selecting items to fill your box
+              </a>
+            </div></div>
             <SelectedImages
               selectedProducts={Object.values(this.props.selectedProducts)}
               removeFromBox={this.props.removeFromBox}
