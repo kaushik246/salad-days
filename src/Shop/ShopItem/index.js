@@ -8,7 +8,7 @@ class ShopItem extends Component {
         className="product-container"
         onClick={() => {
           if (this.props.quantity !== 0) {
-            console.log('Hello')
+            this.props.history.push('/product')
           }
         }}
       >

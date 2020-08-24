@@ -18,7 +18,7 @@ const BoxInfo = () => {
           <div className="description-title">DESCRIPTION</div>
           <hr />
           {descriptionState && (
-            <div className="description-content">
+            <div className="description-content" onClick={(e) => e.stopPropagation()}>
               Inspired by moments spent under a striped umbrella, this box gives
               her permission to chill. With a fun journal, catch-all bag, a face
               mask, candle, and a sweet treat, this is recipe for the perfect

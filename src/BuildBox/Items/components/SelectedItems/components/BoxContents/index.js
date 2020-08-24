@@ -19,7 +19,7 @@ class BoxContents extends Component {
               <div className="box-item" key={1}>
                 <div className={boxItemCountClass}>{product.count}</div>
                 <div className="box-item-name">{product.title}</div>
-                <div className="box-item-price">{product.price}</div>
+                <div className="box-item-price">Rs. {product.price}</div>
                 <div
                   className={boxItemRemoveClass}
                   onClick={() => this.props.removeFromBox(product)}

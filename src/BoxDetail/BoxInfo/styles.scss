@@ -4,8 +4,10 @@
   .description-button-container {
     text-align: center;
     font-size: 12px;
+    margin-bottom: 10px;
     border-bottom-color: black;
     border-bottom-width: 1px;
+    letter-spacing: 1px;
     .description-content {
       padding-top: 10px;
       max-height: 200px;
@@ -17,6 +19,8 @@
     font-size: 12px;
     border-bottom-color: black;
     border-bottom-width: 1px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
     .includes-content {
       padding-top: 10px;
       max-height: 200px;
