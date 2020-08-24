@@ -6,6 +6,18 @@
     flex-direction: row-reverse;
     .cart-checkout-subtotal-container {
       .cart-subtotal {
+        display: inline-flex;
+        .subtotal-text {
+          font-size: 10px;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 1px;
+          padding: 10px;
+        }
+        .subtotal-value {
+          font-size: 22px;
+          font-weight: 400;
+        }
       }
       .cart-checkout-container {
         text-transform: uppercase;

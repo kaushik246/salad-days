@@ -32,26 +32,29 @@ export class BuildBox extends Component {
           ]}
           activeStep={this.props.stepper.currentStep}
         />
-        {this.props.stepper.currentStep === 0 && (
-          <div className="build-box-packaging">
-            <Packaging items={this.props.items} />
-          </div>
-        )}
-        {this.props.stepper.currentStep === 1 && (
-          <div className="build-box-ietms">
-            <Items items={this.props.items} />
-          </div>
-        )}
-        {this.props.stepper.currentStep === 2 && (
-          <div className="build-box-card">
-            <Card card={this.props.card} items={this.props.items} />
-          </div>
-        )}
-        {this.props.stepper.currentStep === 3 && (
-          <div className="build-box-card">
-            <Done history={this.props.history} />
-          </div>
-        )}
+        <div className="build-box-main-container">
+          {this.props.stepper.currentStep === 0 && (
+            <div className="build-box-packaging">
+              <Packaging items={this.props.items} />
+            </div>
+          )}
+          {this.props.stepper.currentStep === 1 && (
+            <div className="build-box-ietms">
+              <Items items={this.props.items} />
+            </div>
+          )}
+          {this.props.stepper.currentStep === 2 && (
+            <div className="build-box-card">
+              <Card card={this.props.card} items={this.props.items} />
+            </div>
+          )}
+          {this.props.stepper.currentStep === 3 && (
+            <div className="build-box-card">
+              <Done history={this.props.history} />
+            </div>
+          )}
+        </div>
+
       </div>
     )
   }

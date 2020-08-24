@@ -5,18 +5,18 @@ import './responsive.css'
 class Product extends Component {
   render() {
     return (
-      <div className="product-container">
+      <div className="item-container">
         <div className="container">
           <img className="product-image image" src={this.props.image} />
           <div className="overlay" />
           {this.props.quantity === 0 ? (
-            <div className="button product-sold-out">
+            <div className="items-button product-sold-out">
               <a href="#" className="text">
                 OUT OF STOCK
               </a>
             </div>
           ) : this.props.selectedQuantity === 0 ? (
-            <div className="button">
+            <div className="items-button">
               <a
                 href="#"
                 className="text"
@@ -29,13 +29,13 @@ class Product extends Component {
               </a>
             </div>
           ) : this.props.quantity === this.props.selectedQuantity ? (
-            <div className="button">
+            <div className="items-button">
               <a href="#" className="text">
                 MAX LIMIT REACHED
               </a>
             </div>
           ) : (
-            <div className="button product-exists">
+            <div className="items-button product-exists">
               <div className="product-listing">
                 <a
                   className="decrease"
@@ -64,9 +64,9 @@ class Product extends Component {
             </div>
           )}
         </div>
-        <div className="product-details">
-          <div className="title">{this.props.title}</div>
-          <div className="price">${this.props.price}</div>
+        <div className="items-details">
+          <div className="items-title">{this.props.title}</div>
+          <div className="items-price">${this.props.price}</div>
         </div>
       </div>
     )

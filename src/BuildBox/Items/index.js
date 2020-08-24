@@ -33,8 +33,8 @@ class Items extends Component {
           removeFromBox={this.props.removeFromBox}
           setCurrentStep={this.props.setCurrentStep}
           subTotal={this.props.items.subTotal}
+          selectedItemsCount={this.props.items.selectedItemsCount}
         />
-        <hr />
         <ItemsList
           productList={this.props.items.productList}
           addToBox={this.props.addToBox}

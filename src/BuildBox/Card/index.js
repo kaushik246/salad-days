@@ -51,6 +51,8 @@ class Card extends Component {
             addBoxToCart={this.props.addBoxToCart}
             selectedProducts={this.props.items.selectedProducts}
             selectedBox={this.props.items.selectedBox}
+            selectedBoxImage={this.props.items.selectedBoxImage}
+            subTotal={this.props.items.subTotal}
           />
         )}
       </div>

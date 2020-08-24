@@ -10,13 +10,15 @@ class CardMessage extends Component {
     from,
     message,
     selectedCard,
-    selectedBox
+    selectedBoxImage,
+    selectedBox,
+    subTotal
   ) => {
     to = document.querySelector("#card-msg-to-input").value;
     from = document.querySelector("#card-msg-from-input").value;
     message = document.querySelector("#card-msg-content").value;
     this.props.addBoxToCart({
-      quantity: 1,
+      quantity: 2,
       type: 'BUILD A BOX',
       card: selectedCard.title,
       selectedProducts: Object.values(selectedProducts),
@@ -27,7 +29,8 @@ class CardMessage extends Component {
         selectedCard: selectedCard
       },
       selectedBox: selectedBox,
-      price: 0
+      selectedBoxImage: selectedBoxImage,
+      price: subTotal
     })
   }
 
@@ -111,7 +114,9 @@ class CardMessage extends Component {
                     this.props.from,
                     this.props.message,
                     this.props.selectedCard,
-                    this.props.selectedBox
+                    this.props.selectedBoxImage,
+                    this.props.selectedBox,
+                    this.props.subTotal
                   )
                   this.props.setCurrentStep(3)
                 }}

@@ -22,7 +22,10 @@ export class Cart extends Component {
         ))}
         <div className="cart-footer-container">
           <div className="cart-checkout-subtotal-container">
-            <div className="cart-subtotal">SUBTOTAL: 1000</div>
+            <div className="cart-subtotal">
+              <div className="subtotal-text">SUBTOTAL</div> 
+              <div className="subtotal-value">Rs. {this.props.cart.cartPrice}</div>
+            </div>
             <div className="cart-checkout-container" onClick={() => {}}>
               CHECK OUT
             </div>
