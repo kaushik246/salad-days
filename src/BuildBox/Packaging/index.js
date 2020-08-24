@@ -9,6 +9,7 @@ import './responsive.css'
 
 class Packaging extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="build-a-box-step-1-component">
         <Header
@@ -18,6 +19,12 @@ class Packaging extends Component {
         />
         <div className="step-1-box-selection-wrapper">
           {this.props.items.boxesList.map((box) => {
+            var opacity = 0
+            if (
+              this.props.items.selectedBox &&
+              this.props.items.selectedBox == box.title
+            )
+              opacity = 1
             return (
               <div
                 className="selected-box-container"
@@ -31,7 +38,21 @@ class Packaging extends Component {
                   style={{
                     background: `url(${box.image})`
                   }}
-                ></div>
+                >
+                  <div
+                    className="selected-box-border"
+                    style={{
+                      opacity: opacity
+                    }}
+                  >
+                    <div
+                      className="selected-box-checkmark"
+                      style={{
+                        opacity: opacity
+                      }}
+                    ></div>
+                  </div>
+                </div>
                 <div className="selected-box-name">{box.title}</div>
               </div>
             )
