@@ -15,6 +15,7 @@ export class Shop extends Component {
     this.props.fetchShopItems()
   }
   render() {
+    console.log(this.props.history)
     return (
       <div className="shop-main-container">
         <div className="shop-header-container">Products</div>
@@ -25,6 +26,7 @@ export class Shop extends Component {
               image={item.image}
               price={item.price}
               title={item.title}
+              history={this.props.history}
             />
           ))}
         </div>

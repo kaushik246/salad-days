@@ -29,7 +29,7 @@ const cart = (state = defaultState, action) => {
       return {
         ...state,
         cartItems: [...state.cartItems, action.box],
-        cartPrice: state.cartPrice + (action.quantity*action.price)
+        cartPrice: state.cartPrice + action.box.price
       }
     case CART_REMOVE_BOX:
       return {

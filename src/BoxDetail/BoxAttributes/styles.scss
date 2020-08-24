@@ -3,7 +3,8 @@
     text-align: center;
     padding-bottom: 10px;
     .quantity-title {
-      font-size: 12px
+      font-size: 12px;
+      letter-spacing: 1px;
     }
   }
   .pick-card-container {
@@ -16,6 +17,7 @@
     cursor: pointer;
     .pick-card-title {
       font-size: 13px;
+      font-weight: 700;
     }
   }
   .cart-button-container {
@@ -29,11 +31,13 @@
 
 
     .cart-button-title {
-      font-size: 13px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
     }
   }
 }
 
 .pick-card-container :hover {
-  background-color: #5fc3ca;  
 }

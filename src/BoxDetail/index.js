@@ -20,6 +20,7 @@ class BoxDetail extends Component {
           </div>
           <div className="box-detail-info">
             <div className="box-name">CABANA</div>
+            <div className="box-price">Rs. 1500 </div>
             <BoxInfo />
             <BoxAttributes />
           </div>
