@@ -7,7 +7,7 @@ import './responsive.css'
 class ItemsList extends Component {
   render() {
     return (
-      <div className="item-list-container">
+      <div id="product-items-list-container" className="item-list-container">
         {this.props.productList.map((product) => (
           <Product
             product={product}
