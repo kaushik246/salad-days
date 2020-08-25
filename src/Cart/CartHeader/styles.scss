@@ -3,12 +3,12 @@
   margin: 0 auto;
   position: relative;
   .cart-title {
-    margin-top: 10px;
-    font-family: 'Jane Austin';
+    margin-top: 100px;
     font-size: 30px;
   }
   .cart-column-headers {
     display: flex;
+    margin-bottom: 10px;
     .cart-column-item {
       flex: 2;
       padding: 10px;

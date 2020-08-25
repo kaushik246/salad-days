@@ -44,7 +44,7 @@ export class CartItem extends Component {
         </div>
       <div className="cart-item-price">{this.props.item.price}</div>
         <div className="cart-item-quantity">{this.props.item.quantity}</div>
-        <div className="cart-item-subtotal">{this.props.item.price * this.props.item.quantity}</div>
+        <div className="cart-item-subtotal">Rs. {this.props.item.price * this.props.item.quantity}</div>
       </div>
     )
   }

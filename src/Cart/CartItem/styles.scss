@@ -1,13 +1,15 @@
 .cart-item-container {
   display: flex;
   position: relative;
+  padding-top: 30px;
+  margin-top: 30px;
   padding-bottom: 20px;
   .cart-item-image-contents {
     flex: 2;
     display: flex;
     position: relative;
     .item-image {
-      flex: 1;
+      flex: 2;
       vertical-align: middle;
 
       .box-item-image {
@@ -17,7 +19,10 @@
       }
     }
     .cart-item-contents {
-      flex: 2;
+      flex: 3;
+      vertical-align: middle;
+      display: table-cell;
+      float: none;
       .item-title-container {
         .item-title {
           font-size: 20px;
@@ -47,13 +52,16 @@
   .cart-item-price {
     flex: 1;
     text-align: center;
+    margin: auto 0px;
   }
   .cart-item-quantity {
     flex: 1;
     text-align: center;
+    margin: auto 0px;
   }
   .cart-item-subtotal {
     flex: 1;
     text-align: center;
+    margin: auto 0px;
   }
 }
