@@ -16,7 +16,21 @@ const mapStateToProps = (state) => {
 }
 
 class Done extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.myInterval = setInterval(() => {
+      const { seconds } = this.state
+      if (seconds > 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds - 1
+        }))
+      }
+    }, 1000)
+
+  }
+
+  state = {
+    seconds: 2
+  }
   render() {
     return (
       <div className="done-selection-step">
@@ -26,6 +40,10 @@ class Done extends Component {
           description="Please wait a moment while we prepare your custom gift box!"
         />
         <div className="cart-new-box-buttons">
+          {this.state.seconds !== 0 && <img
+            className="loading-icon"
+            src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/SD_Graphic_1_1024x1024@2x.gif?v=1598351459"
+          />}
           <p
             className="cart-button"
             onClick={() => this.props.history.push('/cart')}

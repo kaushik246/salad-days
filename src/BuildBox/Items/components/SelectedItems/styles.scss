@@ -63,14 +63,15 @@
   text-align: center;
   color: inherit;
   font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .selected-items-instructions.none {
   display: none;
 }
 
-.selected-items-instructions-wrap {
-  padding: 15px;
+.selected-items-instructions-wrap{
+  padding: 20px;
 }

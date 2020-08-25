@@ -1,0 +1,36 @@
+.nav-main-container {
+  display: inline-flex;
+    height: 60px !important;
+    width: 100%;
+    background-color :#5fc3ca;
+    border-bottom: 1px solid black;
+  .salad-days-title-container {
+      width: 100px;
+  }
+  .salad-days-image-section {
+    padding-top: 20px;
+    margin-right:40px;
+    margin-left: 20px;
+    .salad-days-logo {
+      height: 20px;
+      width: 144px;
+    }
+  }
+  .salad-days-sections {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 24px ;
+    padding-bottom: 24px ;
+    .section-text {
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
