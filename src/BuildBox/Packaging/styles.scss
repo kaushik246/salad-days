@@ -52,7 +52,7 @@
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.75);
-  border: solid 2px #36c069;
+  border: solid 3px #5fc3ca;
   z-index: 100;
   -webkit-transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
@@ -72,14 +72,15 @@
   height: 40px;
   border: 5px solid;
   font-size: 36px;
-  color: #36c069;
+  color: #5fc3ca;
   transition: all 0.25s ease;
   pointer-events: none;
   z-index: 301;
   background: #fff;
   border-radius: 50%;
-  margin-top: -270px;
-  margin-left: 230px;
+  margin-top: -50%;
+  margin-left: 50%;
+  font-family: sans-serif;
 }
 
 .build-a-box-step-1-component

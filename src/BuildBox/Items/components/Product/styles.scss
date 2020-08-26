@@ -70,12 +70,7 @@
   text-align: left;
 }
 
-.container {
-  position: relative;
-  width: 257px;
-  height: 257px;
-  cursor: pointer;
-}
+
 
 .overlay {
   position: absolute;
@@ -92,14 +87,18 @@
 }
 
 .item-container {
-  padding-right: 15px;
-  padding-left: 15px;
+  .container {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    cursor: pointer;
+  }
 }
 
-img.product-image {
+img.item-image {
   position: absolute;
-  width: 257px;
-  height: 257px;
+  width: 265px;
+  height: 265px;
   left: 0;
 }
 
@@ -124,9 +123,9 @@ img.product-image {
 
 .items-button {
   position: absolute;
-  width: 256px;
+  width: 264px;
   left: 0;
-  top: 214px;
+  top: 220px;
   text-align: center;
   opacity: 0;
   transition: opacity 0.35s ease;
@@ -134,7 +133,7 @@ img.product-image {
 }
 
 .items-button .text {
-  padding: 12px 80px;
+  padding: 12px 60px;
   text-align: center;
   color: black;
   border: solid 1px black;
