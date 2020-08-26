@@ -7,7 +7,7 @@ class Product extends Component {
     return (
       <div className="item-container">
         <div className="container">
-          <img className="product-image image" src={this.props.image} />
+          <img className="item-image image" src={this.props.image} />
           <div className="overlay" />
           {this.props.quantity === 0 ? (
             <div className="items-button product-sold-out">
@@ -30,7 +30,7 @@ class Product extends Component {
             </div>
           ) : this.props.quantity === this.props.selectedQuantity ? (
             <div className="items-button">
-              <a href="#" className="text">
+              <a href="#" className="text" onClick={(e) => e.preventDefault()}>
                 MAX LIMIT REACHED
               </a>
             </div>
