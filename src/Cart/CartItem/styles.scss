@@ -65,3 +65,38 @@
     margin: auto 0px;
   }
 }
+
+.cart-item-input-wrap {
+  display: flex;
+  width: 110px;
+  align-items: center;
+  margin: auto;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.cart-item-increase-decrease {
+  width: 30%;
+    cursor: pointer;
+    height: 29px;
+    vertical-align: middle;
+    padding-top: 6px;
+}
+
+.cart-item-increase-decrease:hover {
+  background: #5fc3ca;
+  color: white;
+  color: white;
+}
+
+.cart-item-input-wrap input {
+  width: 40%;
+  border: none;
+  text-align: center;
+}
+
+.cart-item-input-wrap input:focus {
+  border: none;
+  outline: none;
+}

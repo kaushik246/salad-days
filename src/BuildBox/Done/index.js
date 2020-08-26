@@ -29,7 +29,7 @@ class Done extends Component {
   }
 
   state = {
-    seconds: 1
+    seconds: 2
   }
   render() {
     return (

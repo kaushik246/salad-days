@@ -12,9 +12,7 @@ export class Nav extends Component {
   componentDidMount() {
     //this.props.fetchShopItems()
   }
-         /* <div className="salad-days-cart-section" type="button" onClick={() => this.props.history.push('/cart')}>
-  <p className="section-text">Cart</p>
-</div>*/
+  
   render() {
     return (
       <div className="nav-main-container">
@@ -41,7 +39,6 @@ export class Nav extends Component {
             {this.props.cart.cartPrice !== 0  && <p className="section-price">(Rs. {this.props.cart.cartPrice})</p>}
           </div>
         </div>
-
       </div>
     )
   }
