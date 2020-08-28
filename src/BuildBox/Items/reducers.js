@@ -9,88 +9,124 @@ import {
 const defaultState = {
   productList: [
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
-      title: 'Sanitizer Bottle'
+      title: 'Sanitizer Bottle',
+      maxQuantityAllowed: 2,
+      weight: 1
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
-      title: 'Mugs'
+      title: 'Mugs',
+      maxQuantityAllowed: 5,
+      weight: 2
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
-      title: 'Chopping Board'
+      title: 'Chopping Board',
+      maxQuantityAllowed: 1,
+      weight: 4
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
-      title: 'Sanitizer Bottle'
+      title: 'Sanitizer Bottle 2',
+      maxQuantityAllowed: 3,
+      weight: 1
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
-      title: 'Mugs'
+      title: 'Mugs 2',
+      maxQuantityAllowed: 6,
+      weight: 2
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
-      title: 'Chopping Board'
+      title: 'Chopping Board 2',
+      maxQuantityAllowed: 1,
+      weight: 4
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
-      title: 'Sanitizer Bottle'
+      title: 'Sanitizer Bottle 3',
+      maxQuantityAllowed: 3,
+      weight: 1
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
-      title: 'Mugs'
+      title: 'Mugs 3',
+      maxQuantityAllowed: 3,
+      weight: 2
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
-      title: 'Chopping Board'
+      title: 'Chopping Board 3',
+      maxQuantityAllowed: 3,
+      weight: 4
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
       price: 1000,
       discountPrice: 800,
       quantity: 9,
-      title: 'Sanitizer Bottle'
+      title: 'Sanitizer Bottle 4',
+      maxQuantityAllowed: 3,
+      weight: 1
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
       price: 5000,
       discountPrice: 4000,
       quantity: 6,
-      title: 'Mugs'
+      title: 'Mugs 4',
+      maxQuantityAllowed: 3,
+      weight: 2
     },
     {
-      image: 'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
+      image:
+        'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/woodenchoppingboard_1024x1024@2x.jpg?v=1598077368',
       price: 4000,
       discountPrice: 2500,
       quantity: 11,
-      title: 'Chopping Board'
+      title: 'Chopping Board 4',
+      maxQuantityAllowed: 3,
+      weight: 4
     }
   ],
   boxesList: [
@@ -118,6 +154,7 @@ const defaultState = {
   selectedProducts: {},
   dataIsFetching: false,
   selectedItemsCount: 0,
+  totalVolumetricWeight: 0,
   subTotal: 0
 }
 
@@ -145,7 +182,7 @@ const items = (state = defaultState, action) => {
         }
         return {
           ...state,
-          selectedItemsCount: state.selectedItemsCount + 1,
+          selectedItemsCount: state.selectedItemsCount,
           selectedProducts: newSelectedProducts,
           selectedBox: action.product.title,
           selectedBoxImage: action.product.image
@@ -165,7 +202,9 @@ const items = (state = defaultState, action) => {
           ...state,
           selectedItemsCount: state.selectedItemsCount + 1,
           selectedProducts: newSelectedProducts,
-          subTotal: state.subTotal + action.product.price
+          subTotal: state.subTotal + action.product.price,
+          totalVolumetricWeight:
+            state.totalVolumetricWeight + action.product.weight
         }
       }
     case ITEMS_REMOVE_FROM_BOX:
@@ -180,7 +219,9 @@ const items = (state = defaultState, action) => {
         ...state,
         selectedItemsCount: state.selectedItemsCount - 1,
         selectedProducts: afterDecreasingCount,
-        subTotal: state.subTotal - action.product.price
+        subTotal: state.subTotal - action.product.price,
+        totalVolumetricWeight:
+          state.totalVolumetricWeight - action.product.weight
       }
     case ITEMS_CLEAR_FROM_BOX:
       return {

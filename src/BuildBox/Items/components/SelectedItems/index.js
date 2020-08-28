@@ -14,7 +14,7 @@ class SelectedItems extends Component {
             <div className="size-meter">
               <p
                 className={`box-size-text ${
-                  this.props.selectedItemsCount <= 4
+                  this.props.totalVolumetricWeight <= 4
                     ? 'selected-box'
                     : 'non-selected-box'
                 }`}
@@ -27,7 +27,7 @@ class SelectedItems extends Component {
             <div className="size-meter">
               <p
                 className={`box-size-text ${
-                  this.props.selectedItemsCount > 4
+                  this.props.totalVolumetricWeight > 4
                     ? 'selected-box'
                     : 'non-selected-box'
                 }`}
@@ -39,19 +39,21 @@ class SelectedItems extends Component {
         </div>
         <div className="selected-items-data">
           <div className="selected-items-images">
-            <div className="selected-items-instructions-wrap"> 
-            <div className={`selected-items-instructions ${
-                  this.props.selectedItemsCount > 1
-                    ? 'none'
-                    : 'show'
-                }`}>
-              <a href="#product-items-list-container">
-                Start selecting items to fill your box
-              </a>
-            </div></div>
+            <div className="selected-items-instructions-wrap">
+              <div
+                className={`selected-items-instructions ${
+                  this.props.selectedItemsCount > 0 ? 'none' : 'show'
+                }`}
+              >
+                <a href="#product-items-list-container">
+                  Start selecting items to fill your box
+                </a>
+              </div>
+            </div>
             <SelectedImages
               selectedProducts={Object.values(this.props.selectedProducts)}
               removeFromBox={this.props.removeFromBox}
+              setCurrentStep={this.props.setCurrentStep}
             />
           </div>
           <div className="selected-items-contents">
@@ -62,6 +64,7 @@ class SelectedItems extends Component {
               subTotal={this.props.subTotal}
               selectedBox={this.props.selectedBox}
               selectedItemsCount={this.props.selectedItemsCount}
+              totalVolumetricWeight={this.props.totalVolumetricWeight}
             />
           </div>
         </div>

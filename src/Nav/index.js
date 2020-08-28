@@ -34,7 +34,7 @@ export class Nav extends Component {
         </div>
         </div>
         <div className="nav-right-sections">
-          <div className="salad-days-cart-section">
+          <div className="salad-days-cart-section" type="button" onClick={() => this.props.history.push('/cart')}>
             <p className="section-text">CART </p>
             {this.props.cart.cartPrice !== 0  && <p className="section-price">(Rs. {this.props.cart.cartPrice})</p>}
           </div>

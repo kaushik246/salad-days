@@ -10,7 +10,11 @@ class SelectedImages extends Component {
           var badgeClassName = 'count-badge'
           if (product.count == 0) badgeClassName += ' hide'
           return (
-            <div className="item-image" key={product.title}>
+            <div
+              className="item-image"
+              key={product.title}
+              onClick={() => this.props.setCurrentStep(0)}
+            >
               <a>
                 <img
                   src={product.image}

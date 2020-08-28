@@ -34,12 +34,14 @@ class Items extends Component {
           setCurrentStep={this.props.setCurrentStep}
           subTotal={this.props.items.subTotal}
           selectedItemsCount={this.props.items.selectedItemsCount}
+          totalVolumetricWeight={this.props.items.totalVolumetricWeight}
         />
         <ItemsList
           productList={this.props.items.productList}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
           selectedProducts={this.props.items.selectedProducts}
+          totalVolumetricWeight={this.props.items.totalVolumetricWeight}
         />
       </div>
     )
