@@ -4,7 +4,14 @@ import { connect } from 'react-redux'
 import ItemsList from './components/ItemsList'
 import SelectedItems from './components/SelectedItems'
 import Header from '../generic/Header'
-import { fetchProductsList, addToBox, removeFromBox } from './actions'
+import ItemDetailModal from './components/ItemDetailModal'
+import {
+  fetchProductsList,
+  addToBox,
+  removeFromBox,
+  openDetailModal,
+  closeDetailModal
+} from './actions'
 import { setCurrentStep } from './../../Stepper/actions'
 
 import './styles.scss'
@@ -34,12 +41,27 @@ class Items extends Component {
           setCurrentStep={this.props.setCurrentStep}
           subTotal={this.props.items.subTotal}
           selectedItemsCount={this.props.items.selectedItemsCount}
+          totalVolumetricWeight={this.props.items.totalVolumetricWeight}
+          openDetailModal={this.props.openDetailModal}
+          closeDetailModal={this.props.closeDetailModal}
         />
         <ItemsList
           productList={this.props.items.productList}
           addToBox={this.props.addToBox}
           removeFromBox={this.props.removeFromBox}
           selectedProducts={this.props.items.selectedProducts}
+          totalVolumetricWeight={this.props.items.totalVolumetricWeight}
+          openDetailModal={this.props.openDetailModal}
+          closeDetailModal={this.props.closeDetailModal}
+        />
+        <ItemDetailModal
+          title="Sanitizer Bottle"
+          description="This Korean beauty face mask is a nourishing and moisturizing face mask that lightens your face to make it glow."
+          ingredients="Honey Key Ingredients: Dipropylene glycol, capric trigylceride, glycerin, pennywort extract, peony root extract, matricaria extract, honey extract, cocoa extract, evening primrose extract"
+          addToBox={this.props.addToBox}
+          removeFromBox={this.props.removeFromBox}
+          itemDetailModal={this.props.items.itemDetailModal}
+          closeDetailModal={this.props.closeDetailModal}
         />
       </div>
     )
@@ -52,6 +74,8 @@ export default connect(
     fetchProductsList,
     addToBox,
     removeFromBox,
-    setCurrentStep
+    setCurrentStep,
+    openDetailModal,
+    closeDetailModal
   }
 )(Items)

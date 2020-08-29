@@ -6,7 +6,15 @@ class Product extends Component {
   render() {
     return (
       <div className="item-container">
-        <div className="container">
+        <div
+          className="container"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            this.props.openDetailModal()
+          }}
+          type="button"
+        >
           <img className="item-image image" src={this.props.image} />
           <div className="overlay" />
           {this.props.quantity === 0 ? (
@@ -16,22 +24,57 @@ class Product extends Component {
               </a>
             </div>
           ) : this.props.selectedQuantity === 0 ? (
+            this.props.totalVolumetricWeight <= 8 &&
+            this.props.remainingVolumetricWeight >= this.props.weight ? (
+              <div className="items-button">
+                <a
+                  href="#"
+                  className="text"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    this.props.addToBox(this.props.product)
+                  }}
+                >
+                  ADD TO BOX
+                </a>
+              </div>
+            ) : (
+              <div className="items-button">
+                <a
+                  href="#"
+                  className="text"
+                  onClick={(e) => {
+                    e.preventDefault()
+                  }}
+                >
+                  TOO LARGE
+                </a>
+              </div>
+            )
+          ) : this.props.quantity === this.props.selectedQuantity ||
+            this.props.remainingVolumetricWeight === 0 ||
+            this.props.remainingVolumetricWeight < this.props.weight ? (
             <div className="items-button">
               <a
+                className="decrease"
                 href="#"
-                className="text"
                 onClick={(e) => {
                   e.preventDefault()
-                  this.props.addToBox(this.props.product)
+                  e.stopPropagation()
+                  this.props.removeFromBox(this.props.product)
                 }}
               >
-                ADD TO BOX
+                -
               </a>
-            </div>
-          ) : this.props.quantity === this.props.selectedQuantity ? (
-            <div className="items-button">
-              <a href="#" className="text" onClick={(e) => e.preventDefault()}>
-                MAX LIMIT REACHED
+              <a
+                href="#"
+                className="text-limit-reached"
+                onClick={(e) => e.preventDefault()}
+              >
+                {this.props.remainingVolumetricWeight === 0
+                  ? 'NO SPACE LEFT'
+                  : 'MAX LIMIT REACHED'}
               </a>
             </div>
           ) : (
@@ -42,12 +85,17 @@ class Product extends Component {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault()
+                    e.stopPropagation()
                     this.props.removeFromBox(this.props.product)
                   }}
                 >
                   -
                 </a>
-                <a className="main" href="#">
+                <a
+                  className="quantity-text"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                >
                   {this.props.selectedQuantity} IN BOX
                 </a>
                 <a

@@ -41,14 +41,23 @@ class BoxContents extends Component {
         </div>
         <div className="box-contents-sub-section">
           <div className="box-contents-sub-title">
-            Current Packaging | {`${this.props.selectedItemsCount > 4 ? 'Big ' : 'Small '} ${this.props.selectedBox}`}
+            Current Packaging |{' '}
+            {`${this.props.totalVolumetricWeight > 4 ? 'Big ' : 'Small '} ${
+              this.props.selectedBox
+            }`}
           </div>
           <div className="box-contents-sub-total">
             Box Subtotal: Rs. {this.props.subTotal}
           </div>
           <div
             className="complete-box-button"
-            onClick={() => this.props.selectedItemsCount > 1 ? this.props.setCurrentStep(2) : {}}
+            onClick={() =>
+              this.props.selectedItemsCount > 1 &&
+              (this.props.totalVolumetricWeight === 4 ||
+                this.props.totalVolumetricWeight === 8)
+                ? this.props.setCurrentStep(2)
+                : {}
+            }
           >
             <p className="complete-box-button-text">COMPLETE BOX</p>
           </div>

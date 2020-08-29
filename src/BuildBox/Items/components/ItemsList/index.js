@@ -11,6 +11,7 @@ class ItemsList extends Component {
         {this.props.productList.map((product) => (
           <Product
             product={product}
+            weight={product.weight}
             image={product.image}
             price={product.price}
             discountPrice={product.discountPrice}
@@ -24,6 +25,10 @@ class ItemsList extends Component {
                 ? this.props.selectedProducts[product.title]['count']
                 : 0
             }
+            totalVolumetricWeight={this.props.totalVolumetricWeight}
+            remainingVolumetricWeight={8 - this.props.totalVolumetricWeight}
+            openDetailModal={this.props.openDetailModal}
+            closeDetailModal={this.props.closeDetailModal}
           />
         ))}
       </div>
