@@ -26,6 +26,9 @@ class ItemsList extends Component {
                 : 0
             }
             totalVolumetricWeight={this.props.totalVolumetricWeight}
+            remainingVolumetricWeight={8 - this.props.totalVolumetricWeight}
+            openDetailModal={this.props.openDetailModal}
+            closeDetailModal={this.props.closeDetailModal}
           />
         ))}
       </div>

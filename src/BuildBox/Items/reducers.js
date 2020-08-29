@@ -3,7 +3,9 @@ import {
   ITEMS_RECEIVE_PRODUCT_LIST,
   ITEMS_ADD_TO_BOX,
   ITEMS_REMOVE_FROM_BOX,
-  ITEMS_CLEAR_FROM_BOX
+  ITEMS_CLEAR_FROM_BOX,
+  ITEMS_OPEN_DETAIL_MODAL,
+  ITEMS_CLOSE_DETAIL_MODAL
 } from './actions'
 
 const defaultState = {
@@ -35,7 +37,7 @@ const defaultState = {
       discountPrice: 2500,
       quantity: 11,
       title: 'Chopping Board',
-      maxQuantityAllowed: 1,
+      maxQuantityAllowed: 2,
       weight: 4
     },
     {
@@ -47,7 +49,8 @@ const defaultState = {
       title: 'Sanitizer Bottle 2',
       maxQuantityAllowed: 3,
       weight: 1
-    },
+    }
+    /*
     {
       image:
         'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/ceramicmug_1024x1024@2x.jpg?v=1598077367',
@@ -127,7 +130,7 @@ const defaultState = {
       title: 'Chopping Board 4',
       maxQuantityAllowed: 3,
       weight: 4
-    }
+    }*/
   ],
   boxesList: [
     {
@@ -155,7 +158,8 @@ const defaultState = {
   dataIsFetching: false,
   selectedItemsCount: 0,
   totalVolumetricWeight: 0,
-  subTotal: 0
+  subTotal: 0,
+  itemDetailModal: false
 }
 
 const items = (state = defaultState, action) => {
@@ -230,6 +234,16 @@ const items = (state = defaultState, action) => {
         selectedProducts: {},
         subTotal: 0,
         selectedItemsCount: 0
+      }
+    case ITEMS_OPEN_DETAIL_MODAL:
+      return {
+        ...state,
+        itemDetailModal: true
+      }
+    case ITEMS_CLOSE_DETAIL_MODAL:
+      return {
+        ...state,
+        itemDetailModal: false
       }
     default:
       return state

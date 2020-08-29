@@ -1,0 +1,41 @@
+.item-detail-modal-container {
+  display: inline-flex;
+  width: 960px;
+  height: 480px;
+  .item-image-container {
+    padding-right: 20px;
+    img {
+      width: 480px;
+      height: 480px;
+    }
+  }
+  .item-detail-container {
+    .item-title-container {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 24px;
+    }
+    .item-description-container {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .item-ingredients-container {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .items-detail-buttons-container {
+      text-align: center;
+      border: 1px solid black;
+      font-size: 10px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+}

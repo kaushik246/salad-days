@@ -14,9 +14,9 @@ class CardMessage extends Component {
     selectedBox,
     subTotal
   ) => {
-    to = document.querySelector("#card-msg-to-input").value;
-    from = document.querySelector("#card-msg-from-input").value;
-    message = document.querySelector("#card-msg-content").value;
+    to = document.querySelector('#card-msg-to-input').value
+    from = document.querySelector('#card-msg-from-input').value
+    message = document.querySelector('#card-msg-content').value
     this.props.addBoxToCart({
       quantity: 1,
       type: 'BUILD A BOX',

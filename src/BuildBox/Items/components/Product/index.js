@@ -4,11 +4,17 @@ import './responsive.css'
 
 class Product extends Component {
   render() {
-    const remainingVolumetricWeight = 8 - this.props.totalVolumetricWeight
-    console.log(this.props.weight, this.props.title, remainingVolumetricWeight)
     return (
       <div className="item-container">
-        <div className="container">
+        <div
+          className="container"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            this.props.openDetailModal()
+          }}
+          type="button"
+        >
           <img className="item-image image" src={this.props.image} />
           <div className="overlay" />
           {this.props.quantity === 0 ? (
@@ -18,14 +24,15 @@ class Product extends Component {
               </a>
             </div>
           ) : this.props.selectedQuantity === 0 ? (
-            this.props.totalVolumetricWeight < 8 &&
-            8 - this.props.totalVolumetricWeight >= this.props.weight ? (
+            this.props.totalVolumetricWeight <= 8 &&
+            this.props.remainingVolumetricWeight >= this.props.weight ? (
               <div className="items-button">
                 <a
                   href="#"
                   className="text"
                   onClick={(e) => {
                     e.preventDefault()
+                    e.stopPropagation()
                     this.props.addToBox(this.props.product)
                   }}
                 >
@@ -46,13 +53,15 @@ class Product extends Component {
               </div>
             )
           ) : this.props.quantity === this.props.selectedQuantity ||
-            remainingVolumetricWeight === 0 ? (
+            this.props.remainingVolumetricWeight === 0 ||
+            this.props.remainingVolumetricWeight < this.props.weight ? (
             <div className="items-button">
               <a
                 className="decrease"
                 href="#"
                 onClick={(e) => {
                   e.preventDefault()
+                  e.stopPropagation()
                   this.props.removeFromBox(this.props.product)
                 }}
               >
@@ -63,7 +72,7 @@ class Product extends Component {
                 className="text-limit-reached"
                 onClick={(e) => e.preventDefault()}
               >
-                {remainingVolumetricWeight === 0
+                {this.props.remainingVolumetricWeight === 0
                   ? 'NO SPACE LEFT'
                   : 'MAX LIMIT REACHED'}
               </a>
@@ -76,6 +85,7 @@ class Product extends Component {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault()
+                    e.stopPropagation()
                     this.props.removeFromBox(this.props.product)
                   }}
                 >

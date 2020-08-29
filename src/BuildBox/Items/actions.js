@@ -3,11 +3,25 @@ export const ITEMS_RECEIVE_PRODUCT_LIST = 'ITEMS_RECEIVE_PRODUCT_LIST'
 export const ITEMS_REMOVE_FROM_BOX = 'ITEMS_REMOVE_FROM_BOX'
 export const ITEMS_ADD_TO_BOX = 'ITEMS_ADD_TO_BOX'
 export const ITEMS_CLEAR_FROM_BOX = 'ITEMS_CLEAR_FROM_BOX'
+export const ITEMS_OPEN_DETAIL_MODAL = 'ITEMS_OPEN_DETAIL_MODAL'
+export const ITEMS_CLOSE_DETAIL_MODAL = 'ITEMS_CLOSE_DETAIL_MODAL'
 
 export const requestProductList = (dataIsFetching) => {
   return {
     type: ITEMS_REQUEST_PRODUCT_LIST,
     dataIsFetching: dataIsFetching
+  }
+}
+
+export const openDetailModal = () => {
+  return {
+    type: ITEMS_OPEN_DETAIL_MODAL
+  }
+}
+
+export const closeDetailModal = () => {
+  return {
+    type: ITEMS_CLOSE_DETAIL_MODAL
   }
 }
 
