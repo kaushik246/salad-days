@@ -2,7 +2,22 @@
   max-width: 1180px;
   margin: 0 auto;
   .box-detail-header-container {
+    padding-top: 60px;
+    padding-left: 60px;
     font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    .shop-button {
+      padding-right: 20px;
+      cursor: pointer;
+    }
+    .right-chevron {
+      padding-right: 20px;
+    }
+    .box-name {
+      padding-right: 20px;
+    }
   }
   .box-detail-slider-info {
     display: flex;

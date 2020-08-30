@@ -1,7 +1,8 @@
 import {
   BOX_DETAIL_OPEN_CARD_MODAL,
   BOX_DETAIL_CLOSE_CARD_MODAL,
-  BOX_DETAIL_SET_CARD
+  BOX_DETAIL_SET_CARD,
+  BOX_DETAIL_SET_BOX
 } from './actions'
 
 const defaultState = {
@@ -33,6 +34,13 @@ const boxDetail = (state = defaultState, action) => {
         ...state,
         cardSelected: action.card.title,
         cardImage: action.card.image,
+        cardModal: false
+      }
+    case BOX_DETAIL_SET_BOX:
+      return {
+        ...state,
+        boxSelected: action.box.title,
+        boxImage: action.box.image,
         cardModal: false
       }
     default:

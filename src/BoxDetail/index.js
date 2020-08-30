@@ -7,13 +7,14 @@ import BoxInfo from './BoxInfo'
 import BoxAttributes from './BoxAttributes'
 import CardModal from './CardModal'
 
-import { openCardModal, closeCardModal, setCard } from './actions'
+import { openCardModal, closeCardModal, setCard, setBox } from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
 
 const mapStateToProps = (state) => {
   return {
     boxDetail: state.boxDetail,
-    card: state.card
+    card: state.card,
+    items: state.items
   }
 }
 
@@ -24,7 +25,11 @@ class BoxDetail extends Component {
   render() {
     return (
       <div className="box-detail-main-container">
-        <div className="box-detail-header-container">Home</div>
+        <div className="box-detail-header-container">
+          <div className="shop-button">SHOP</div>
+          <div className="right-chevron">{'>'}</div>
+          <div className="box-name">CABANA</div>
+        </div>
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
             <ImageSlider />
@@ -36,8 +41,11 @@ class BoxDetail extends Component {
             <BoxAttributes
               cardSelected={this.props.boxDetail.cardSelected}
               cardImage={this.props.boxDetail.cardImage}
+              boxSelected={this.props.boxSelected}
+              boxImage={this.props.boxImage}
               openCardModal={this.props.openCardModal}
               closeCardModal={this.props.closeCardModal}
+              boxesList={this.props.items.boxesList}
             />
           </div>
         </div>
@@ -54,14 +62,5 @@ class BoxDetail extends Component {
 
 export default connect(
   mapStateToProps,
-  { openCardModal, closeCardModal, setCard, fetchCardList }
+  { openCardModal, closeCardModal, setCard, fetchCardList, setBox }
 )(BoxDetail)
-
-/*
-        <CardModal
-          cardList={this.props.card.cardList}
-          CardModal={this.props.boxDetail.CardModal}
-          closeCardModal={this.props.closeCardModal}
-        />
-
-        */
