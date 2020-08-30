@@ -29,6 +29,19 @@
         }
       }
     }
+    .running-container {
+      margin: 1px;
+      display: flex;
+      width: 100%;
+      .size-indicator {
+        flex: 1;
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        font-weight: 600px;
+        letter-spacing: 1px;
+      }
+    }
   }
   .selected-items-data {
     display: flex;
@@ -72,6 +85,15 @@
   display: none;
 }
 
-.selected-items-instructions-wrap{
+.selected-items-instructions-wrap {
   padding: 20px;
+}
+
+.selected-items-meter {
+  $columns: 8;
+  @for $i from 1 through $columns {
+    .columns-#{$i} {
+      background: linear-gradient(90deg, #5fc3ca (12.5% * $i), white 0);
+    }
+  }
 }

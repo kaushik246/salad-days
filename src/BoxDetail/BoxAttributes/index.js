@@ -13,6 +13,10 @@ class BoxAttributes extends Component {
         </div>
         <div className="box-selection-container">
           <div className="box-selection-title">BOX COLOR</div>
+          <div className="box-image-selection">
+            <div className="box-image"></div>
+            <div className="">BOX1</div>
+          </div>
         </div>
         {this.props.cardSelected === '' ? (
           <div

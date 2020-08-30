@@ -10,30 +10,14 @@ class SelectedItems extends Component {
     return (
       <div className="selected-items-container">
         <div className="selected-items-meter">
-          <div className="box-size">
-            <div className="size-meter">
-              <p
-                className={`box-size-text ${
-                  this.props.totalVolumetricWeight <= 4
-                    ? 'selected-box'
-                    : 'non-selected-box'
-                }`}
-              >
-                SMALL
-              </p>
+          <div
+            className={`running-container columns-${this.props.totalVolumetricWeight}`}
+          >
+            <div className="size-indicator">
+              <p>SMALL</p>
             </div>
-          </div>
-          <div className="box-size">
-            <div className="size-meter">
-              <p
-                className={`box-size-text ${
-                  this.props.totalVolumetricWeight > 4
-                    ? 'selected-box'
-                    : 'non-selected-box'
-                }`}
-              >
-                BIG
-              </p>
+            <div className="size-indicator">
+              <p>BIG</p>
             </div>
           </div>
         </div>
@@ -74,3 +58,34 @@ class SelectedItems extends Component {
 }
 
 export default SelectedItems
+
+/*
+        <div className="selected-items-meter">
+          <div className="box-size">
+            <div className="size-meter">
+              <p
+                className={`box-size-text ${
+                  this.props.totalVolumetricWeight <= 4
+                    ? 'selected-box'
+                    : 'non-selected-box'
+                }`}
+              >
+                SMALL
+              </p>
+            </div>
+          </div>
+          <div className="box-size">
+            <div className="size-meter">
+              <p
+                className={`box-size-text ${
+                  this.props.totalVolumetricWeight > 4
+                    ? 'selected-box'
+                    : 'non-selected-box'
+                }`}
+              >
+                BIG
+              </p>
+            </div>
+          </div>
+        </div>
+        */
