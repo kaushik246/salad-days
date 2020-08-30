@@ -10,8 +10,7 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-    'z-index': '10'
+    transform: 'translate(-50%, -50%)'
   }
 }
 export class CardModal extends Component {
