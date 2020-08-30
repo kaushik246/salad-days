@@ -44,7 +44,7 @@ export class Nav extends Component {
           <div
             className="salad-days-sections"
             type="button"
-            onClick={() => this.props.history.push('/')}
+            onClick={() => this.props.history.push('/corporateGifting')}
           >
             <p className="section-text">CORPORATE GIFTING</p>
           </div>

@@ -5,6 +5,7 @@ import BuildBox from './BuildBox'
 import Shop from './Shop'
 import Cart from './Cart'
 import BoxDetail from './BoxDetail'
+import CorporateGifting from './CorporateGifting'
 import Nav from './Nav'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
@@ -35,6 +36,8 @@ export class App extends Component {
           <Route exact path="/cart" component={Cart} />
           {/*Shop*/}
           <Route exact path="/shop" component={Shop} />
+          {/*Corporate Gifting*/}
+          <Route exact path="/corporateGifting" component={CorporateGifting} />
         </Switch>
       </Fragment>
     )

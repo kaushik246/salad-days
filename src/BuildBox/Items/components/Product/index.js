@@ -46,6 +46,7 @@ class Product extends Component {
                   className="text"
                   onClick={(e) => {
                     e.preventDefault()
+                    e.stopPropagation()
                   }}
                 >
                   TOO LARGE
@@ -70,7 +71,10 @@ class Product extends Component {
               <a
                 href="#"
                 className="text-limit-reached"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                }}
               >
                 {this.props.remainingVolumetricWeight === 0
                   ? 'NO SPACE LEFT'
@@ -103,6 +107,7 @@ class Product extends Component {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault()
+                    e.stopPropagation()
                     this.props.addToBox(this.props.product)
                   }}
                 >

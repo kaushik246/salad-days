@@ -1,3 +1,34 @@
 .card-modal-container {
-  width: 1000px;
+  width: 1070px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  .card-image-component {
+    width: 265px;
+    height: 265px;
+    padding: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    .card-image {
+      padding: 5px;
+      width: 265px;
+      height: 265px;
+      position: relative;
+    }
+    .card-footer-text {
+      text-align: center;
+    }
+  }
+}
+
+.card-modal-header {
+  .card-modal-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .card-modal-summary {
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 0;
+  }
 }
