@@ -62,9 +62,11 @@ export class CartItem extends Component {
             >
               -
             </div>
-            <input type="text" disabled={true}>
-              {this.props.item.quantity}
-            </input>
+            <input
+              type="text"
+              disabled={true}
+              placeholder={this.props.item.quantity}
+            />
             <div
               className="cart-item-increase-decrease"
               onClick={(e) => {

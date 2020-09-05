@@ -26,7 +26,13 @@ class BoxDetail extends Component {
     return (
       <div className="box-detail-main-container">
         <div className="box-detail-header-container">
-          <div className="shop-button">SHOP</div>
+          <div
+            className="shop-button"
+            type="button"
+            onClick={() => this.props.history.push('/shop')}
+          >
+            SHOP
+          </div>
           <div className="right-chevron">{'>'}</div>
           <div className="box-name">CABANA</div>
         </div>
