@@ -57,6 +57,7 @@ class Done extends Component {
                 this.props.clearCard()
                 this.props.clearItems()
                 this.props.history.push('/cart')
+                this.props.setCurrentStep(0)
               }}
             >
               VIEW CART

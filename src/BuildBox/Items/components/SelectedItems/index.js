@@ -3,6 +3,7 @@ import './styles.scss'
 
 import SelectedImages from './components/SelectedImages'
 import BoxContents from './components/BoxContents'
+import InfoModal from './components/InfoModal'
 import './responsive.css'
 
 class SelectedItems extends Component {
@@ -49,9 +50,18 @@ class SelectedItems extends Component {
               selectedBox={this.props.selectedBox}
               selectedItemsCount={this.props.selectedItemsCount}
               totalVolumetricWeight={this.props.totalVolumetricWeight}
+              openInfoModal={this.props.openInfoModal}
+              closeInfoModal={this.props.closeInfoModal}
             />
           </div>
         </div>
+        <InfoModal
+          openInfoModal={this.props.openInfoModal}
+          closeInfoModal={this.props.closeInfoModal}
+          infoModal={this.props.infoModal}
+          info={this.props.info}
+          title={this.props.title}
+        />
       </div>
     )
   }

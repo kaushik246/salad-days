@@ -5,27 +5,41 @@
     .quantity-title {
       font-size: 12px;
       letter-spacing: 1px;
+      padding-bottom: 10px;
+    }
+    .quantity-button-field {
+      padding-bottom: 10px;
     }
   }
 
   .box-selection-container {
+    padding-bottom: 10px;
     .box-selection-title {
       font-size: 12px;
       letter-spacing: 1px;
-      padding-bottom: 5px;
+      padding-bottom: 20px;
     }
     .box-image-selection {
-      display: inline-flex;
+      display: flex;
       justify-content: space-between;
-      height: 211px;
-      width: 166px;
-      .box-image {
-        border: 2px solid lightgray;
-        height: 166px;
+      .box-info {
+        height: 211px;
         width: 166px;
+        border: 3px solid lightgray;
+
+        .box-image {
+          height: 166px;
+          width: 160px;
+          cursor: pointer;
+        }
+        .box-title {
+          padding: 10px 0;
+          letter-spacing: 1px;
+          font-size: 10px;
+        }
       }
-      .box-image-selected {
-        border: 2px solid #5fc3ca;
+      .box-selected {
+        border: 3px solid #5fc3ca;
       }
     }
   }
@@ -33,8 +47,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border: 2px dashed #ddd;
     cursor: pointer;
     .pick-card-title {
@@ -44,7 +58,7 @@
   }
 
   .pick-card-container-selected {
-    border: 2px solid black;
+    border: 2px solid #5fc3ca;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
@@ -79,7 +93,8 @@
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid #5fc3ca;
+    background-color: #5fc3ca;
     cursor: pointer;
 
     .cart-button-title {
@@ -87,9 +102,41 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 600;
+      color: white;
     }
   }
 }
 
-.pick-card-container :hover {
+.shop-item-input-wrap {
+  display: flex;
+  width: 110px;
+  align-items: center;
+  margin: auto;
+  height: 30px;
+  border: 1px solid #5fc3ca;
+  border-radius: 2px;
+}
+
+.shop-item-increase-decrease {
+  width: 30%;
+  cursor: pointer;
+  height: 29px;
+  vertical-align: middle;
+  padding-top: 6px;
+}
+
+.shop-item-increase-decrease:hover {
+  background: #5fc3ca;
+  color: white;
+}
+
+.shop-item-input-wrap input {
+  width: 40%;
+  border: none;
+  text-align: center;
+}
+
+.shop-item-input-wrap input:focus {
+  border: none;
+  outline: none;
 }

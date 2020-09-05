@@ -4,18 +4,54 @@ import './styles.scss'
 import BoxMessage from '../BoxMessage'
 
 class BoxAttributes extends Component {
+  state = {
+    quantity: 1
+  }
+
   render() {
     return (
       <div className="box-attributes-main-container">
         <div className="quantity-field-container">
           <div className="quantity-title">QUANTITY</div>
-          <div className="quantity-button-field">1</div>
+          <div className="quantity-button-field">
+            <div className="shop-item-input-wrap">
+              <div
+                className="shop-item-increase-decrease"
+                onClick={(e) => {
+                  e.preventDefault()
+                }}
+              >
+                -
+              </div>
+              <input type="text" disabled={true} placeholder="1"></input>
+              <div
+                className="shop-item-increase-decrease"
+                onClick={(e) => {
+                  e.preventDefault()
+                }}
+              >
+                +
+              </div>
+            </div>
+          </div>
         </div>
         <div className="box-selection-container">
           <div className="box-selection-title">BOX COLOR</div>
           <div className="box-image-selection">
-            <div className="box-image"></div>
-            <div className="">BOX1</div>
+            <div className="box-info box-selected">
+              <img
+                className="box-image"
+                src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/mainboxbrown_1024x1024@2x.jpg?v=1598077337"
+              />{' '}
+              <div className="box-title">ORIGINAL CRAFT BOX</div>
+            </div>
+            <div className="box-info">
+              <img
+                className="box-image"
+                src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/mainboxblue_1024x1024@2x.jpg?v=1598077337"
+              />
+              <div className="box-title">TIL BLUE BOX</div>
+            </div>
           </div>
         </div>
         {this.props.cardSelected === '' ? (

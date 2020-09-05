@@ -10,7 +10,9 @@ import {
   addToBox,
   removeFromBox,
   openDetailModal,
-  closeDetailModal
+  closeDetailModal,
+  openInfoModal,
+  closeInfoModal
 } from './actions'
 import { setCurrentStep } from './../../Stepper/actions'
 
@@ -44,6 +46,11 @@ class Items extends Component {
           totalVolumetricWeight={this.props.items.totalVolumetricWeight}
           openDetailModal={this.props.openDetailModal}
           closeDetailModal={this.props.closeDetailModal}
+          openInfoModal={this.props.openInfoModal}
+          closeInfoModal={this.props.closeInfoModal}
+          infoModal={this.props.items.infoModal}
+          info={this.props.items.info}
+          title={this.props.items.title}
         />
         <ItemsList
           productList={this.props.items.productList}
@@ -76,6 +83,8 @@ export default connect(
     removeFromBox,
     setCurrentStep,
     openDetailModal,
-    closeDetailModal
+    closeDetailModal,
+    openInfoModal,
+    closeInfoModal
   }
 )(Items)
