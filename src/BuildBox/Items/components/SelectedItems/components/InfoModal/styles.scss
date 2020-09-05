@@ -1,0 +1,33 @@
+.info-modal-container {
+  width: 498px;
+  height: 170px;
+  .info-modal-title {
+    display: block;
+    padding: 0px 5px 0 5px;
+    font-size: 20px;
+    color: #000;
+    text-align: left;
+  }
+  .info-modal-info {
+    display: block;
+    padding: 20px 5px;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+  }
+  .info-modal-button {
+    display: block;
+    padding: 20px 5px;
+    border-top: solid 1px lightgray;
+    text-align: right;
+    .info-modal-button-text {
+      cursor: pointer;
+      padding: 18px 20px;
+      background-color: #5fc3ca;
+      color: white;
+      border: none;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+  }
+}

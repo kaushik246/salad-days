@@ -27,7 +27,7 @@ class BoxContents extends Component {
                   {product.count !== 0 && (
                     <button
                       type="button"
-                      class="close"
+                      className="close"
                       aria-label="Close"
                       className="remove-item-button"
                     >
@@ -56,7 +56,7 @@ class BoxContents extends Component {
               (this.props.totalVolumetricWeight === 4 ||
                 this.props.totalVolumetricWeight === 8)
                 ? this.props.setCurrentStep(2)
-                : {}
+                : this.props.openInfoModal('Your Box is Empty', 'It looks like you haven\'t added anything to your box. Please add at least one item before proceeding.')
             }
           >
             <p className="complete-box-button-text">COMPLETE BOX</p>

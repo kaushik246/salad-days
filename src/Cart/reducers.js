@@ -8,38 +8,58 @@ import {
 } from './actions'
 
 const defaultState = {
-  cartItems: [],
+  cartItems: {},
   cartPrice: 0,
+  cartItemsCount: 0,
   dataIsFetching: false
 }
 
 const cart = (state = defaultState, action) => {
   switch (action.type) {
     case CART_INCREASE_QUANTITY:
+      let increaseQuantity = state.cartItems
+      increaseQuantity[action.cartId]['quantity'] =
+        increaseQuantity[action.cartId]['quantity'] + 1
       return {
         ...state,
-        cartItems: defaultState.cartItems
+        cartItems: increaseQuantity,
+        cartPrice: state.cartPrice + increaseQuantity[action.cartId]['price']
       }
     case CART_DECREASE_QUANTITY:
+      let decreaseQuantity = state.cartItems
+      let decreaseQuantityPrice = state.cartPrice
+      if (decreaseQuantity[action.cartId]['quantity'] > 1) {
+        decreaseQuantity[action.cartId]['quantity'] =
+          decreaseQuantity[action.cartId]['quantity'] - 1
+        decreaseQuantityPrice =
+          decreaseQuantityPrice - decreaseQuantity[action.cartId]['price']
+      }
       return {
         ...state,
-        cartItems: defaultState.cartItems
+        cartItems: decreaseQuantity,
+        cartPrice: decreaseQuantityPrice
       }
     case CART_ADD_BOX:
+      let newCartItems = state.cartItems
+      let newBoxKey =
+        state.cartItemsCount === 0
+          ? 1
+          : Math.max(...Object.keys(state.cartItems)) + 1
+      newCartItems[newBoxKey] = action.box
       return {
         ...state,
-        cartItems: [...state.cartItems, action.box],
-        cartPrice: state.cartPrice + action.box.price*action.box.quantity
+        cartItems: newCartItems,
+        cartPrice: state.cartPrice + action.box.price * action.box.quantity,
+        cartItemsCount: state.cartItemsCount + 1
       }
     case CART_REMOVE_BOX:
+      let updatedCartItems = state.cartItems
+      delete updatedCartItems[action.cartId]
       return {
         ...state,
-        cart: [...state.cartItems]
-      }
-    case CART_REMOVE_BOX:
-      return {
-        ...state,
-        cart: [...state.cartItems]
+        cartItems: updatedCartItems,
+        cartItemsCount: state.cartItemsCount - 1,
+        cartPrice: state.cartPrice - action.box.price * action.box.quantity
       }
     case CART_UPDATE_SUBTOTAL:
       return {
