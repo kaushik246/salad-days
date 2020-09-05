@@ -4,7 +4,7 @@ import './styles.scss'
 
 const BoxMessage = () => {
   const [quantity, setQuantity] = useState(1)
-  var remainingCharacters = 12
+  var remainingCharacters = 120
   return (
     <div className="box-msg-data">
       <div className="box-msg-to-from">

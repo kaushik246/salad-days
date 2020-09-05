@@ -97,18 +97,23 @@ const BoxAttributes = ({
           <div className="pick-card-title">Pick a card</div>
         </div>
       ) : (
-        <div
-          className="pick-card-container-selected"
-          type="button"
-          onClick={(e) => {
-            e.preventDefault()
-            openCardModal()
-          }}
-        >
-          <img src={cardImage} className="selected-card-image" />
-          <div className="selected-card-title-change-text">
-            <div className="selected-card-title">{cardSelected}</div>
-            <div className="selected-card-change">(change card)</div>
+        <div>
+          <div
+            className="pick-card-container-selected"
+            type="button"
+            onClick={(e) => {
+              e.preventDefault()
+              openCardModal()
+            }}
+          >
+            <img src={cardImage} className="selected-card-image" />
+            <div className="selected-card-title-change-text">
+              <div className="selected-card-title">{cardSelected}</div>
+              <div className="selected-card-change">(change card)</div>
+            </div>
+          </div>
+          <div>
+            <BoxMessage />
           </div>
         </div>
       )}
