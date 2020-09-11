@@ -16,6 +16,11 @@ class Product extends Component {
           type="button"
         >
           <img className="item-image image" src={this.props.image} />
+          {this.props.remainingVolumetricWeight < this.props.weight ? (
+            <div class="too-large-text">
+              <h4>TOO LARGE</h4>
+            </div>
+          ) : null}
           <div className="overlay" />
           {this.props.quantity === 0 ? (
             <div className="items-button product-sold-out">
