@@ -113,6 +113,19 @@ img.item-image {
   left: 0;
 }
 
+.too-large-text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  background: #efefef;
+  color: black;
+  width: 100%; /* Set the width of the positioned div */
+}
+
 .items-details {
   padding-top: 15px;
   .items-title {

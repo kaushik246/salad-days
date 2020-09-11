@@ -47,9 +47,9 @@ const defaultState = {
         'https://cdn.shopify.com/s/files/1/0450/7985/5254/products/sanitizerbottle_1024x1024@2x.jpg?v=1598077367',
       price: 1000,
       discountPrice: 800,
-      quantity: 9,
+      quantity: 2,
       title: 'Sanitizer Bottle 2',
-      maxQuantityAllowed: 3,
+      maxQuantityAllowed: 2,
       weight: 1
     }
   ],
