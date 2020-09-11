@@ -53,10 +53,12 @@ class BoxContents extends Component {
             className="complete-box-button"
             onClick={() =>
               this.props.selectedItemsCount > 1 &&
-              (this.props.totalVolumetricWeight === 4 ||
-                this.props.totalVolumetricWeight === 8)
+              this.props.totalVolumetricWeight % 4 === 0
                 ? this.props.setCurrentStep(2)
-                : this.props.openInfoModal('Your Box is Empty', 'It looks like you haven\'t added anything to your box. Please add at least one item before proceeding.')
+                : this.props.openInfoModal(
+                    'Your Box is Empty / Partially filled',
+                    "It looks like you haven't added completed your box. Please add more item before proceeding."
+                  )
             }
           >
             <p className="complete-box-button-text">COMPLETE BOX</p>
