@@ -1,16 +1,39 @@
 import { useSelector, useDispatch } from 'react-redux'
 import Client from 'shopify-buy'
-
-const client = Client.buildClient({
-  storefrontAccessToken: '8ccdc410d80589b42c1964ec1708a2d6',
-  domain: 'testing-app-development-store.myshopify.com'
-})
+import { check } from 'prettier'
 
 export const SHOP_REQUEST_ITEMS_LIST = 'SHOP_REQUEST_ITEMS_LIST'
 export const SHOP_RECEIVE_ITEMS_LIST = 'SHOP_RECEIVE_ITEMS_LIST'
 export const SHOP_REQUEST_ITEM = 'SHOP_REQUEST_ITEM'
 export const SHOP_RECEIVE_ITEM = 'SHOP_RECEIVE_ITEM'
 export const UNSET_SHOP_ITEM = 'UNSET_SHOP_ITEM'
+export const CART_UPDATE = 'CART_UPDATE'
+
+const client = Client.buildClient({
+  storefrontAccessToken: '8ccdc410d80589b42c1964ec1708a2d6',
+  domain: 'testing-app-development-store.myshopify.com'
+})
+
+export const createCheckout = () => {
+  return (dispatch) => {
+    client.checkout.create().then((resp) => {
+      dispatch({type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id})
+    })
+  }
+}
+
+export const addItemToCart = (checkoutId, lineItemsToAdd) => {
+  return async (dispatch) => {
+    try {
+      const resp = await client.checkout.addLineItems(checkoutId, lineItemsToAdd)
+      dispatch(cartUpdate(resp))
+    } catch (e) {
+      console.log('There is some problem', e)
+    }
+  }
+}
+
+
 
 export const fetchShopItems = (dataIsFetching = true) => {
   return  (dispatch) => {
@@ -77,5 +100,12 @@ export const receiveShopItem = (shopItem) => {
 export const unsetShopItemData = () => {
   return {
     type: UNSET_SHOP_ITEM
+  }
+}
+
+export const cartUpdate = (checkout) => {
+  return {
+    type: CART_UPDATE,
+    checkout
   }
 }

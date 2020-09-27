@@ -9,7 +9,7 @@ import CardModal from './CardModal'
 
 import { openCardModal, closeCardModal, setCard, setBox } from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
-import { fetchShopItemData, unsetShopItemData } from './../Shop/actions'
+import { fetchShopItemData, unsetShopItemData, addItemToCart } from './../Shop/actions'
 import _ from 'lodash'
 
 const mapStateToProps = (state) => {
@@ -18,7 +18,8 @@ const mapStateToProps = (state) => {
     card: state.card,
     items: state.items,
     shopItem: state.shop.shopItem,
-    shop: state.shop
+    shop: state.shop,
+    cart: state.cart
   }
 }
 
@@ -34,7 +35,6 @@ class BoxDetail extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log(prevProps.shopItem, this.props.shopItem)
     if (!_.isEqual(prevProps.shopItem, this.props.shopItem)) {
       this.setState({
         shopItem: this.props.shopItem
@@ -46,18 +46,16 @@ class BoxDetail extends Component {
     this.props.unsetShopItemData()
   }
   render() {
-    return (
-      this.props.shopItem ? <div className="box-detail-main-container">
+    return this.props.shopItem ? (
+      <div className="box-detail-main-container">
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
             <div className="box-name">{this.props.shopItem.title}</div>
-            <div className="box-price">Rs. {this.props.shopItem.variants[0].price}</div>
-            <BoxInfo 
-              description={this.props.shopItem.description}
-            />
-            <ImageSlider 
-              images={this.props.shopItem.images}
-            />
+            <div className="box-price">
+              Rs. {this.props.shopItem.variants[0].price}
+            </div>
+            <BoxInfo description={this.props.shopItem.description} />
+            <ImageSlider images={this.props.shopItem.images} />
           </div>
           <div className="box-detail-info">
             <BoxAttributes
@@ -68,6 +66,10 @@ class BoxDetail extends Component {
               openCardModal={this.props.openCardModal}
               closeCardModal={this.props.closeCardModal}
               boxesList={this.props.items.boxesList}
+              history={this.props.history}
+              addItemToCart={this.props.addItemToCart}
+              checkoutId={this.props.cart.checkoutId}
+              variantId={this.props.shopItem.variants[0].id}
             />
           </div>
         </div>
@@ -77,7 +79,9 @@ class BoxDetail extends Component {
           closeCardModal={this.props.closeCardModal}
           setCard={this.props.setCard}
         />
-      </div> : <p>Loading</p>
+      </div>
+    ) : (
+      <p>Loading</p>
     )
   }
 }
@@ -91,6 +95,7 @@ export default connect(
     fetchCardList,
     setBox,
     fetchShopItemData,
-    unsetShopItemData
+    unsetShopItemData,
+    addItemToCart
   }
 )(BoxDetail)

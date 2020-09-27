@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 import BoxMessage from '../BoxMessage'
+import Moment from 'react-moment'
+import { random } from 'lodash'
 
 const BoxAttributes = ({
   cardSelected,
@@ -10,7 +12,11 @@ const BoxAttributes = ({
   boxImage,
   openCardModal,
   closeCardModal,
-  boxesList
+  boxesList,
+  history,
+  addItemToCart,
+  checkoutId,
+  variantId
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -117,7 +123,45 @@ const BoxAttributes = ({
         </div>
       )}
       <div className="cart-button-container">
-        <div className="cart-button-title"> Add to Cart . Rs 1000</div>
+        <div
+          className="cart-button-title"
+          onClick={(e) => {
+            console.log('Cicked')
+            e.stopPropagation()
+            addItemToCart(checkoutId, [
+              {
+                variantId: variantId,
+                quantity: 1,
+                customAttributes: [{ key: 'box', value: selectedBox }]
+              }
+            ])
+          }}
+        >
+          {' '}
+          Add to Cart . Rs 1000
+        </div>
+      </div>
+      <div className="more-buttons-container">
+        <div
+          className="shop-more-button"
+          onClick={(e) => {
+            e.stopPropagation()
+            history.push('/shop')
+          }}
+        >
+          {' '}
+          Shop More
+        </div>
+        <div
+          className="checkout-button"
+          onClick={(e) => {
+            e.stopPropagation()
+            history.push('/cart')
+          }}
+        >
+          {' '}
+          Checkout{' '}
+        </div>
       </div>
     </div>
   )

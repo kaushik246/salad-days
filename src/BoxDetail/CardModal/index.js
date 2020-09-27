@@ -11,6 +11,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     transform: 'translate(-50%, -50%)'
+  },
+  overlay: {
+    zIndex: 200
   }
 }
 export class CardModal extends Component {
