@@ -15,17 +15,13 @@ export class Shop extends Component {
     this.props.fetchShopItems()
   }
   render() {
-    console.log(this.props.history)
     return (
       <div className="shop-main-container">
         <div className="shop-header-container">Products</div>
         <div className="shop-items-container">
-          {this.props.shop.shopItems.map((item) => (
+          {this.props.shop.shopItems && this.props.shop.shopItems.map((item) => (
             <ShopItem
-              quantity={item.quantity}
-              image={item.image}
-              price={item.price}
-              title={item.title}
+              item={item}
               history={this.props.history}
             />
           ))}

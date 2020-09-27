@@ -52,7 +52,7 @@ class BoxContents extends Component {
           <div
             className="complete-box-button"
             onClick={() =>
-              this.props.selectedItemsCount > 1 &&
+              this.props.selectedItemsCount >= 1 &&
               this.props.totalVolumetricWeight % 4 === 0
                 ? this.props.setCurrentStep(2)
                 : this.props.openInfoModal(

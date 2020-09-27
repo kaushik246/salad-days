@@ -25,11 +25,7 @@
     .box-detail-slider {
       flex: 2;
       padding-left: 30px;
-    }
-    .box-detail-info {
-      flex: 1;
       text-align: center;
-      padding-left: 30px;
       .box-name {
         font-size: 26px;
         letter-spacing: 1.5px;
@@ -41,6 +37,11 @@
         letter-spacing: 1px;
         margin-bottom: 10px;
       }
+    }
+    .box-detail-info {
+      flex: 1;
+      text-align: center;
+      padding-left: 30px;
     }
   }
 }

@@ -16,7 +16,6 @@ const BoxAttributes = ({
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
 
   const increaseItemQuantity = () => {
-    console.log('Hello')
     setQuantity(quantity + 1)
   }
 
