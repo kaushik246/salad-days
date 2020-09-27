@@ -9,7 +9,11 @@ import CardModal from './CardModal'
 
 import { openCardModal, closeCardModal, setCard, setBox } from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
-import { fetchShopItemData, unsetShopItemData, addItemToCart } from './../Shop/actions'
+import {
+  fetchShopItemData,
+  unsetShopItemData,
+  addItemToCart
+} from './../Shop/actions'
 import _ from 'lodash'
 
 const mapStateToProps = (state) => {
@@ -25,9 +29,7 @@ const mapStateToProps = (state) => {
 
 class BoxDetail extends Component {
   componentDidMount() {
-    this.props.fetchShopItemData(
-      this.props.match.params.id
-    )
+    this.props.fetchShopItemData(this.props.match.params.id)
     this.props.fetchCardList()
     this.state = {
       shopItem: this.props.shopItem

@@ -6,7 +6,10 @@ import ImageGallery from 'react-image-gallery'
 
 class ImageSlider extends React.Component {
   render() {
-    const images = this.props.images.map((imageData) => ({ original: imageData.src, thumbnail: imageData.src}))
+    const images = this.props.images.map((imageData) => ({
+      original: imageData.src,
+      thumbnail: imageData.src
+    }))
     return (
       <div className="image-slider-container">
         <ImageGallery

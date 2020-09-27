@@ -54,10 +54,3 @@ export const setCheckoutId = (checkoutId) => {
     checkoutId
   }
 }
-
-export const cartUpdate = (cart) => {
-  return {
-    type: CART_UPDATE,
-    cart
-  }
-}

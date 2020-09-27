@@ -17,7 +17,7 @@ const client = Client.buildClient({
 export const createCheckout = () => {
   return (dispatch) => {
     client.checkout.create().then((resp) => {
-      dispatch({type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id})
+      dispatch({ type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id })
     })
   }
 }
@@ -25,7 +25,10 @@ export const createCheckout = () => {
 export const addItemToCart = (checkoutId, lineItemsToAdd) => {
   return async (dispatch) => {
     try {
-      const resp = await client.checkout.addLineItems(checkoutId, lineItemsToAdd)
+      const resp = await client.checkout.addLineItems(
+        checkoutId,
+        lineItemsToAdd
+      )
       dispatch(cartUpdate(resp))
     } catch (e) {
       console.log('There is some problem', e)
@@ -33,35 +36,28 @@ export const addItemToCart = (checkoutId, lineItemsToAdd) => {
   }
 }
 
-
-
 export const fetchShopItems = (dataIsFetching = true) => {
-  return  (dispatch) => {
+  return (dispatch) => {
     dispatch(requestShopItems(dataIsFetching))
     try {
-
       client.product.fetchAll().then((resp) => {
         dispatch(receiveShopItems(resp))
-      }
-      )
+      })
     } catch (e) {
-      console.log('There is some problem',  e)
+      console.log('There is some problem', e)
     }
   }
 }
 
-
-export const fetchShopItemData = (id, dataIsFetching=true) => {
-  return  async (dispatch) => {
+export const fetchShopItemData = (id, dataIsFetching = true) => {
+  return async (dispatch) => {
     dispatch(requestShopItem(dataIsFetching))
     try {
-      const resp = await client.product.fetch(
-        id
-      )
+      const resp = await client.product.fetch(id)
       console.log(resp)
       dispatch(receiveShopItem(resp))
     } catch (e) {
-      console.log('There is some problem',  e)
+      console.log('There is some problem', e)
     }
   }
 }
@@ -81,10 +77,9 @@ export const receiveShopItems = (shopItems) => {
   }
 }
 
-
 export const requestShopItem = () => {
   return {
-    type: SHOP_REQUEST_ITEM,
+    type: SHOP_REQUEST_ITEM
   }
 }
 
@@ -95,7 +90,6 @@ export const receiveShopItem = (shopItem) => {
     shopItem
   }
 }
-
 
 export const unsetShopItemData = () => {
   return {
