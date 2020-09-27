@@ -9,39 +9,55 @@ import CardModal from './CardModal'
 
 import { openCardModal, closeCardModal, setCard, setBox } from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
+import { fetchShopItemData, unsetShopItemData } from './../Shop/actions'
+import _ from 'lodash'
 
 const mapStateToProps = (state) => {
   return {
     boxDetail: state.boxDetail,
     card: state.card,
-    items: state.items
+    items: state.items,
+    shopItem: state.shop.shopItem,
+    shop: state.shop
   }
 }
 
 class BoxDetail extends Component {
   componentDidMount() {
+    this.props.fetchShopItemData(
+      this.props.match.params.id
+    )
     this.props.fetchCardList()
+    this.state = {
+      shopItem: this.props.shopItem
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log(prevProps.shopItem, this.props.shopItem)
+    if (!_.isEqual(prevProps.shopItem, this.props.shopItem)) {
+      this.setState({
+        shopItem: this.props.shopItem
+      })
+    }
+  }
+
+  componentWillUnmount() {
+    this.props.unsetShopItemData()
   }
   render() {
     return (
-      <div className="box-detail-main-container">
-        {false && <div className="box-detail-header-container">
-          <div
-            className="shop-button"
-            type="button"
-            onClick={() => this.props.history.push('/shop')}
-          >
-            SHOP
-          </div>
-          <div className="right-chevron">{'>'}</div>
-          <div className="box-name">CABANA</div>
-        </div>}
+      this.props.shopItem ? <div className="box-detail-main-container">
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
-            <div className="box-name">CABANA</div>
-            <div className="box-price">Rs. {1500}</div>
-            <BoxInfo />
-            <ImageSlider />
+            <div className="box-name">{this.props.shopItem.title}</div>
+            <div className="box-price">Rs. {this.props.shopItem.variants[0].price}</div>
+            <BoxInfo 
+              description={this.props.shopItem.description}
+            />
+            <ImageSlider 
+              images={this.props.shopItem.images}
+            />
           </div>
           <div className="box-detail-info">
             <BoxAttributes
@@ -61,12 +77,20 @@ class BoxDetail extends Component {
           closeCardModal={this.props.closeCardModal}
           setCard={this.props.setCard}
         />
-      </div>
+      </div> : <p>Loading</p>
     )
   }
 }
 
 export default connect(
   mapStateToProps,
-  { openCardModal, closeCardModal, setCard, fetchCardList, setBox }
+  {
+    openCardModal,
+    closeCardModal,
+    setCard,
+    fetchCardList,
+    setBox,
+    fetchShopItemData,
+    unsetShopItemData
+  }
 )(BoxDetail)

@@ -4,7 +4,6 @@ import './responsive.css'
 
 export class CartItem extends Component {
   cartItemsString = (items) => {
-    console.log(items)
     let itemsString = ' '
     items.map((item) => {
       if (item.count !== 0) itemsString += ` ${item.count} x ${item.title},`

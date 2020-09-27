@@ -31,7 +31,7 @@ export class App extends Component {
           <Route exact path="/" component={BuildBox} />
           <Route exact path="/buildBox" component={BuildBox} />
           {/*Box Detail */}
-          <Route exact path="/product" component={BoxDetail} />
+          <Route exact path="/product/:id" component={BoxDetail} />
           {/*Cart*/}
           <Route exact path="/cart" component={Cart} />
           {/*Shop*/}

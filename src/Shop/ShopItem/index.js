@@ -7,15 +7,18 @@ class ShopItem extends Component {
       <div
         className="product-container"
         onClick={() => {
-          if (this.props.quantity !== 0) {
-            this.props.history.push('/product')
+          if (this.props.item.availableForSale) {
+            this.props.history.push(`/product/${this.props.item.id}`)
           }
         }}
       >
         <div className="container">
-          <img className="product-image image" src={this.props.image} />
+          <img
+            className="product-image image"
+            src={this.props.item.images[0].src}
+          />
           <div className="overlay" />
-          {this.props.quantity === 0 && (
+          {!this.props.item.availableForSale && (
             <div className="button product-sold-out">
               <a href="#" className="text">
                 OUT OF STOCK
@@ -24,9 +27,11 @@ class ShopItem extends Component {
           )}
         </div>
         <div className="product-details">
-          <div className="title">{this.props.title}</div>
-          <div className="price">${this.props.price}</div>
-          {this.props.quantity === 0 && <div className="title">Sold Out</div>}
+          <div className="title">{this.props.item.title}</div>
+          <div className="price">Rs. {this.props.item.variants[0].price}</div>
+          {!this.props.item.availableForSale && (
+            <div className="title">Sold Out</div>
+          )}
         </div>
       </div>
     )

@@ -9,7 +9,6 @@ import './responsive.css'
 
 class Packaging extends Component {
   render() {
-    console.log(this.props)
     return (
       <div className="build-a-box-step-1-component">
         <Header
