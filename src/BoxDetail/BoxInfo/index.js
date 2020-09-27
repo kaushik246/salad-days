@@ -30,23 +30,6 @@ const BoxInfo = () => {
           </div>
         )}
       </div>
-      <div
-        className="includes-button-container"
-        onClick={() => {
-          setDescriptionState(!descriptionState)
-          setIncludesState(!includesState)
-        }}
-      >
-        <div className="includes-title">INCLUDES</div>
-        <hr />
-        {includesState && (
-          <div className="include-content">
-            Lapcos // Aqua Sheet Mask Rifle Paper Co // Cabana Notebook Beverly
-            3rd Candle Co // Summer Nights Candle Sugarfina // Italian Spritz
-            Candies Baggu // Washable Brick Bag Keepsake Box & Handwritten Card
-          </div>
-        )}
-      </div>
     </div>
   )
 }

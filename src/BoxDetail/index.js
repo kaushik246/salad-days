@@ -25,7 +25,7 @@ class BoxDetail extends Component {
   render() {
     return (
       <div className="box-detail-main-container">
-        <div className="box-detail-header-container">
+        {false && <div className="box-detail-header-container">
           <div
             className="shop-button"
             type="button"
@@ -35,15 +35,15 @@ class BoxDetail extends Component {
           </div>
           <div className="right-chevron">{'>'}</div>
           <div className="box-name">CABANA</div>
-        </div>
+        </div>}
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
-            <ImageSlider />
-          </div>
-          <div className="box-detail-info">
             <div className="box-name">CABANA</div>
             <div className="box-price">Rs. {1500}</div>
             <BoxInfo />
+            <ImageSlider />
+          </div>
+          <div className="box-detail-info">
             <BoxAttributes
               cardSelected={this.props.boxDetail.cardSelected}
               cardImage={this.props.boxDetail.cardImage}
