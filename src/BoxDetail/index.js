@@ -14,6 +14,7 @@ import {
   unsetShopItemData,
   addItemToCart
 } from './../Shop/actions'
+
 import _ from 'lodash'
 
 const mapStateToProps = (state) => {
