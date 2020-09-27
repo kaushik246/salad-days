@@ -19,7 +19,7 @@ export class Cart extends Component {
     return (
       <div className="cart-main-container">
         <CartHeader />
-        {Object.keys(this.props.cart.cartItems).map((cartId) => (
+        {Object.keys(this.props.cart.checkout.lineItems).map((cartId) => (
           <CartItem
             item={this.props.cart.cartItems[cartId]}
             cartId={cartId}

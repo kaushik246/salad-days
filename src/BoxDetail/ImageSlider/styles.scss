@@ -4,6 +4,10 @@
   z-index: 0 !important;
 }
 
+.image-gallery-custom-right-nav {
+  z-index: 2;
+}
+
 .image-gallery-icon {
   color: $ig-white;
   transition: all 0.2s ease-out;
@@ -30,4 +34,12 @@
     // a11y support
     outline: 2px solid $ig-blue;
   }
+}
+
+.image-gallery-thumbnail.active {
+  border: 4px #5fc3ca !important;
+}
+
+.image-gallery-thumbnail :focus :hover {
+  border: 4px #5fc3ca !important;
 }

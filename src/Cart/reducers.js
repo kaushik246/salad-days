@@ -4,14 +4,18 @@ import {
   CART_DECREASE_QUANTITY,
   CART_REMOVE_BOX,
   CART_CHECKOUT,
-  CART_UPDATE_SUBTOTAL
+  CART_UPDATE_SUBTOTAL,
+  CART_SET_CHECKOUT_ID,
+  CART_UPDATE
 } from './actions'
 
 const defaultState = {
   cartItems: {},
   cartPrice: 0,
   cartItemsCount: 0,
-  dataIsFetching: false
+  dataIsFetching: false,
+  checkoutId: null,
+  checkout: null
 }
 
 const cart = (state = defaultState, action) => {
@@ -65,6 +69,17 @@ const cart = (state = defaultState, action) => {
       return {
         ...state,
         cartPrice: action.cartPrice
+      }
+    case CART_SET_CHECKOUT_ID:
+      return {
+        ...state,
+        checkoutId: action.checkoutId
+      }
+    case CART_UPDATE:
+      console.log(action)
+      return {
+        ...state,
+        checkout: action.checkout
       }
     default:
       return state

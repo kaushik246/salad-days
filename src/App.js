@@ -9,8 +9,12 @@ import CorporateGifting from './CorporateGifting'
 import Nav from './Nav'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
+import { createCheckout } from './Shop/actions'
 
 export class App extends Component {
+  componentDidMount() {
+    if (!this.props.cart.checkoutId) this.props.createCheckout()
+  }
   state = {
     modalIsOpen: true
   }
@@ -46,13 +50,14 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.app.user
+    user: state.app.user,
+    cart: state.cart
   }
 }
 
 export default withRouter(
   connect(
     mapStateToProps,
-    { setCurrentStep }
+    { setCurrentStep, createCheckout }
   )(App)
 )
