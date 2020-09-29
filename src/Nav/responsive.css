@@ -1,0 +1,74 @@
+@media only screen and (max-width: 90%) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+/* #Tablet (Landscape)
+================================================== */
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+/* #Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .nav-main-container {
+    display: block;
+    height: 90px!important;
+  }
+  .nav-main-container .section-text{
+      font-size: 12px;
+  }
+  .nav-main-container .nav-right-sections .salad-days-cart-section{
+      margin-right: 0px;
+  }
+
+  .nav-main-container .nav-wrap.mobile{
+      display: flex;
+      justify-content: space-around;
+      padding-top: 20px;
+  }
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+/* iPhone 5 (Portrait) */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+}
+
+/* iPhone 6 Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+}
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width: 641px) and (max-device-width: 667px) and (orientation: landscape) {
+}
+
+/* iPhone 6+ Portrait */
+@media only screen and (min-device-width: 412px) and (max-device-width: 736px) and (orientation: portrait) {
+}
+
+/* iPhone 6+ landscape */
+@media only screen and (min-device-width: 668px) and (max-device-width: 736px) and (orientation: landscape) {
+}
