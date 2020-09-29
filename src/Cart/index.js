@@ -19,24 +19,34 @@ export class Cart extends Component {
     return (
       <div className="cart-main-container">
         <CartHeader />
-        {Object.keys(this.props.cart.checkout.lineItems).map((cartId) => (
-          <CartItem
-            item={this.props.cart.cartItems[cartId]}
-            cartId={cartId}
-            increaseQuantity={this.props.increaseQuantity}
-            decreaseQuantity={this.props.decreaseQuantity}
-            removeItem={this.props.removeItem}
-          />
-        ))}
+        {this.props.cart.checkout.lineItems.map((lineItem) => {
+          return (
+            <CartItem
+              id={lineItem.id}
+              cartId={this.props.cart.cartId}
+              image={lineItem.variant.image.src}
+              customAttributes={lineItem.customAttributes}
+              quantity={lineItem.quantity}
+              title={lineItem.title}
+              price={lineItem.variant.price}
+            />
+          )
+        })}
         <div className="cart-footer-container">
           <div className="cart-checkout-subtotal-container">
             <div className="cart-subtotal">
               <div className="subtotal-text">SUBTOTAL</div>
               <div className="subtotal-value">
-                Rs. {this.props.cart.cartPrice}
+                Rs. {this.props.cart.checkout.totalPrice}
               </div>
             </div>
-            <div className="cart-checkout-container" onClick={() => {}}>
+            <div
+              className="cart-checkout-container"
+              onClick={(e) => {
+                e.preventDefault()
+                window.location.replace(this.props.cart.checkout.webUrl)
+              }}
+            >
               CHECK OUT
             </div>
           </div>

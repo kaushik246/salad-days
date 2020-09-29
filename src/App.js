@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
-import BuildBox from './BuildBox'
 import Shop from './Shop'
 import Cart from './Cart'
 import BoxDetail from './BoxDetail'
@@ -32,8 +31,7 @@ export class App extends Component {
         <Nav history={this.props.history} />
         <Switch>
           {/*Build A Box*/}
-          <Route exact path="/" component={BuildBox} />
-          <Route exact path="/buildBox" component={BuildBox} />
+          <Route exact path="/" component={Shop} />
           {/*Box Detail */}
           <Route exact path="/product/:id" component={BoxDetail} />
           {/*Cart*/}

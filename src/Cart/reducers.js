@@ -76,7 +76,6 @@ const cart = (state = defaultState, action) => {
         checkoutId: action.checkoutId
       }
     case CART_UPDATE:
-      console.log(action)
       return {
         ...state,
         checkout: action.checkout
