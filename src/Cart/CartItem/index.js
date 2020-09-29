@@ -16,47 +16,42 @@ export class CartItem extends Component {
       <div className="cart-item-container">
         <div className="cart-item-image-contents">
           <div className="item-image">
-            <img
-              className="box-item-image"
-              src={this.props.item.selectedBoxImage}
-            />
+            <img className="box-item-image" src={this.props.image} />
           </div>
           <div className="cart-item-contents">
             <div className="item-title-container">
-              <div className="item-title">{this.props.item.type}</div>
-              <div className="item-title-subtext">
-                {this.props.item.selectedBox}
-              </div>
+              <div className="item-title">{this.props.title}</div>
+              <div className="item-title-subtext">{'Box'}</div>
             </div>
 
             <div className="item-card">
-              <b>Card: </b> {this.props.item.card}
+              <b>Card: </b> {'Card'}
             </div>
-            <div className="item-contents">
-              <b>Gift Box Contents: </b>{' '}
-              {this.props.item.selectedProducts &&
-                this.cartItemsString(this.props.item.selectedProducts)}
-            </div>
+            {/*(
+              <div className="item-contents">
+                <b>Gift Box Contents: </b>{' '}
+                {this.props.item.selectedProducts &&
+                  this.cartItemsString(this.props.item.selectedProducts)}
+              </div>
+            )*/}
             <div
               className="item-remove"
               type="button"
               onClick={(e) => {
                 e.preventDefault()
-                this.props.removeItem(this.props.cartId, this.props.item)
               }}
             >
               Remove
             </div>
           </div>
         </div>
-        <div className="cart-item-price">{this.props.item.price}</div>
+        <div className="cart-item-price">{this.props.price}</div>
         <div className="cart-item-quantity">
           <div className="cart-item-input-wrap">
             <div
               className="cart-item-increase-decrease"
               onClick={(e) => {
                 e.preventDefault()
-                this.props.decreaseQuantity(this.props.cartId)
               }}
             >
               -
@@ -64,13 +59,12 @@ export class CartItem extends Component {
             <input
               type="text"
               disabled={true}
-              placeholder={this.props.item.quantity}
+              placeholder={this.props.quantity}
             />
             <div
               className="cart-item-increase-decrease"
               onClick={(e) => {
                 e.preventDefault()
-                this.props.increaseQuantity(this.props.cartId)
               }}
             >
               +
@@ -78,7 +72,7 @@ export class CartItem extends Component {
           </div>
         </div>
         <div className="cart-item-subtotal">
-          {this.props.item.price * this.props.item.quantity}
+          {parseInt(this.props.price, 10) * parseInt(this.props.quantity, 10)}
         </div>
       </div>
     )

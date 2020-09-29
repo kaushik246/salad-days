@@ -3,6 +3,7 @@ import './styles.scss'
 
 class ShopItem extends Component {
   render() {
+    console.log(this.props.item)
     return (
       <div
         className="product-container"
@@ -18,7 +19,7 @@ class ShopItem extends Component {
             src={this.props.item.images[0].src}
           />
           <div className="overlay" />
-          {!this.props.item.availableForSale && (
+          {!this.props.item.availableForSale && false && (
             <div className="button product-sold-out">
               <a href="#" className="text">
                 OUT OF STOCK

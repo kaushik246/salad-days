@@ -15,6 +15,7 @@ export class Nav extends Component {
   }
 
   render() {
+    const disable = false
     return (
       <div className="nav-main-container">
         <div className="nav-main-wrap">
@@ -72,15 +73,17 @@ export class Nav extends Component {
             type="button"
             onClick={() => this.props.history.push('/shop')}
           >
-            <p className="section-text">SHOP</p>
+            <p className="section-text">SHOP A GIFT</p>
           </div>
-          <div
-            className="salad-days-sections mobile"
-            type="button"
-            onClick={() => this.props.history.push('/buildBox')}
-          >
-            <p className="section-text">BUILD A BOX</p>
-          </div>
+          {disable && (
+            <div
+              className="salad-days-sections"
+              type="button"
+              onClick={() => this.props.history.push('/buildBox')}
+            >
+              <p className="section-text">BUILD A BOX</p>
+            </div>
+          )}
           <div
             className="salad-days-sections mobile"
             type="button"
@@ -93,6 +96,10 @@ export class Nav extends Component {
             type="button"
             onClick={() => this.props.history.push('/cart')}
           >
+            <img
+              src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/cart-01.png?v=1601411687"
+              className="cart-logo"
+            />
             <p className="section-text">CART </p>
             {this.props.cart.cartPrice !== 0 && (
               <p className="section-price">(Rs. {this.props.cart.cartPrice})</p>

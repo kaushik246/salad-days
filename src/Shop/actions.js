@@ -10,8 +10,8 @@ export const UNSET_SHOP_ITEM = 'UNSET_SHOP_ITEM'
 export const CART_UPDATE = 'CART_UPDATE'
 
 const client = Client.buildClient({
-  storefrontAccessToken: '8ccdc410d80589b42c1964ec1708a2d6',
-  domain: 'testing-app-development-store.myshopify.com'
+  storefrontAccessToken: '50c7db75bbf868e62de163103d68b8f1',
+  domain: 'salad-days-gift-shop.myshopify.com'
 })
 
 export const createCheckout = () => {
@@ -40,9 +40,14 @@ export const fetchShopItems = (dataIsFetching = true) => {
   return (dispatch) => {
     dispatch(requestShopItems(dataIsFetching))
     try {
-      client.product.fetchAll().then((resp) => {
-        dispatch(receiveShopItems(resp))
-      })
+      client.collection
+        .fetchWithProducts(
+          'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIxMDE2NjI1MTY3OA=='
+        )
+        .then((resp) => {
+          console.log(resp)
+          dispatch(receiveShopItems(resp.products))
+        })
     } catch (e) {
       console.log('There is some problem', e)
     }

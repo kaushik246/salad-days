@@ -2,8 +2,14 @@ import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
 
-const BoxMessage = () => {
-  const [quantity, setQuantity] = useState(1)
+const BoxMessage = ({
+  to,
+  from,
+  message,
+  changeTo,
+  changeFrom,
+  changeMessage
+}) => {
   var remainingCharacters = 120
   return (
     <div className="box-msg-data">
@@ -17,6 +23,10 @@ const BoxMessage = () => {
             className="box-msg-input"
             type="text"
             placeholder="To"
+            value={to}
+            onChange={(e) => {
+              changeTo(e.target.value)
+            }}
           />
         </div>
         <div className="box-msg-from">
@@ -28,6 +38,10 @@ const BoxMessage = () => {
             className="box-msg-input"
             type="text"
             placeholder="From"
+            value={from}
+            onChange={(e) => {
+              changeFrom(e.target.value)
+            }}
           />
         </div>
       </div>
@@ -40,6 +54,10 @@ const BoxMessage = () => {
           placeholder="Enter your card message here. 120 characters max."
           maxLength="120"
           rows="6"
+          value={message}
+          onChange={(e) => {
+            changeMessage(e.target.value)
+          }}
         />
         <div id="msg-remaining-characters" className="box-msg-characters">
           {remainingCharacters} characters remaining

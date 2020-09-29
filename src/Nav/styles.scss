@@ -1,65 +1,68 @@
 .nav-main-container {
-    display: inline-flex;
-    justify-content: space-between;
-    height: 60px !important;
-    width: 100%;
-    background-color :white;
-    border-bottom: 1px solid #5fc3ca;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 60px !important;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #5fc3ca;
   .salad-days-title-container {
-      width: 100px;
+    width: 100px;
   }
   .nav-left-sections {
     display: inline-flex;
-  .salad-days-image-section {
-    padding-top: 20px;
-    margin-right:40px;
-    margin-left: 20px;
-    .salad-days-logo {
-      height: 20px;
-      width: 144px;
-    }
-  }
-  .salad-days-sections {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-top: 24px ;
-    padding-bottom: 24px ;
-    .section-text {
-      &:hover {
-        color: #5fc3ca;
-        cursor: pointer;
+    .salad-days-image-section {
+      padding-top: 20px;
+      margin-right: 40px;
+      margin-left: 20px;
+      .salad-days-logo {
+        height: 20px;
+        width: 144px;
       }
     }
-
+    .salad-days-sections {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      .section-text {
+        &:hover {
+          color: #5fc3ca;
+          cursor: pointer;
+        }
+      }
+    }
   }
-}
   .nav-right-sections {
     display: inline-flex;
-  .salad-days-cart-section {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 30px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    padding-top: 24px ;
-    padding-bottom: 24px ;
-    float: right;
-    display: inline-flex;
+    .salad-days-cart-section {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      float: right;
+      display: inline-flex;
       &:hover {
         color: #5fc3ca;
         cursor: pointer;
       }
-    .section-text {
-      padding-right: 5px;
-
+      .cart-logo {
+        height: 20px;
+        width: 20px;
+        color: #5fc3ca;
+      }
+      .section-text {
+        padding-right: 5px;
+      }
+      .section-price {
+        letter-spacing: 1px;
+      }
     }
-    .section-price {
-      letter-spacing: 1px;
-    }
-
   }
 }
 }

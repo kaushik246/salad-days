@@ -20,6 +20,9 @@ const BoxAttributes = ({
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
+  const [changeTo, to] = useState('')
+  const [changeFrom, from] = useState('')
+  const [changeMessage, message] = useState('')
 
   const increaseItemQuantity = () => {
     setQuantity(quantity + 1)
@@ -70,7 +73,7 @@ const BoxAttributes = ({
           >
             <img
               className="box-image"
-              src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/mainboxbrown_1024x1024@2x.jpg?v=1598077337"
+              src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_brown.jpg?v=1601414146"
             />{' '}
             <div className="box-title">ORIGINAL CRAFT BOX</div>
           </div>
@@ -84,7 +87,7 @@ const BoxAttributes = ({
           >
             <img
               className="box-image"
-              src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/mainboxblue_1024x1024@2x.jpg?v=1598077337"
+              src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_blue.jpg?v=1601414145"
             />
             <div className="box-title">TIL BLUE BOX</div>
           </div>
@@ -118,7 +121,14 @@ const BoxAttributes = ({
             </div>
           </div>
           <div>
-            <BoxMessage />
+            <BoxMessage
+              to={to}
+              from={from}
+              message={message}
+              changeTo={changeTo}
+              changeFrom={changeFrom}
+              changeMessage={changeMessage}
+            />
           </div>
         </div>
       )}
@@ -126,13 +136,22 @@ const BoxAttributes = ({
         <div
           className="cart-button-title"
           onClick={(e) => {
-            console.log('Cicked')
             e.stopPropagation()
             addItemToCart(checkoutId, [
               {
                 variantId: variantId,
                 quantity: 1,
-                customAttributes: [{ key: 'box', value: selectedBox }]
+                customAttributes: [
+                  { key: 'Box', value: selectedBox },
+                  { key: 'Card', value: cardSelected },
+                  { key: 'To', value: 'Kaushik' },
+                  { key: 'From', value: 'Varun' },
+                  {
+                    key: 'Message',
+                    value:
+                      'Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali'
+                  }
+                ]
               }
             ])
           }}
