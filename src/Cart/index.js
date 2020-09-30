@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 
 export class Cart extends Component {
   render() {
-    return (
+    return this.props.cart.checkout ? (
       <div className="cart-main-container">
         <CartHeader />
         {this.props.cart.checkout.lineItems.map((lineItem) => {
@@ -49,6 +49,20 @@ export class Cart extends Component {
             >
               CHECK OUT
             </div>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div className="cart-main-container">
+        <div className="empty-cart">
+          <div className="empty-cart-title">YOUR CART</div>
+          <div className="empty-cart-subtitle">Your cart is empty</div>
+          <div
+            className="empty-cart-shop"
+            type="button"
+            onClick={() => this.props.history.push('/shop')}
+          >
+            Continue Browsing Here
           </div>
         </div>
       </div>

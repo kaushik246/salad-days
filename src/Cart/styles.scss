@@ -26,7 +26,34 @@
         background-color: #5fc3ca;
         color: white;
         width: 200px;
+        cursor: pointer;
       }
+    }
+  }
+  .empty-cart {
+    padding-top: 150px;
+    margin: 10% 40%;
+    .empty-cart-title {
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+    }
+    .empty-cart-subtitle {
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .empty-cart-shop {
+      padding: 15px 0px;
+      font-size: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #5fc3ca;
+      color: white;
+      margin-top: 10px;
+      cursor: pointer;
     }
   }
 }

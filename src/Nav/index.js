@@ -15,6 +15,7 @@ export class Nav extends Component {
 
   render() {
     const disable = false
+    console.log(window.location.pathname)
     return (
       <div className="nav-main-container">
         <div className="nav-left-sections">

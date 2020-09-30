@@ -25,6 +25,7 @@ const BoxMessage = ({
             placeholder="To"
             value={to}
             onChange={(e) => {
+              e.stopPropagation()
               changeTo(e.target.value)
             }}
           />
@@ -56,7 +57,7 @@ const BoxMessage = ({
           rows="6"
           value={message}
           onChange={(e) => {
-            changeMessage(e.target.value)
+            console.log(e.target.value)
           }}
         />
         <div id="msg-remaining-characters" className="box-msg-characters">

@@ -30,6 +30,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="Company"
             value={company}
+            onChange={(e) => {
+              e.stopPropagation()
+              setCompany(e.target.value)
+            }}
           />
         </div>
         <div className="corporate-gifting-field">
@@ -39,6 +43,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="First Name"
             value={firstName}
+            onChange={(e) => {
+              e.stopPropagation()
+              setFirstName(e.target.value)
+            }}
           />
         </div>
         <div className="corporate-gifting-field">
@@ -48,6 +56,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="Last Name"
             value={lastName}
+            onChange={(e) => {
+              e.stopPropagation()
+              setLastName(e.target.value)
+            }}
           />
         </div>
         <div className="corporate-gifting-field">
@@ -57,6 +69,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="Email"
             value={email}
+            onChange={(e) => {
+              e.stopPropagation()
+              setEmail(e.target.value)
+            }}
           />
         </div>
         <div className="corporate-gifting-field">
@@ -66,6 +82,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="Phone number"
             value={phoneNumber}
+            onChange={(e) => {
+              e.stopPropagation()
+              setPhoneNumber(e.target.value)
+            }}
           />
         </div>
         <div className="corporate-gifting-field">
@@ -75,6 +95,10 @@ const CorporateGifting = () => {
             type="text"
             placeholder="Message...."
             value={message}
+            onChange={(e) => {
+              e.stopPropagation()
+              setMessage(e.target.value)
+            }}
           />
         </div>
         <div

@@ -38,27 +38,29 @@ const BoxAttributes = ({
     <div className="box-attributes-main-container">
       <div className="quantity-field-container">
         <div className="quantity-title">QUANTITY</div>
-        <div className="quantity-button-field">
-          <div className="shop-item-input-wrap">
-            <div
-              className="shop-item-increase-decrease"
-              onClick={() => {
-                decreaseItemQuantity()
-              }}
-            >
-              -
-            </div>
-            <input type="text" disabled={true} placeholder={quantity}></input>
-            <div
-              className="shop-item-increase-decrease"
-              onClick={() => {
-                increaseItemQuantity()
-              }}
-            >
-              +
+        {false && (
+          <div className="quantity-button-field">
+            <div className="shop-item-input-wrap">
+              <div
+                className="shop-item-increase-decrease"
+                onClick={() => {
+                  decreaseItemQuantity()
+                }}
+              >
+                -
+              </div>
+              <input type="text" disabled={true} placeholder={quantity}></input>
+              <div
+                className="shop-item-increase-decrease"
+                onClick={() => {
+                  increaseItemQuantity()
+                }}
+              >
+                +
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
       <div className="box-selection-container">
         <div className="box-selection-title">BOX COLOR</div>
