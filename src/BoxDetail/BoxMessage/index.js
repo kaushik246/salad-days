@@ -57,7 +57,7 @@ const BoxMessage = ({
           rows="6"
           value={message}
           onChange={(e) => {
-            console.log(e.target.value)
+            changeMessage(e.target.value)
           }}
         />
         <div id="msg-remaining-characters" className="box-msg-characters">

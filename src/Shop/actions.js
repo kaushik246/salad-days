@@ -43,7 +43,6 @@ export const fetchShopItems = (dataIsFetching = true) => {
       const resp = await client.collection.fetchWithProducts(
         'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIxMDE2NjI1MTY3OA=='
       )
-      console.log(resp)
       dispatch(receiveShopItems(resp.products))
     } catch (e) {
       console.log('There is some problem', e)
