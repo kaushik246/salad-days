@@ -84,7 +84,9 @@ class BoxDetail extends Component {
         />
       </div>
     ) : (
-      <p>Loading</p>
+      <div className="loading-icon">
+        <img src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/SD_Graphic_1_1024x1024@2x.gif?v=1598351459" />
+      </div>
     )
   }
 }

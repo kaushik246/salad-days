@@ -37,17 +37,13 @@ export const addItemToCart = (checkoutId, lineItemsToAdd) => {
 }
 
 export const fetchShopItems = (dataIsFetching = true) => {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(requestShopItems(dataIsFetching))
     try {
-      client.collection
-        .fetchWithProducts(
-          'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIxMDE2NjI1MTY3OA=='
-        )
-        .then((resp) => {
-          console.log(resp)
-          dispatch(receiveShopItems(resp.products))
-        })
+      const resp = await client.collection.fetchWithProducts(
+        'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIxMDE2NjI1MTY3OA=='
+      )
+      dispatch(receiveShopItems(resp.products))
     } catch (e) {
       console.log('There is some problem', e)
     }

@@ -36,10 +36,20 @@
   }
 }
 
+.image-gallery-thumbnail {
+  border: 4px #5fc3ca !important;
+}
+
 .image-gallery-thumbnail.active {
   border: 4px #5fc3ca !important;
 }
 
 .image-gallery-thumbnail :focus :hover {
   border: 4px #5fc3ca !important;
+}
+
+.image-gallery-icon {
+  &:hover {
+    color: #5fceca;
+  }
 }

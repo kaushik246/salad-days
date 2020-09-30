@@ -25,6 +25,7 @@ const BoxMessage = ({
             placeholder="To"
             value={to}
             onChange={(e) => {
+              e.stopPropagation()
               changeTo(e.target.value)
             }}
           />
