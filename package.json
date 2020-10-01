@@ -2,7 +2,7 @@
   "name": "salad-days",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kaukota.github.io/",
+  "homepage": "http://kaukota.github.io/salad-days",
   "dependencies": {
     "@blueprintjs/core": "^3.15.1",
     "@blueprintjs/datetime": "^3.9.1",
