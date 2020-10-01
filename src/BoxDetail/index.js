@@ -21,6 +21,8 @@ import {
   addItemToCart
 } from './../Shop/actions'
 
+import { requestAddLineItem } from './../Cart/actions'
+
 import _ from 'lodash'
 
 const mapStateToProps = (state) => {
@@ -35,12 +37,22 @@ const mapStateToProps = (state) => {
 }
 
 class BoxDetail extends Component {
+  state = {
+    shopItem: this.props.shopItem,
+    seconds: 3
+  }
   componentDidMount() {
     this.props.fetchShopItemData(this.props.match.params.id)
     this.props.fetchCardList()
-    this.state = {
-      shopItem: this.props.shopItem
-    }
+
+    this.myInterval = setInterval(() => {
+      const { seconds } = this.state
+      if (seconds > 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds - 1
+        }))
+      }
+    }, 1000)
   }
 
   componentDidUpdate(prevProps) {
@@ -80,6 +92,8 @@ class BoxDetail extends Component {
               checkoutId={this.props.cart.checkoutId}
               variantId={this.props.shopItem.variants[0].id}
               clearBox={this.props.clearBox}
+              addLineItemInProgress={this.props.cart.addLineItemInProgress}
+              requestAddLineItem={this.props.requestAddLineItem}
             />
           </div>
         </div>
@@ -93,7 +107,7 @@ class BoxDetail extends Component {
       </div>
     ) : (
       <div className="loading-icon">
-        <img src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/SD_Graphic_1_1024x1024@2x.gif?v=1598351459" />
+        <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-1s-200px.gif?v=1601548805" />
       </div>
     )
   }
@@ -110,6 +124,7 @@ export default connect(
     clearBox,
     fetchShopItemData,
     unsetShopItemData,
-    addItemToCart
+    addItemToCart,
+    requestAddLineItem
   }
 )(BoxDetail)

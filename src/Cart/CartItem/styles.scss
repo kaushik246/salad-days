@@ -59,6 +59,12 @@
     flex: 1;
     text-align: center;
     margin: auto 0px;
+    .loading-icon {
+      width: 110px;
+      align-items: center;
+      margin: auto;
+      height: 30px;
+    }
   }
   .cart-item-subtotal {
     flex: 1;

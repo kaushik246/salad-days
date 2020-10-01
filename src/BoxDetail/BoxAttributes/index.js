@@ -17,7 +17,9 @@ const BoxAttributes = ({
   addItemToCart,
   checkoutId,
   variantId,
-  clearBox
+  clearBox,
+  addLineItemInProgress,
+  requestAddLineItem
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -97,7 +99,11 @@ const BoxAttributes = ({
           </div>
         </div>
       </div>
-      {cardSelected === '' ? (
+      {addLineItemInProgress ? (
+        <div className="loading-icon">
+          <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-1s-200px.gif?v=1601548805" />
+        </div>
+      ) : cardSelected === '' ? (
         <div
           className="pick-card-container"
           type="button"
@@ -136,38 +142,41 @@ const BoxAttributes = ({
           </div>
         </div>
       )}
-      <div
-        className="cart-button-container"
-        onClick={(e) => {
-          e.stopPropagation()
-          if (from) customAttributes.push({ key: 'From', value: from })
-          if (to) customAttributes.push({ key: 'To', value: to })
-          if (message)
-            customAttributes.push({
-              key: 'Message',
-              value: message
+      {!addLineItemInProgress && (
+        <div
+          className="cart-button-container"
+          onClick={(e) => {
+            e.stopPropagation()
+            if (from) customAttributes.push({ key: 'From', value: from })
+            if (to) customAttributes.push({ key: 'To', value: to })
+            if (message)
+              customAttributes.push({
+                key: 'Message',
+                value: message
+              })
+            requestAddLineItem()
+            addItemToCart(checkoutId, [
+              {
+                variantId: variantId,
+                quantity: 1,
+                customAttributes: [
+                  { key: 'Box', value: selectedBox },
+                  { key: 'Card', value: cardSelected },
+                  ...customAttributes
+                ]
+              }
+            ]).then(() => {
+              changeTo('')
+              changeFrom('')
+              changeMessage('')
+              setBought(true)
+              clearBox()
             })
-          addItemToCart(checkoutId, [
-            {
-              variantId: variantId,
-              quantity: 1,
-              customAttributes: [
-                { key: 'Box', value: selectedBox },
-                { key: 'Card', value: cardSelected },
-                ...customAttributes
-              ]
-            }
-          ]).then(() => {
-            changeTo('')
-            changeFrom('')
-            changeMessage('')
-            setBought(true)
-            clearBox()
-          })
-        }}
-      >
-        <div className="cart-button-title"> Add to Cart . Rs 1000</div>
-      </div>
+          }}
+        >
+          <div className="cart-button-title"> Add to Cart . Rs 1000</div>
+        </div>
+      )}
       {bought && (
         <div className="more-buttons-container">
           <div

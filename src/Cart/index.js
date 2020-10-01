@@ -7,7 +7,7 @@ import CartHeader from './CartHeader'
 import CartItem from './CartItem'
 
 import { increaseQuantity, decreaseQuantity, removeItem } from './actions'
-import { removeLineItem } from './../Shop/actions'
+import { removeLineItem, updateLineItems } from './../Shop/actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -32,6 +32,8 @@ export class Cart extends Component {
               title={lineItem.title}
               price={lineItem.variant.price}
               removeLineItem={this.props.removeLineItem}
+              updateLineItems={this.props.updateLineItems}
+              lineItemIdProgress={this.props.cart.lineItemIdProgress}
             />
           )
         })}
@@ -79,6 +81,7 @@ export default connect(
     increaseQuantity,
     decreaseQuantity,
     removeItem,
-    removeLineItem
+    removeLineItem,
+    updateLineItems
   }
 )(Cart)

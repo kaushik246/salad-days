@@ -68,29 +68,42 @@ export class CartItem extends Component {
         </div>
         <div className="cart-item-price">{this.props.price}</div>
         <div className="cart-item-quantity">
-          <div className="cart-item-input-wrap">
-            <div
-              className="cart-item-increase-decrease"
-              onClick={(e) => {
-                e.preventDefault()
-              }}
-            >
-              -
+          {this.props.lineItemIdProgress === this.props.id ? (
+            <div className="loading-icon">
+              <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/smal_loading.gif?v=1601572533" />
             </div>
-            <input
-              type="text"
-              disabled={true}
-              placeholder={this.props.quantity}
-            />
-            <div
-              className="cart-item-increase-decrease"
-              onClick={(e) => {
-                e.preventDefault()
-              }}
-            >
-              +
+          ) : (
+            <div className="cart-item-input-wrap">
+              <div
+                className="cart-item-increase-decrease"
+                onClick={(e) => {
+                  e.preventDefault()
+                  if (this.props.quantity > 1)
+                    this.props.updateLineItems(this.props.checkoutId, [
+                      { id: this.props.id, quantity: this.props.quantity - 1 }
+                    ])
+                }}
+              >
+                -
+              </div>
+              <input
+                type="text"
+                disabled={true}
+                placeholder={this.props.quantity}
+              />
+              <div
+                className="cart-item-increase-decrease"
+                onClick={(e) => {
+                  e.preventDefault()
+                  this.props.updateLineItems(this.props.checkoutId, [
+                    { id: this.props.id, quantity: this.props.quantity + 1 }
+                  ])
+                }}
+              >
+                +
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <div className="cart-item-subtotal">
           {parseInt(this.props.price, 10) * parseInt(this.props.quantity, 10)}

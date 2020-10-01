@@ -10,6 +10,7 @@ export const SHOP_REQUEST_CARDS = 'SHOP_REQUEST_CARDS'
 export const SHOP_RECEIVE_CARDS = 'SHOP_RECEIVE_CARDS'
 export const UNSET_SHOP_ITEM = 'UNSET_SHOP_ITEM'
 export const CART_UPDATE = 'CART_UPDATE'
+export const CART_UPDATE_LINE_ITEM = 'CART_UPDATE_LINE_ITEM'
 
 const client = Client.buildClient({
   storefrontAccessToken: '50c7db75bbf868e62de163103d68b8f1',
@@ -43,6 +44,21 @@ export const addItemToCart = (checkoutId, lineItemsToAdd) => {
       const resp = await client.checkout.addLineItems(
         checkoutId,
         lineItemsToAdd
+      )
+      dispatch(cartUpdate(resp))
+    } catch (e) {
+      console.log('There is some problem', e)
+    }
+  }
+}
+
+export const updateLineItems = (checkoutId, lineItemToUpdate) => {
+  return async (dispatch) => {
+    try {
+      dispatch(updatingLineItem(lineItemToUpdate[0].id))
+      const resp = await client.checkout.updateLineItems(
+        checkoutId,
+        lineItemToUpdate
       )
       dispatch(cartUpdate(resp))
     } catch (e) {
@@ -159,5 +175,12 @@ export const receiveCards = (cards) => {
   return {
     type: SHOP_RECEIVE_CARDS,
     cards
+  }
+}
+
+export const updatingLineItem = (lineItemId) => {
+  return {
+    type: CART_UPDATE_LINE_ITEM,
+    lineItemId
   }
 }
