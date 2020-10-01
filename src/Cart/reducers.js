@@ -6,7 +6,9 @@ import {
   CART_CHECKOUT,
   CART_UPDATE_SUBTOTAL,
   CART_SET_CHECKOUT_ID,
-  CART_UPDATE
+  CART_UPDATE,
+  CART_REQUEST_ADD_LINE_ITEM,
+  CART_UPDATE_LINE_ITEM
 } from './actions'
 
 const defaultState = {
@@ -15,7 +17,8 @@ const defaultState = {
   cartItemsCount: 0,
   dataIsFetching: false,
   checkoutId: null,
-  checkout: null
+  checkout: null,
+  addLineItemInProgress: null
 }
 
 const cart = (state = defaultState, action) => {
@@ -76,11 +79,23 @@ const cart = (state = defaultState, action) => {
         ...state,
         checkoutId: action.checkoutId
       }
+    case CART_REQUEST_ADD_LINE_ITEM:
+      return {
+        ...state,
+        addLineItemInProgress: true
+      }
     case CART_UPDATE:
       return {
         ...state,
         checkout: action.checkout,
-        checkoutId: action.checkout.id
+        checkoutId: action.checkout.id,
+        addLineItemInProgress: false,
+        lineItemIdProgress: null
+      }
+    case CART_UPDATE_LINE_ITEM:
+      return {
+        ...state,
+        lineItemIdProgress: action.lineItemId
       }
     default:
       return state

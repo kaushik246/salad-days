@@ -6,6 +6,8 @@ export const CART_CHECKOUT = 'CART_CHECKOUT'
 export const CART_UPDATE_SUBTOTAL = 'CART_UPDATE_SUBTOTAL'
 export const CART_SET_CHECKOUT_ID = 'CART_SET_CHECKOUT_ID'
 export const CART_UPDATE = 'CART_UPDATE'
+export const CART_REQUEST_ADD_LINE_ITEM = 'CART_REQUEST_ADD_LINE_ITEM'
+export const CART_UPDATE_LINE_ITEM = 'CART_UPDATE_LINE_ITEM'
 
 export const addBoxToCart = (box) => {
   var cartInJson = JSON.stringify(box)
@@ -52,5 +54,11 @@ export const setCheckoutId = (checkoutId) => {
   return {
     type: CART_SET_CHECKOUT_ID,
     checkoutId
+  }
+}
+
+export const requestAddLineItem = () => {
+  return {
+    type: CART_REQUEST_ADD_LINE_ITEM
   }
 }
