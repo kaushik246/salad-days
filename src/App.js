@@ -47,6 +47,7 @@ export class App extends Component {
           <Route exact path="/shop" component={Shop} />
           {/*Corporate Gifting*/}
           <Route exact path="/corporateGifting" component={CorporateGifting} />
+          <Route path="*" component={Shop} />
         </Switch>
       </Fragment>
     )
