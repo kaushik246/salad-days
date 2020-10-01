@@ -8,11 +8,18 @@ import CorporateGifting from './CorporateGifting'
 import Nav from './Nav'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
-import { createCheckout } from './Shop/actions'
+import { createCheckout, fetchCheckout, fetchCards } from './Shop/actions'
 
 export class App extends Component {
   componentDidMount() {
-    if (!this.props.cart.checkoutId) this.props.createCheckout()
+    if (!this.props.cart.checkoutId) {
+      if (localStorage.getItem('saladDaysCheckoutId')) {
+        this.props.fetchCheckout(localStorage.getItem('saladDaysCheckoutId'))
+      } else this.props.createCheckout()
+    }
+    if (!this.props.shop.cards) {
+      this.props.fetchCards()
+    }
   }
   state = {
     modalIsOpen: true
@@ -49,13 +56,14 @@ export class App extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.app.user,
-    cart: state.cart
+    cart: state.cart,
+    shop: state.shop
   }
 }
 
 export default withRouter(
   connect(
     mapStateToProps,
-    { setCurrentStep, createCheckout }
+    { setCurrentStep, createCheckout, fetchCheckout, fetchCards }
   )(App)
 )

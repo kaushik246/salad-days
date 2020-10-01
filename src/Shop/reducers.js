@@ -3,13 +3,17 @@ import {
   SHOP_RECEIVE_ITEMS_LIST,
   SHOP_REQUEST_ITEM,
   SHOP_RECEIVE_ITEM,
-  UNSET_SHOP_ITEM
+  UNSET_SHOP_ITEM,
+  SHOP_REQUEST_CARDS,
+  SHOP_RECEIVE_CARDS
 } from './actions'
 
 const defaultState = {
   shopItems: null,
   dataIsFetching: false,
-  shopItem: null
+  shopItem: null,
+  cards: null,
+  cardDataIsFetching: false
 }
 
 const shop = (state = defaultState, action) => {
@@ -40,6 +44,17 @@ const shop = (state = defaultState, action) => {
       return {
         ...state,
         shopItem: null
+      }
+    case SHOP_REQUEST_CARDS:
+      return {
+        ...state,
+        cardDataIsFetching: true
+      }
+    case SHOP_RECEIVE_CARDS:
+      return {
+        ...state,
+        cardDataIsFetching: false,
+        cards: action.cards
       }
     default:
       return state

@@ -10,7 +10,7 @@ const BoxMessage = ({
   changeFrom,
   changeMessage
 }) => {
-  var remainingCharacters = 120
+  var remainingCharacters = 120 - message.length
   return (
     <div className="box-msg-data">
       <div className="box-msg-to-from">

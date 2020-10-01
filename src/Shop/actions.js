@@ -6,6 +6,8 @@ export const SHOP_REQUEST_ITEMS_LIST = 'SHOP_REQUEST_ITEMS_LIST'
 export const SHOP_RECEIVE_ITEMS_LIST = 'SHOP_RECEIVE_ITEMS_LIST'
 export const SHOP_REQUEST_ITEM = 'SHOP_REQUEST_ITEM'
 export const SHOP_RECEIVE_ITEM = 'SHOP_RECEIVE_ITEM'
+export const SHOP_REQUEST_CARDS = 'SHOP_REQUEST_CARDS'
+export const SHOP_RECEIVE_CARDS = 'SHOP_RECEIVE_CARDS'
 export const UNSET_SHOP_ITEM = 'UNSET_SHOP_ITEM'
 export const CART_UPDATE = 'CART_UPDATE'
 
@@ -19,6 +21,19 @@ export const createCheckout = () => {
     client.checkout.create().then((resp) => {
       dispatch({ type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id })
     })
+  }
+}
+
+export const fetchCheckout = (checkoutId) => {
+  return async (dispatch) => {
+    try {
+      console.log(checkoutId)
+      const resp = await client.checkout.fetch(checkoutId)
+      console.log(resp)
+      dispatch(cartUpdate(resp))
+    } catch (e) {
+      console.log('There is some problem', e)
+    }
   }
 }
 
@@ -36,6 +51,21 @@ export const addItemToCart = (checkoutId, lineItemsToAdd) => {
   }
 }
 
+export const removeLineItem = (checkoutId, lineItemIds) => {
+  return async (dispatch) => {
+    console.log(checkoutId, lineItemIds)
+    try {
+      const resp = await client.checkout.removeLineItems(
+        checkoutId,
+        lineItemIds
+      )
+      dispatch(cartUpdate(resp))
+    } catch (e) {
+      console.log('There is some problem', e)
+    }
+  }
+}
+
 export const fetchShopItems = (dataIsFetching = true) => {
   return async (dispatch) => {
     dispatch(requestShopItems(dataIsFetching))
@@ -44,6 +74,20 @@ export const fetchShopItems = (dataIsFetching = true) => {
         'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIxMDE2NjI1MTY3OA=='
       )
       dispatch(receiveShopItems(resp.products))
+    } catch (e) {
+      console.log('There is some problem', e)
+    }
+  }
+}
+
+export const fetchCards = (dataIsFetching = true) => {
+  return async (dispatch) => {
+    dispatch(requestCards(dataIsFetching))
+    try {
+      const resp = await client.collection.fetchWithProducts(
+        'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIyNDE2NzM2MjcxOA=='
+      )
+      dispatch(receiveCards(resp.products))
     } catch (e) {
       console.log('There is some problem', e)
     }
@@ -102,5 +146,18 @@ export const cartUpdate = (checkout) => {
   return {
     type: CART_UPDATE,
     checkout
+  }
+}
+
+export const requestCards = () => {
+  return {
+    type: SHOP_REQUEST_CARDS
+  }
+}
+
+export const receiveCards = (cards) => {
+  return {
+    type: SHOP_RECEIVE_CARDS,
+    cards
   }
 }

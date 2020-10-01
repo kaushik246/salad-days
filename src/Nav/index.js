@@ -35,15 +35,17 @@ export class Nav extends Component {
               type="button"
               onClick={() => this.props.history.push('/shop')}
             >
-              <p className="section-text">SHOP</p>
+              <p className="section-text">SHOP A GIFT</p>
             </div>
-            <div
-              className="salad-days-sections desktop"
-              type="button"
-              onClick={() => this.props.history.push('/buildBox')}
-            >
-              <p className="section-text">BUILD A BOX</p>
-            </div>
+            {disable && (
+              <div
+                className="salad-days-sections desktop"
+                type="button"
+                onClick={() => this.props.history.push('/buildBox')}
+              >
+                <p className="section-text">BUILD A BOX</p>
+              </div>
+            )}
             <div
               className="salad-days-sections desktop"
               type="button"
