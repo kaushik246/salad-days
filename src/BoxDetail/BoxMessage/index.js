@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
+import './responsive.css'
 
 const BoxMessage = ({
   to,

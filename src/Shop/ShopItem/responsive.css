@@ -22,14 +22,32 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-
-  .box-msg-data .box-msg-to-from {
-    display: block;
+  .container {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
   }
 
-  .box-msg-data .box-msg-to-from > div{
-    width: 100%;
+  img.product-image {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 0;
   }
+
+  .product-container {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .shop-main-container .shop-items-container {
+    display: flex;
+    width: 360px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
 }
 
 /* #Mobile (Landscape)
