@@ -7,7 +7,13 @@ import BoxInfo from './BoxInfo'
 import BoxAttributes from './BoxAttributes'
 import CardModal from './CardModal'
 
-import { openCardModal, closeCardModal, setCard, setBox } from './actions'
+import {
+  openCardModal,
+  closeCardModal,
+  setCard,
+  setBox,
+  clearBox
+} from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
 import {
   fetchShopItemData,
@@ -73,11 +79,13 @@ class BoxDetail extends Component {
               addItemToCart={this.props.addItemToCart}
               checkoutId={this.props.cart.checkoutId}
               variantId={this.props.shopItem.variants[0].id}
+              clearBox={this.props.clearBox}
             />
           </div>
         </div>
         <CardModal
           cardsList={this.props.card.cardsList}
+          cards={this.props.shop.cards}
           cardModal={this.props.boxDetail.cardModal}
           closeCardModal={this.props.closeCardModal}
           setCard={this.props.setCard}
@@ -99,6 +107,7 @@ export default connect(
     setCard,
     fetchCardList,
     setBox,
+    clearBox,
     fetchShopItemData,
     unsetShopItemData,
     addItemToCart

@@ -12,6 +12,10 @@ export class CartItem extends Component {
   }
 
   render() {
+    let customAttributes = {}
+    this.props.customAttributes.map((attribute) => {
+      customAttributes[attribute['key']] = attribute['value']
+    })
     return (
       <div className="cart-item-container">
         <div className="cart-item-image-contents">
@@ -21,12 +25,26 @@ export class CartItem extends Component {
           <div className="cart-item-contents">
             <div className="item-title-container">
               <div className="item-title">{this.props.title}</div>
-              <div className="item-title-subtext">{'Box'}</div>
+              <div className="item-title-subtext">{customAttributes.Box}</div>
             </div>
-
             <div className="item-card">
-              <b>Card: </b> {'Card'}
+              <b>Card: </b> {customAttributes.Card}
             </div>
+            {customAttributes.To && (
+              <div className="item-card">
+                <b>To: </b> {customAttributes.To}
+              </div>
+            )}
+            {customAttributes.From && (
+              <div className="item-card">
+                <b>From: </b> {customAttributes.From}
+              </div>
+            )}
+            {customAttributes.Message && (
+              <div className="item-card">
+                <b>Message: </b> {customAttributes.Message}
+              </div>
+            )}
             {/*(
               <div className="item-contents">
                 <b>Gift Box Contents: </b>{' '}
@@ -39,6 +57,9 @@ export class CartItem extends Component {
               type="button"
               onClick={(e) => {
                 e.preventDefault()
+                this.props.removeLineItem(this.props.checkoutId, [
+                  this.props.id
+                ])
               }}
             >
               Remove

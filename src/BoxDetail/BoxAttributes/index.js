@@ -16,13 +16,15 @@ const BoxAttributes = ({
   history,
   addItemToCart,
   checkoutId,
-  variantId
+  variantId,
+  clearBox
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
-  const [changeTo, to] = useState('')
-  const [changeFrom, from] = useState('')
-  const [changeMessage, message] = useState('')
+  const [to, changeTo] = useState('')
+  const [from, changeFrom] = useState('')
+  const [message, changeMessage] = useState('')
+  const [bought, setBought] = useState(false)
 
   const increaseItemQuantity = () => {
     setQuantity(quantity + 1)
@@ -33,11 +35,11 @@ const BoxAttributes = ({
       setQuantity(quantity - 1)
     }
   }
-
+  let customAttributes = []
   return (
     <div className="box-attributes-main-container">
       <div className="quantity-field-container">
-        <div className="quantity-title">QUANTITY</div>
+        {false && <div className="quantity-title">QUANTITY</div>}
         {false && (
           <div className="quantity-button-field">
             <div className="shop-item-input-wrap">
@@ -134,56 +136,62 @@ const BoxAttributes = ({
           </div>
         </div>
       )}
-      <div className="cart-button-container">
-        <div
-          className="cart-button-title"
-          onClick={(e) => {
-            e.stopPropagation()
-            addItemToCart(checkoutId, [
-              {
-                variantId: variantId,
-                quantity: 1,
-                customAttributes: [
-                  { key: 'Box', value: selectedBox },
-                  { key: 'Card', value: cardSelected },
-                  { key: 'To', value: 'Kaushik' },
-                  { key: 'From', value: 'Varun' },
-                  {
-                    key: 'Message',
-                    value:
-                      'Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali Happy Diwali'
-                  }
-                ]
-              }
-            ])
-          }}
-        >
-          {' '}
-          Add to Cart . Rs 1000
-        </div>
+      <div
+        className="cart-button-container"
+        onClick={(e) => {
+          e.stopPropagation()
+          if (from) customAttributes.push({ key: 'From', value: from })
+          if (to) customAttributes.push({ key: 'To', value: to })
+          if (message)
+            customAttributes.push({
+              key: 'Message',
+              value: message
+            })
+          addItemToCart(checkoutId, [
+            {
+              variantId: variantId,
+              quantity: 1,
+              customAttributes: [
+                { key: 'Box', value: selectedBox },
+                { key: 'Card', value: cardSelected },
+                ...customAttributes
+              ]
+            }
+          ]).then(() => {
+            changeTo('')
+            changeFrom('')
+            changeMessage('')
+            setBought(true)
+            clearBox()
+          })
+        }}
+      >
+        <div className="cart-button-title"> Add to Cart . Rs 1000</div>
       </div>
-      <div className="more-buttons-container">
-        <div
-          className="shop-more-button"
-          onClick={(e) => {
-            e.stopPropagation()
-            history.push('/shop')
-          }}
-        >
-          {' '}
-          Shop More
+      {bought && (
+        <div className="more-buttons-container">
+          <div
+            className="shop-more-button"
+            onClick={(e) => {
+              e.stopPropagation()
+              history.push('/shop')
+            }}
+          >
+            {' '}
+            Shop More
+          </div>
+          <div
+            className="checkout-button"
+            onClick={(e) => {
+              e.stopPropagation()
+              history.push('/cart')
+            }}
+          >
+            {' '}
+            Checkout{' '}
+          </div>
         </div>
-        <div
-          className="checkout-button"
-          onClick={(e) => {
-            e.stopPropagation()
-            history.push('/cart')
-          }}
-        >
-          {' '}
-          Checkout{' '}
-        </div>
-      </div>
+      )}
     </div>
   )
 }

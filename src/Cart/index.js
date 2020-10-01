@@ -7,6 +7,7 @@ import CartHeader from './CartHeader'
 import CartItem from './CartItem'
 
 import { increaseQuantity, decreaseQuantity, removeItem } from './actions'
+import { removeLineItem } from './../Shop/actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -16,19 +17,21 @@ const mapStateToProps = (state) => {
 
 export class Cart extends Component {
   render() {
-    return this.props.cart.checkout ? (
+    return this.props.cart.checkout &&
+      this.props.cart.checkout.lineItems.length > 0 ? (
       <div className="cart-main-container">
         <CartHeader />
         {this.props.cart.checkout.lineItems.map((lineItem) => {
           return (
             <CartItem
               id={lineItem.id}
-              cartId={this.props.cart.cartId}
+              checkoutId={this.props.cart.checkoutId}
               image={lineItem.variant.image.src}
               customAttributes={lineItem.customAttributes}
               quantity={lineItem.quantity}
               title={lineItem.title}
               price={lineItem.variant.price}
+              removeLineItem={this.props.removeLineItem}
             />
           )
         })}
@@ -75,6 +78,7 @@ export default connect(
   {
     increaseQuantity,
     decreaseQuantity,
-    removeItem
+    removeItem,
+    removeLineItem
   }
 )(Cart)

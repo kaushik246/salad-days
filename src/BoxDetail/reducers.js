@@ -2,15 +2,13 @@ import {
   BOX_DETAIL_OPEN_CARD_MODAL,
   BOX_DETAIL_CLOSE_CARD_MODAL,
   BOX_DETAIL_SET_CARD,
-  BOX_DETAIL_SET_BOX
+  BOX_DETAIL_SET_BOX,
+  BOX_DETAIL_CLEAR_BOX
 } from './actions'
 
 const defaultState = {
   cardSelected: '',
   cardImage: '',
-  to: '',
-  from: '',
-  message: '',
   boxSelected: '',
   boxImage: '',
   boxQuantity: '',
@@ -32,8 +30,8 @@ const boxDetail = (state = defaultState, action) => {
     case BOX_DETAIL_SET_CARD:
       return {
         ...state,
-        cardSelected: action.card.title,
-        cardImage: action.card.image,
+        cardSelected: action.cardTitle,
+        cardImage: action.cardImage,
         cardModal: false
       }
     case BOX_DETAIL_SET_BOX:
@@ -42,6 +40,13 @@ const boxDetail = (state = defaultState, action) => {
         boxSelected: action.box.title,
         boxImage: action.box.image,
         cardModal: false
+      }
+    case BOX_DETAIL_CLEAR_BOX:
+      return {
+        ...state,
+        boxSelected: '',
+        cardSelected: '',
+        boxImage: ''
       }
     default:
       return state

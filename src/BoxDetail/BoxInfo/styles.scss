@@ -7,12 +7,15 @@
     margin-bottom: 30px;
     border-bottom-color: black;
     border-bottom-width: 1px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     .description-content {
       padding-top: 10px;
       max-height: 200px;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 400px;
+      &.heading {
+        color: #5fc3ca;
+      }
     }
   }
   .includes-button-container {

@@ -71,7 +71,7 @@ const cart = (state = defaultState, action) => {
         cartPrice: action.cartPrice
       }
     case CART_SET_CHECKOUT_ID:
-      localStorage.setItem('saladDays', { checkoutId: action.checkoutId })
+      localStorage.setItem('saladDaysCheckoutId', action.checkoutId)
       return {
         ...state,
         checkoutId: action.checkoutId
@@ -79,7 +79,8 @@ const cart = (state = defaultState, action) => {
     case CART_UPDATE:
       return {
         ...state,
-        checkout: action.checkout
+        checkout: action.checkout,
+        checkoutId: action.checkout.id
       }
     default:
       return state
