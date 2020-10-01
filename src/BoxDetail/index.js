@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
-
+import './responsive.css'
 import ImageSlider from './ImageSlider'
 import BoxInfo from './BoxInfo'
 import BoxAttributes from './BoxAttributes'

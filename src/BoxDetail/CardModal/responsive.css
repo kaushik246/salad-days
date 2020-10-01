@@ -22,14 +22,25 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-
-  .box-msg-data .box-msg-to-from {
-    display: block;
+  .card-modal-container{
+    width: 320px;
   }
 
-  .box-msg-data .box-msg-to-from > div{
-    width: 100%;
+  .card-modal-container .card-image-component {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
   }
+
+  .card-modal-container .card-image-component .card-image {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+
 }
 
 /* #Mobile (Landscape)

@@ -39,7 +39,7 @@
       margin-right: 0px;
   }
 
-  .nav-main-container .nav-wrap.mobile{
+  .nav-main-container .nav-wrap.mobile .nav-wrap-mobile-container{
       display: flex;
       justify-content: space-around;
       padding-top: 20px;
