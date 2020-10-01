@@ -65,13 +65,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "production-start": "npm run build && http-server build/ -p 3000 -P http://cafy3-dev-lnx:7700",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "build-aws": "npm run build && aws s3 sync build/ s3://cafy.io",
-    "build-aws-dev": "npm run build && aws s3 sync build/ s3://cafy.io-dev",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "compile": "tsc",
     "eject": "react-scripts eject"
   },
   "prettier": {
