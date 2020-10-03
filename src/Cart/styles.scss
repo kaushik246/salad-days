@@ -6,7 +6,7 @@
     flex-direction: row-reverse;
     .cart-checkout-subtotal-container {
       .cart-subtotal {
-        display: inline-flex;
+        display: flex;
         .subtotal-text {
           font-size: 10px;
           text-transform: uppercase;
@@ -17,18 +17,29 @@
         .subtotal-value {
           font-size: 22px;
           font-weight: 400;
+          margin-bottom: 10px;
         }
+      }
+      .cart-checkout-info {
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 13px;
       }
       .cart-checkout-container {
         text-transform: uppercase;
         text-align: center;
-        padding: 12px 24px;
+        padding: 16px 48px;
         background-color: #5fc3ca;
+        border: none;
+        letter-spacing: 1px;
+        font-weight: 300px;
+        font-size: 12px;
         color: white;
         width: 200px;
         cursor: pointer;
       }
     }
+    margin-bottom: 50px;
   }
   .empty-cart {
     padding-top: 150px;

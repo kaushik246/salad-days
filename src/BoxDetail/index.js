@@ -6,6 +6,7 @@ import ImageSlider from './ImageSlider'
 import BoxInfo from './BoxInfo'
 import BoxAttributes from './BoxAttributes'
 import CardModal from './CardModal'
+import InfoModal from './../BuildBox/Items/components/SelectedItems/components/InfoModal'
 
 import {
   openCardModal,
@@ -39,7 +40,8 @@ const mapStateToProps = (state) => {
 class BoxDetail extends Component {
   state = {
     shopItem: this.props.shopItem,
-    seconds: 3
+    seconds: 3,
+    infoModal: false
   }
   componentDidMount() {
     this.props.fetchShopItemData(this.props.match.params.id)
@@ -61,6 +63,22 @@ class BoxDetail extends Component {
         shopItem: this.props.shopItem
       })
     }
+  }
+
+  openInfoModal = () => {
+    this.setState({
+      infoModal: true,
+      title: 'Please select a card!',
+      info: 'You must select a card before adding this box to your cart.'
+    })
+  }
+
+  closeInfoModal = () => {
+    this.setState({
+      infoModal: false,
+      title: '',
+      info: ''
+    })
   }
 
   componentWillUnmount() {
@@ -94,6 +112,8 @@ class BoxDetail extends Component {
               clearBox={this.props.clearBox}
               addLineItemInProgress={this.props.cart.addLineItemInProgress}
               requestAddLineItem={this.props.requestAddLineItem}
+              price={this.props.shopItem.variants[0].price}
+              openInfoModal={this.openInfoModal}
             />
           </div>
         </div>
@@ -103,6 +123,13 @@ class BoxDetail extends Component {
           cardModal={this.props.boxDetail.cardModal}
           closeCardModal={this.props.closeCardModal}
           setCard={this.props.setCard}
+        />
+        <InfoModal
+          openInfoModal={this.openInfoModal}
+          closeInfoModal={this.closeInfoModal}
+          infoModal={this.state.infoModal}
+          info={this.state.info}
+          title={this.state.title}
         />
       </div>
     ) : (
