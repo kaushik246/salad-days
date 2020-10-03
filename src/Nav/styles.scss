@@ -51,10 +51,35 @@
         color: #5fc3ca;
         cursor: pointer;
       }
-      .cart-logo {
-        height: 20px;
-        width: 20px;
-        color: #5fc3ca;
+      .cart-icon-container {
+        display: flex;
+        .cart-icon {
+          width: 25px;
+          height: 25px;
+          margin: -5px 10px;
+        }
+        .cart-count {
+          position: relative;
+          margin-left: -15px;
+          margin-top: -15px;
+          top: 0;
+          right: 0;
+          font-size: 8px;
+          width: auto;
+          height: 16px;
+          width: 16px;
+          font-weight: bold;
+          color: white;
+          background: #5fc3ca;
+          border: none;
+          font-family: inherit;
+          text-align: center;
+          border-radius: 10px;
+          line-height: 18px;
+          padding-left: 2px;
+          letter-spacing: 0;
+          text-align: center;
+        }
       }
       .section-text {
         padding-right: 5px;

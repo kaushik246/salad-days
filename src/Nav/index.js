@@ -60,12 +60,24 @@ export class Nav extends Component {
               type="button"
               onClick={() => this.props.history.push('/cart')}
             >
-              <p className="section-text">CART </p>
-              {this.props.cart.cartPrice !== 0 && (
-                <p className="section-price">
-                  (Rs. {this.props.cart.cartPrice})
-                </p>
-              )}
+              <div className="cart-icon-container">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/cart.png?v=1601745553"
+                  className="cart-icon"
+                />
+                {this.props.cart.checkout &&
+                  this.props.cart.checkout.lineItems.length && (
+                    <div className="cart-count">
+                      {this.props.cart.checkout.lineItems.length}
+                    </div>
+                  )}
+              </div>
+              {this.props.cart.checkout &&
+                this.props.cart.checkout.totalPrice !== '0.00' && (
+                  <p className="section-price">
+                    (Rs. {this.props.cart.checkout.totalPrice})
+                  </p>
+                )}
             </div>
           </div>
         </div>
@@ -99,12 +111,24 @@ export class Nav extends Component {
               type="button"
               onClick={() => this.props.history.push('/cart')}
             >
-              <p className="section-text">CART </p>
-              {this.props.cart.cartPrice !== 0 && (
-                <p className="section-price">
-                  (Rs. {this.props.cart.cartPrice})
-                </p>
-              )}
+              <div className="cart-icon-container">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/cart.png?v=1601745553"
+                  className="cart-icon"
+                />
+                {this.props.cart.checkout &&
+                  this.props.cart.checkout.lineItems.length !== 0 && (
+                    <div className="cart-count">
+                      {this.props.cart.checkout.lineItems.length}
+                    </div>
+                  )}
+              </div>
+              {this.props.cart.checkout &&
+                this.props.cart.checkout.totalPrice !== '0.00' && (
+                  <p className="section-price">
+                    (Rs. {this.props.cart.checkout.totalPrice})
+                  </p>
+                )}
             </div>
           </div>
         </div>
