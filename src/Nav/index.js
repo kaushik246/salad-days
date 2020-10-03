@@ -26,7 +26,7 @@ export class Nav extends Component {
               onClick={() => this.props.history.push('/')}
             >
               <img
-                src="https://cdn.shopify.com/s/files/1/0450/7985/5254/products/BankStatement_1024x1024@2x.png?v=1598351459"
+                src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/logo-01.png?v=1601708076"
                 className="salad-days-logo"
               />
             </div>

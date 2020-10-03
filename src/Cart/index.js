@@ -45,7 +45,10 @@ export class Cart extends Component {
                 Rs. {this.props.cart.checkout.totalPrice}
               </div>
             </div>
-            <div
+            <p className="cart-checkout-info">
+              <i>Shipping & taxes calculated at checkout</i>
+            </p>
+            <button
               className="cart-checkout-container"
               onClick={(e) => {
                 e.preventDefault()
@@ -53,7 +56,7 @@ export class Cart extends Component {
               }}
             >
               CHECK OUT
-            </div>
+            </button>
           </div>
         </div>
       </div>

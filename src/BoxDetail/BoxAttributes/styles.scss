@@ -99,14 +99,17 @@
     padding-bottom: 20px;
     border: 1px solid #5fc3ca;
     background-color: #5fc3ca;
+    width: 100%;
     cursor: pointer;
 
     .cart-button-title {
       font-size: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 400;
       color: white;
+      border: none;
+      background-color: #5fc3ca;
     }
   }
   .more-buttons-container {
@@ -119,28 +122,31 @@
       flex: 1;
       text-align: center;
       font-size: 10px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 400;
       color: white;
       padding-top: 20px;
       padding-bottom: 20px;
       background-color: #5fc3ca;
       margin-right: 10px;
+      border: none;
     }
 
     .checkout-button {
       flex: 1;
       text-align: center;
       font-size: 10px;
-      letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 400;
       color: white;
       background-color: #5fc3ca;
       padding-top: 20px;
       padding-bottom: 20px;
       margin-left: 10px;
+      background-color: #5fc3ca;
+      border: none;
+      letter-spacing: 1.5px;
     }
   }
 }

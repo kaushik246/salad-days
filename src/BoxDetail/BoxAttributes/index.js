@@ -19,7 +19,9 @@ const BoxAttributes = ({
   variantId,
   clearBox,
   addLineItemInProgress,
-  requestAddLineItem
+  requestAddLineItem,
+  price,
+  openInfoModal
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -143,43 +145,46 @@ const BoxAttributes = ({
         </div>
       )}
       {!addLineItemInProgress && (
-        <div
+        <button
           className="cart-button-container"
           onClick={(e) => {
             e.stopPropagation()
-            if (from) customAttributes.push({ key: 'From', value: from })
-            if (to) customAttributes.push({ key: 'To', value: to })
-            if (message)
-              customAttributes.push({
-                key: 'Message',
-                value: message
+            if (!cardSelected) openInfoModal()
+            else {
+              if (from) customAttributes.push({ key: 'From', value: from })
+              if (to) customAttributes.push({ key: 'To', value: to })
+              if (message)
+                customAttributes.push({
+                  key: 'Message',
+                  value: message
+                })
+              requestAddLineItem()
+              addItemToCart(checkoutId, [
+                {
+                  variantId: variantId,
+                  quantity: 1,
+                  customAttributes: [
+                    { key: 'Box', value: selectedBox },
+                    { key: 'Card', value: cardSelected },
+                    ...customAttributes
+                  ]
+                }
+              ]).then(() => {
+                changeTo('')
+                changeFrom('')
+                changeMessage('')
+                setBought(true)
+                clearBox()
               })
-            requestAddLineItem()
-            addItemToCart(checkoutId, [
-              {
-                variantId: variantId,
-                quantity: 1,
-                customAttributes: [
-                  { key: 'Box', value: selectedBox },
-                  { key: 'Card', value: cardSelected },
-                  ...customAttributes
-                ]
-              }
-            ]).then(() => {
-              changeTo('')
-              changeFrom('')
-              changeMessage('')
-              setBought(true)
-              clearBox()
-            })
+            }
           }}
         >
-          <div className="cart-button-title"> Add to Cart . Rs 1000</div>
-        </div>
+          <div className="cart-button-title"> Add to Cart . Rs {price}</div>
+        </button>
       )}
       {bought && (
         <div className="more-buttons-container">
-          <div
+          <button
             className="shop-more-button"
             onClick={(e) => {
               e.stopPropagation()
@@ -188,17 +193,16 @@ const BoxAttributes = ({
           >
             {' '}
             Shop More
-          </div>
-          <div
+          </button>
+          <button
             className="checkout-button"
             onClick={(e) => {
               e.stopPropagation()
               history.push('/cart')
             }}
           >
-            {' '}
-            Checkout{' '}
-          </div>
+            Proceed to Buy
+          </button>
         </div>
       )}
     </div>
