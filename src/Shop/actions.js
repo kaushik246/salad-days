@@ -28,9 +28,7 @@ export const createCheckout = () => {
 export const fetchCheckout = (checkoutId) => {
   return async (dispatch) => {
     try {
-      console.log(checkoutId)
       const resp = await client.checkout.fetch(checkoutId)
-      console.log(resp)
       dispatch(cartUpdate(resp))
     } catch (e) {
       console.log('There is some problem', e)
@@ -69,7 +67,6 @@ export const updateLineItems = (checkoutId, lineItemToUpdate) => {
 
 export const removeLineItem = (checkoutId, lineItemIds) => {
   return async (dispatch) => {
-    console.log(checkoutId, lineItemIds)
     try {
       const resp = await client.checkout.removeLineItems(
         checkoutId,
@@ -115,7 +112,6 @@ export const fetchShopItemData = (id, dataIsFetching = true) => {
     dispatch(requestShopItem(dataIsFetching))
     try {
       const resp = await client.product.fetch(id)
-      console.log(resp)
       dispatch(receiveShopItem(resp))
     } catch (e) {
       console.log('There is some problem', e)

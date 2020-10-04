@@ -4,7 +4,6 @@ import './responsive.css'
 
 class ShopItem extends Component {
   render() {
-    console.log(this.props.item)
     return (
       <div
         className="product-container"

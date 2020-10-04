@@ -119,7 +119,9 @@ export class Nav extends Component {
                 {this.props.cart.checkout &&
                   this.props.cart.checkout.lineItems.length !== 0 && (
                     <div className="cart-count">
-                      {this.props.cart.checkout.lineItems.length}
+                      <p className="cart-count-text">
+                        {this.props.cart.checkout.lineItems.length}
+                      </p>
                     </div>
                   )}
               </div>

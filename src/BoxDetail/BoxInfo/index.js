@@ -5,7 +5,6 @@ import './styles.scss'
 const BoxInfo = ({ description }) => {
   const heading = description.split('|')[0]
   const includes = description.split('|')[1]
-  console.log(description.split('|'))
   return (
     <div className="box-info-main-container">
       <div className="description-button-container">
