@@ -19,7 +19,6 @@ const customStyles = {
 }
 export class CardModal extends Component {
   render() {
-    console.log(this.props.cardsList, this.props.cards)
     return (
       <Modal
         isOpen={this.props.cardModal}

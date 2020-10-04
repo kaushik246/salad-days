@@ -105,7 +105,6 @@ const CorporateGifting = () => {
           className="corporate-gifting-submit"
           type="text"
           onClick={() => {
-            console.log('submited')
             this.props.history.push('/shop')
           }}
         >

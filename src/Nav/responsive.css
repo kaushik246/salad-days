@@ -30,19 +30,60 @@
   }
   .nav-main-container {
     display: block;
-    height: 90px!important;
+    height: 90px !important;
   }
-  .nav-main-container .section-text{
-      font-size: 12px;
+  .nav-main-container .section-text {
+    font-size: 12px;
   }
-  .nav-main-container .nav-right-sections .salad-days-cart-section{
-      margin-right: 0px;
+  .nav-main-container .nav-right-sections .salad-days-cart-section {
+    margin-right: 0px;
   }
 
-  .nav-main-container .nav-wrap.mobile .nav-wrap-mobile-container{
-      display: flex;
-      justify-content: space-around;
-      padding-top: 20px;
+  .nav-main-container .nav-wrap.mobile .nav-wrap-mobile-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+
+  .cart-icon-container {
+    display: flex;
+  }
+  .cart-icon-container .cart-icon {
+    width: 20px;
+    height: 20px;
+    margin: -5px 10px;
+  }
+
+  .cart-icon-container .cart-count {
+    position: relative;
+    margin-left: -15px;
+    margin-top: -15px;
+    top: 0;
+    right: 0;
+    font-size: 8px;
+    width: auto;
+    height: 14px;
+    width: 14px;
+    font-weight: bold;
+    color: white;
+    background: #5fc3ca;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 18px;
+    padding-left: 2px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .cart-icon-container .cart-count .cart-count-text {
+    margin-bottom: 1px;
+  }
+
+  .section-price {
+    margin-top: 5px;
+    font-size: 8px;
   }
 }
 
