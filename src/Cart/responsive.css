@@ -22,6 +22,9 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
+    .cart-main-container .empty-cart{
+        padding-top: 180px;
+    }
 }
 
 /* #Mobile (Landscape)
