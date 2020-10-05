@@ -22,6 +22,33 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
+    .mobile .cart-item-details-wrap{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .mobile .cart-item-details-wrap .cart-item-price-container,
+    .mobile .cart-item-details-wrap .cart-item-subtotal-container{
+        width: 60px;
+    }
+    .mobile .cart-item-details-wrap .cart-item-price-container > div,
+    .mobile .cart-item-details-wrap .cart-item-subtotal-container > div{
+        text-align: left;
+    }
+
+    .mobile .cart-item-details-wrap .primary{
+        height: 20px;
+    }
+
+    .mobile .cart-item-details-wrap .secondary{
+        height: 30px;
+        vertical-align: middle;
+    }
+    
+    .mobile .cart-item-details-wrap .cart-item--value{
+        margin-top: 5px;
+    }
 }
 
 /* #Mobile (Landscape)

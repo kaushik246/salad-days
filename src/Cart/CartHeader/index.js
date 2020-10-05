@@ -7,7 +7,7 @@ export class CartHeader extends Component {
     return (
       <div className="cart-header-container">
         <h3 className="cart-title">Your Cart</h3>
-        <div className="cart-column-headers">
+        <div className="cart-column-headers desktop">
           <div className="cart-column-item">Item</div>
           <div className="cart-column">Price</div>
           <div className="cart-column">Quantity</div>
