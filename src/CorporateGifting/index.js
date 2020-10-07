@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import emailjs from 'emailjs-com'
 import './styles.scss'
 
 const CorporateGifting = () => {
@@ -9,6 +9,17 @@ const CorporateGifting = () => {
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
+
+  sendEmail = () => {
+    emailjs.sendForm().then(
+      (result) => {
+        console.log('Enquiry Sent')
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
+  }
   return (
     <div className="corporate-gifting-main-container">
       <div className="wrapper">
