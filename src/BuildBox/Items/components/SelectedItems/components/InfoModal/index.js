@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
+import './responsive.css'
 
 import Modal from 'react-modal'
-
+const imgsource = require('./finish-salad.png')
 const customStyles = {
   content: {
-    top: '50%',
+    top: '150px',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    background: 'none',
+    border: 'none',
+    padding: '0px',
+    borderRadius: '0'
   }
 }
 export class InfoModal extends Component {
@@ -22,18 +27,8 @@ export class InfoModal extends Component {
         onRequestClose={this.props.closeInfoModal}
         contentLabel="Info Modal"
       >
-        <div className="info-modal-container">
-          <div className="info-modal-title">{this.props.title}</div>
-          <div className="info-modal-info">{this.props.info}</div>
-          <div className="info-modal-button">
-            <button
-              className="info-modal-button-text"
-              type="button"
-              onClick={() => this.props.closeInfoModal()}
-            >
-              OKAY
-            </button>
-          </div>
+        <div className="info-modal-container" onClick={() => this.props.closeInfoModal()}>
+          <img className="info-modal-image" src={imgsource}/>
         </div>
       </Modal>
     )
