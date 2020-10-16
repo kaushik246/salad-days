@@ -6,6 +6,7 @@ import Cart from './Cart'
 import BoxDetail from './BoxDetail'
 import CorporateGifting from './CorporateGifting'
 import Nav from './Nav'
+import Footer from './Footer'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import { createCheckout, fetchCheckout, fetchCards } from './Shop/actions'
@@ -49,6 +50,7 @@ export class App extends Component {
           <Route exact path="/corporateGifting" component={CorporateGifting} />
           <Route path="*" component={Shop} />
         </Switch>
+        <Footer />
       </Fragment>
     )
   }

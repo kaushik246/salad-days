@@ -1,0 +1,54 @@
+.footer-container {
+  background-color: #5fc3ca;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  .footer-main-container {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+
+    .footer-logo {
+      flex: 1;
+      margin-top: 20px;
+      .salad-days-logo {
+        height: 20px;
+      }
+      .logo-text {
+        margin-top: 20px;
+        color: white;
+        font-size: 13px;
+      }
+    }
+    .footer-options {
+      flex: 1;
+      .option {
+        font-family: inherit;
+        font-size: 13px;
+        padding-bottom: 5px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+    .footer-contact {
+      flex: 1;
+      margin-top: 20px;
+      margin-left: 20px;
+      .contact {
+        font-family: inherit;
+        font-size: 13px;
+        padding-bottom: 5px;
+        color: white;
+        letter-spacing: 0.5px;
+        &.us {
+          text-transform: uppercase;
+        }
+        &.email {
+          border-top: 0.5px white;
+          border-bottom: 1px white;
+        }
+      }
+    }
+  }
+}
