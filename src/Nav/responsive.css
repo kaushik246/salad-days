@@ -33,7 +33,7 @@
     height: 90px !important;
   }
   .nav-main-container .section-text {
-    font-size: 12px;
+    font-size: 10px;
   }
   .nav-main-container .nav-right-sections .salad-days-cart-section {
     margin-right: 0px;
@@ -68,7 +68,7 @@
     color: white;
     background: #5fc3ca;
     border: none;
-    font-family: inherit;
+    font-family: 'BrandonGrotesque Regular';
     text-align: center;
     border-radius: 10px;
     line-height: 18px;

@@ -2,6 +2,7 @@
   width: 100%;
   margin: 0px auto;
   padding: 80px 30px;
+  font-family: 'BrandonGrotesque Regular';
   .wrapper {
     text-align: center;
     margin: auto;
@@ -13,11 +14,11 @@
     }
     .corporate-gifting-title-text {
       margin-bottom: 20px;
-      font-size: 13px;
+      font-size: 10px;
     }
     .corporate-gifting-title-summary {
       margin-bottom: 60px;
-      font-size: 13px;
+      font-size: 10px;
     }
     .corporate-gifting-field {
       .phone-input,
@@ -50,11 +51,11 @@
         background-color: transparent;
         padding: 8px 10px;
         line-height: 1.42;
-        font-size: 1em;
+        font-size: 14px;
         color: #000;
         font-weight: normal;
         resize: vertical;
-        font-family: inherit;
+        font-family: 'BrandonGrotesque Regular';
         min-height: 100px;
       }
     }
@@ -63,7 +64,7 @@
       .submit-button-text {
         color: white;
         padding: 15px 0px;
-        font-size: 12px;
+        font-size: 10px;
         letter-spacing: 2px;
       }
     }
