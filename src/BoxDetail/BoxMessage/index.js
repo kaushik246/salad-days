@@ -53,7 +53,7 @@ const BoxMessage = ({
         </div>
         <textarea
           id="box-msg-content"
-          placeholder="Enter your card message here. 120 characters max."
+          placeholder="Enter your card message here"
           maxLength="120"
           rows="6"
           value={message}

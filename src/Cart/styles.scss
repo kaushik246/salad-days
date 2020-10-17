@@ -1,12 +1,14 @@
 .cart-main-container {
   max-width: 1180px;
   margin: 0 auto;
+  font-family: 'BrandonGrotesque Regular';
   .cart-footer-container {
     display: flex;
     flex-direction: row-reverse;
     .cart-checkout-subtotal-container {
       .cart-subtotal {
         display: flex;
+        text-align: center;
         .subtotal-text {
           font-size: 10px;
           text-transform: uppercase;
@@ -15,7 +17,7 @@
           padding: 10px;
         }
         .subtotal-value {
-          font-size: 22px;
+          font-size: 20px;
           font-weight: 400;
           margin-bottom: 10px;
         }
@@ -23,7 +25,8 @@
       .cart-checkout-info {
         margin-bottom: 20px;
         font-weight: 300;
-        font-size: 13px;
+        font-size: 10px;
+        text-align: center;
       }
       .cart-checkout-container {
         text-transform: uppercase;
@@ -33,7 +36,7 @@
         border: none;
         letter-spacing: 1px;
         font-weight: 300px;
-        font-size: 12px;
+        font-size: 10px;
         color: white;
         width: 200px;
         cursor: pointer;
@@ -44,7 +47,7 @@
   .empty-cart {
     padding-top: 280px;
     margin: auto;
-    width:240px;
+    width: 240px;
     .empty-cart-title {
       text-align: center;
       font-size: 24px;

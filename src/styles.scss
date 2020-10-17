@@ -11,7 +11,8 @@
 
 @font-face {
   font-family: 'BrandonGrotesque Regular';
-  src: local('BrandonGrotesque Regular'), url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+  src: local('BrandonGrotesque Regular'),
+    url('./fonts/BrandonGrotesque-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -24,10 +25,10 @@ body {
   margin: 0px;
 }
 
-#root{
+#root {
   scroll-behavior: smooth;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
