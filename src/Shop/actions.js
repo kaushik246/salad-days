@@ -27,7 +27,12 @@ export const fetchCheckout = (checkoutId) => {
   return async (dispatch) => {
     try {
       const resp = await client.checkout.fetch(checkoutId)
-      dispatch(cartUpdate(resp))
+      if (!resp.onlineStoreUrl) dispatch(cartUpdate(resp))
+      else {
+            client.checkout.create().then((resp) => {
+      dispatch({ type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id })
+    })
+      }
     } catch (e) {
       console.log('There is some problem', e)
     }
