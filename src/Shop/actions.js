@@ -27,7 +27,6 @@ export const fetchCheckout = (checkoutId) => {
   return async (dispatch) => {
     try {
       const resp = await client.checkout.fetch(checkoutId)
-      console.log(resp)
       if (!resp.orderStatusUrl) dispatch(cartUpdate(resp))
       else {
             client.checkout.create().then((resp) => {
