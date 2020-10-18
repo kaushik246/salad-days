@@ -27,8 +27,18 @@ export class InfoModal extends Component {
         onRequestClose={this.props.closeInfoModal}
         contentLabel="Info Modal"
       >
-        <div className="info-modal-container" onClick={() => this.props.closeInfoModal()}>
-          <img className="info-modal-image" src={imgsource}/>
+        <div
+          className="info-modal-container"
+          onClick={() => this.props.closeInfoModal()}
+        >
+          <div className="info-modal-title-container">
+            <div className="info-title-primary title-label">
+              Oops! You must choose a card before adding this gift to the cart.
+            </div>
+          </div>
+          <div className="info-modal-button-container">
+            <div className="info-button">OKAY</div>
+          </div>
         </div>
       </Modal>
     )
