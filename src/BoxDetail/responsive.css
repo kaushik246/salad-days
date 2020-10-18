@@ -22,20 +22,20 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-  .box-detail-main-container .box-detail-slider-info{
+  .box-detail-main-container .box-detail-slider-info {
     display: block;
     width: 360px;
     margin: auto;
   }
-  .box-detail-main-container .box-detail-slider-info > div{
-    padding-left: 0px!important;
+  .box-detail-main-container .box-detail-slider-info > div {
+    padding-left: 0px !important;
   }
-  
-  .box-detail-main-container .box-detail-slider-info .box-selection-container{
+
+  .box-detail-main-container .box-detail-slider-info .box-selection-container {
     margin-top: 20px;
   }
 
-  .box-detail-main-container{
+  .box-detail-main-container {
     margin-top: 30px;
   }
 }

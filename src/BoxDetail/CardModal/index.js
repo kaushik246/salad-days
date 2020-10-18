@@ -11,11 +11,11 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   },
   overlay: {
-    zIndex: 200
-  }
+    zIndex: 200,
+  },
 }
 export class CardModal extends Component {
   render() {
@@ -64,7 +64,4 @@ const mapStateToProps = (state) => {
   return {}
 }
 
-export default connect(
-  mapStateToProps,
-  {}
-)(CardModal)
+export default connect(mapStateToProps, {})(CardModal)

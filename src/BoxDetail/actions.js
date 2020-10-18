@@ -6,13 +6,13 @@ export const BOX_DETAIL_CLEAR_BOX = 'BOX_DETAIL_CLEAR_BOX'
 
 export const openCardModal = () => {
   return {
-    type: BOX_DETAIL_OPEN_CARD_MODAL
+    type: BOX_DETAIL_OPEN_CARD_MODAL,
   }
 }
 
 export const closeCardModal = () => {
   return {
-    type: BOX_DETAIL_CLOSE_CARD_MODAL
+    type: BOX_DETAIL_CLOSE_CARD_MODAL,
   }
 }
 
@@ -20,19 +20,19 @@ export const setCard = (cardTitle, cardImage) => {
   return {
     type: BOX_DETAIL_SET_CARD,
     cardTitle,
-    cardImage
+    cardImage,
   }
 }
 
 export const setBox = (box) => {
   return {
     type: BOX_DETAIL_SET_BOX,
-    box
+    box,
   }
 }
 
 export const clearBox = () => {
   return {
-    type: BOX_DETAIL_CLEAR_BOX
+    type: BOX_DETAIL_CLEAR_BOX,
   }
 }

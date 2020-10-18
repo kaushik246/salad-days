@@ -7,7 +7,7 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 21px;
+  font-size: 18px;
   .info-modal-image {
     width: 346px;
     height: 300px;
@@ -15,6 +15,7 @@
   .info-modal-title-container{
     margin-top: 40px;
     padding: 0 36px;
+    line-height: 24px;
   }
   .info-modal-title {
     display: block;
@@ -31,9 +32,12 @@
     text-align: left;
   }
   .info-modal-button-container{
-    margin-top: 72px;
+    margin-top: 85px;
     color: white;
     height: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     .info-button{
       padding: 11px;
       cursor: pointer;

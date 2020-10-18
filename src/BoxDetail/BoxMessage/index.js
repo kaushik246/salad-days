@@ -9,7 +9,7 @@ const BoxMessage = ({
   message,
   changeTo,
   changeFrom,
-  changeMessage
+  changeMessage,
 }) => {
   var remainingCharacters = 120 - message.length
   return (

@@ -22,7 +22,7 @@ const BoxAttributes = ({
   requestAddLineItem,
   price,
   openInfoModal,
-  closeInfoModal
+  closeInfoModal,
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -133,9 +133,7 @@ const BoxAttributes = ({
               <div className="selected-card-change">(change card)</div>
             </div>
           </div>
-          <div>
-
-          </div>
+          <div></div>
         </div>
       )}
       {!addLineItemInProgress && (
@@ -160,7 +158,7 @@ const BoxAttributes = ({
               if (message)
                 customAttributes.push({
                   key: 'Message',
-                  value: message
+                  value: message,
                 })
               requestAddLineItem()
               addItemToCart(checkoutId, [
@@ -170,9 +168,9 @@ const BoxAttributes = ({
                   customAttributes: [
                     { key: 'Box', value: selectedBox },
                     { key: 'Card', value: cardSelected },
-                    ...customAttributes
-                  ]
-                }
+                    ...customAttributes,
+                  ],
+                },
               ]).then(() => {
                 changeTo('')
                 changeFrom('')
@@ -181,7 +179,7 @@ const BoxAttributes = ({
                 clearBox()
               })
               closeInfoModal()
-              setTimeout(function() {
+              setTimeout(function () {
                 openInfoModal('cartadded')
               }, 1500)
             }

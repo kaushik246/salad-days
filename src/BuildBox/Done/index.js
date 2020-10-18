@@ -11,7 +11,7 @@ import './responsive.css'
 const mapStateToProps = (state) => {
   return {
     card: state.card,
-    items: state.items
+    items: state.items,
   }
 }
 
@@ -21,14 +21,14 @@ class Done extends Component {
       const { seconds } = this.state
       if (seconds > 0) {
         this.setState(({ seconds }) => ({
-          seconds: seconds - 1
+          seconds: seconds - 1,
         }))
       }
     }, 1000)
   }
 
   state = {
-    seconds: 2
+    seconds: 2,
   }
   render() {
     return (
@@ -81,11 +81,8 @@ class Done extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    setCurrentStep,
-    clearCard,
-    clearItems
-  }
-)(Done)
+export default connect(mapStateToProps, {
+  setCurrentStep,
+  clearCard,
+  clearItems,
+})(Done)
