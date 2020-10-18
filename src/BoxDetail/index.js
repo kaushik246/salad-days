@@ -89,6 +89,7 @@ class BoxDetail extends Component {
 
   componentWillUnmount() {
     this.props.unsetShopItemData()
+    this.props.clearBox()
   }
   render() {
     return this.props.shopItem ? (
