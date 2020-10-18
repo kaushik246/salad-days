@@ -45,6 +45,9 @@
     margin-top: 50px;
     color: white;
   }
+  .info-modal-container .info-modal-button-container .info-button{
+    padding: 0;
+  }
 }
 
 /* #Mobile (Landscape)
