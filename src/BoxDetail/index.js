@@ -91,7 +91,7 @@ class BoxDetail extends Component {
    checkSingleBoxColourTag = (tags) => {
     let colorFlag = false 
     tags.map((tag) => {
-    if (tag.value === 'SingleColourBox') {
+    if (tag.value === 'SingleColorBox') {
       colorFlag = true
     }
     })
