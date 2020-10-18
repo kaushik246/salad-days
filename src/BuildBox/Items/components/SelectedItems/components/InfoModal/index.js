@@ -33,7 +33,7 @@ export class InfoModal extends Component {
         >
           <div className="info-modal-title-container">
             <div className="info-title-primary title-label">
-              Oops! You must choose a card before adding this gift to the cart.
+              {this.props.title}
             </div>
           </div>
           <div className="info-modal-button-container">
