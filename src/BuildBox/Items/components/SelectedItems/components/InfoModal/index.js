@@ -26,6 +26,7 @@ export class InfoModal extends Component {
         style={customStyles}
         onRequestClose={this.props.closeInfoModal}
         contentLabel="Info Modal"
+        ariaHideApp={false}
       >
         <div
           className="info-modal-container"

@@ -21,7 +21,7 @@ export class Shop extends Component {
         <div className="shop-items-container">
           {this.props.shop.shopItems &&
             this.props.shop.shopItems.map((item) => (
-              <ShopItem item={item} history={this.props.history} />
+              <ShopItem item={item} history={this.props.history} key={`${item.id}`}/>
             ))}
         </div>
       </div>

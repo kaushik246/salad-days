@@ -34,6 +34,7 @@ export class Cart extends Component {
               removeLineItem={this.props.removeLineItem}
               updateLineItems={this.props.updateLineItems}
               lineItemIdProgress={this.props.cart.lineItemIdProgress}
+              key={`${lineItem.id}`}
             />
           )
         })}
