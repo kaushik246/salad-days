@@ -134,16 +134,19 @@ const BoxAttributes = ({
             </div>
           </div>
           <div>
-            <BoxMessage
-              to={to}
-              from={from}
-              message={message}
-              changeTo={changeTo}
-              changeFrom={changeFrom}
-              changeMessage={changeMessage}
-            />
+
           </div>
         </div>
+      )}
+      {!addLineItemInProgress && (
+        <BoxMessage
+          to={to}
+          from={from}
+          message={message}
+          changeTo={changeTo}
+          changeFrom={changeFrom}
+          changeMessage={changeMessage}
+        />
       )}
       {!addLineItemInProgress && (
         <button
