@@ -131,10 +131,8 @@ class BoxDetail extends Component {
               addLineItemInProgress={this.props.cart.addLineItemInProgress}
               requestAddLineItem={this.props.requestAddLineItem}
               price={this.props.shopItem.variants[0].price}
-              tags={this.props.shopItem.tags}
               openInfoModal={this.openInfoModal}
               closeInfoModal={this.closeInfoModal}
-              enableColorSelection={this.checkSingleBoxColourTag(this.props.shopItem.tags)}
             />
           </div>
         </div>
