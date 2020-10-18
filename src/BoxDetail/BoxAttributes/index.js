@@ -177,21 +177,14 @@ const BoxAttributes = ({
                 setBought(true)
                 clearBox()
               })
+              closeInfoModal()
+              setTimeout(function() {
+                openInfoModal('cartadded')
+              }, 1500)
             }
           }}
         >
-          <div
-            className="cart-button-title"
-            onClick={(e) => {
-              closeInfoModal()
-              setTimeout(function(){
-                if(cardSelected) openInfoModal('cartadded')
-              }, 1500)
-            }}
-          >
-            {' '}
-            Add to Cart . Rs {price}
-          </div>
+          <div className="cart-button-title"> Add to Cart . Rs {price}</div>
         </button>
       )}
       {bought && (

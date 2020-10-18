@@ -31,8 +31,13 @@
     text-align: left;
   }
   .info-modal-button-container{
-    margin-top: 82px;
+    margin-top: 72px;
     color: white;
+    height: 50px;
+    .info-button{
+      padding: 11px;
+      cursor: pointer;
+    }
   }
   .info-modal-button {
     display: block;
