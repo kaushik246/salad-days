@@ -43,7 +43,7 @@
   font-size: 1em;
   color: #000;
   font-weight: normal;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 input {
@@ -57,14 +57,14 @@ input {
   cursor: text;
   -writing-mode: horizontal-tb !important;
   text-rendering: auto;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 .box-msg-data .box-msg-to-from input::placeholder,
 .box-msg-data .box-msg-description textarea::placeholder {
   color: #999999;
   letter-spacing: 1px;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 .box-msg-data .box-msg-description textarea:focus {
@@ -82,7 +82,7 @@ input {
   padding: 15px;
   width: 100%;
   height: auto;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   color: #000;
   border: solid 1px #ccc;
@@ -105,18 +105,18 @@ input {
   cursor: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
   resize: none;
 }
 
 .box-msg-data .box-msg-characters {
   margin-top: -10px;
   color: black;
-  text-align: left;
+  text-align: right;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.6;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 .box-msg-data .box-msg-checkbox-container {
@@ -145,7 +145,7 @@ input {
   line-height: 1.6;
   color: #000;
   padding-top: 10px;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 .box-msg-data .box-msg-checkbox-container input {
@@ -175,10 +175,10 @@ input {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   line-height: 1.42;
-  font-size: 1em;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }
 
 .box-msg-data .box-msg-checkbox-container input::before {
@@ -215,5 +215,5 @@ input {
   font-size: 14px;
   text-align: left;
   font-weight: 600;
-  font-family: inherit;
+  font-family: 'BrandonGrotesque Regular';
 }

@@ -1,6 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux'
 import Client from 'shopify-buy'
-import { check } from 'prettier'
 
 export const SHOP_REQUEST_ITEMS_LIST = 'SHOP_REQUEST_ITEMS_LIST'
 export const SHOP_RECEIVE_ITEMS_LIST = 'SHOP_RECEIVE_ITEMS_LIST'
@@ -29,7 +27,12 @@ export const fetchCheckout = (checkoutId) => {
   return async (dispatch) => {
     try {
       const resp = await client.checkout.fetch(checkoutId)
-      dispatch(cartUpdate(resp))
+      if (!resp.orderStatusUrl) dispatch(cartUpdate(resp))
+      else {
+            client.checkout.create().then((resp) => {
+      dispatch({ type: 'CART_SET_CHECKOUT_ID', checkoutId: resp.id })
+    })
+      }
     } catch (e) {
       console.log('There is some problem', e)
     }

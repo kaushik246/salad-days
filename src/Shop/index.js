@@ -17,7 +17,7 @@ export class Shop extends Component {
   render() {
     return (
       <div className="shop-main-container">
-        <div className="shop-header-container">Products</div>
+        <div className="shop-header-container">Ready to Ship</div>
         <div className="shop-items-container">
           {this.props.shop.shopItems &&
             this.props.shop.shopItems.map((item) => (

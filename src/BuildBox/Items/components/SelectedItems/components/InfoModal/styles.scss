@@ -1,6 +1,10 @@
 .info-modal-container {
-  width: 498px;
-  height: 170px;
+  width: 346px;
+  height: 300px;
+  .info-modal-image {
+    width: 346px;
+    height: 300px;
+  }
   .info-modal-title {
     display: block;
     padding: 0px 5px 0 5px;
@@ -27,7 +31,11 @@
       color: white;
       border: none;
       font-size: 10px;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
     }
   }
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba($color: #000, $alpha: 0.4) !important;
 }
