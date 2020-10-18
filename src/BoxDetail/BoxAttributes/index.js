@@ -21,7 +21,8 @@ const BoxAttributes = ({
   addLineItemInProgress,
   requestAddLineItem,
   price,
-  openInfoModal
+  openInfoModal,
+  closeInfoModal
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -149,7 +150,7 @@ const BoxAttributes = ({
           className="cart-button-container"
           onClick={(e) => {
             e.stopPropagation()
-            if (!cardSelected) openInfoModal()
+            if (!cardSelected) openInfoModal('cardmiss')
             else {
               if (from) customAttributes.push({ key: 'From', value: from })
               if (to) customAttributes.push({ key: 'To', value: to })
@@ -179,7 +180,18 @@ const BoxAttributes = ({
             }
           }}
         >
-          <div className="cart-button-title"> Add to Cart . Rs {price}</div>
+          <div
+            className="cart-button-title"
+            onClick={(e) => {
+              closeInfoModal()
+              setTimeout(function(){
+                openInfoModal('cartadded')
+              }, 1500)
+            }}
+          >
+            {' '}
+            Add to Cart . Rs {price}
+          </div>
         </button>
       )}
       {bought && (

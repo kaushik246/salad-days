@@ -65,10 +65,16 @@ class BoxDetail extends Component {
     }
   }
 
-  openInfoModal = () => {
+  openInfoModal = (flag = "cartadded") => {
+    let title;
+    if (flag == "cardmiss"){
+      title = "Oops! You must choose a card before adding this gift to the cart.";
+    }else{
+      title = "Yayy! The gift & card details have been added to the cart.";
+    }
     this.setState({
       infoModal: true,
-      title: 'Please select a card!',
+      title: title,
       info: 'You must select a card before adding this box to your cart.'
     })
   }
@@ -114,6 +120,7 @@ class BoxDetail extends Component {
               requestAddLineItem={this.props.requestAddLineItem}
               price={this.props.shopItem.variants[0].price}
               openInfoModal={this.openInfoModal}
+              closeInfoModal={this.closeInfoModal}
             />
           </div>
         </div>
