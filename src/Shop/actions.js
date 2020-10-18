@@ -1,4 +1,4 @@
-import Client from 'shopify-buy'
+import Client from 'shopify-buy-with-tags'
 
 export const SHOP_REQUEST_ITEMS_LIST = 'SHOP_REQUEST_ITEMS_LIST'
 export const SHOP_RECEIVE_ITEMS_LIST = 'SHOP_RECEIVE_ITEMS_LIST'

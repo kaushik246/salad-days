@@ -88,6 +88,16 @@ class BoxDetail extends Component {
     })
   }
 
+   checkSingleBoxColourTag = (tags) => {
+    let colorFlag = false 
+    tags.map((tag) => {
+    if (tag.value === 'Single Box Colour') {
+      colorFlag = true
+    }
+    })
+    return colorFlag
+  }
+
   componentWillUnmount() {
     this.props.unsetShopItemData()
     this.props.clearBox()
@@ -121,8 +131,10 @@ class BoxDetail extends Component {
               addLineItemInProgress={this.props.cart.addLineItemInProgress}
               requestAddLineItem={this.props.requestAddLineItem}
               price={this.props.shopItem.variants[0].price}
+              tags={this.props.shopItem.tags}
               openInfoModal={this.openInfoModal}
               closeInfoModal={this.closeInfoModal}
+              enableColorSelection={this.checkSingleBoxColourTag(this.props.shopItem.tags)}
             />
           </div>
         </div>
