@@ -24,6 +24,7 @@ export class CardModal extends Component {
         isOpen={this.props.cardModal}
         style={customStyles}
         contentLabel="Item Detail Modal"
+        ariaHideApp={false}
       >
         {this.props.cards && (
           <>
@@ -44,6 +45,7 @@ export class CardModal extends Component {
                     onClick={() =>
                       this.props.setCard(card.title, card.images[0].src)
                     }
+                    key={`${card.title}`}
                   >
                     <img src={card.images[0].src} className="card-image" />
                     <div className="card-footer-text">{card.title}</div>
