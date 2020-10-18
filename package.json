@@ -28,6 +28,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "shopify-buy": "^2.11.0",
+    "shopify-buy-with-tags": "^2.12.0",
     "storm-react-diagrams": "^4.0.0"
   },
   "devDependencies": {

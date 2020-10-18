@@ -17,6 +17,7 @@ const BoxAttributes = ({
   addItemToCart,
   checkoutId,
   variantId,
+  enableColorSelection,
   clearBox,
   addLineItemInProgress,
   requestAddLineItem,
@@ -69,7 +70,7 @@ const BoxAttributes = ({
           </div>
         )}
       </div>
-      <div className="box-selection-container">
+      {!enableColorSelection && <div className="box-selection-container">
         <div className="box-selection-title">BOX COLOR</div>
         <div className="box-image-selection">
           <div
@@ -101,7 +102,8 @@ const BoxAttributes = ({
             <div className="box-title">TIL BLUE BOX</div>
           </div>
         </div>
-      </div>
+      </div>}
+      <div className="card-selection-title">CARD SELECTION</div>
       {addLineItemInProgress ? (
         <div className="loading-icon">
           <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-1s-200px.gif?v=1601548805" />
