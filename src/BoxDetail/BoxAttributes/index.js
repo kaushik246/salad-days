@@ -185,7 +185,7 @@ const BoxAttributes = ({
             onClick={(e) => {
               closeInfoModal()
               setTimeout(function(){
-                openInfoModal('cartadded')
+                if(cardSelected) openInfoModal('cartadded')
               }, 1500)
             }}
           >

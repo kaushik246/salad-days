@@ -29,10 +29,21 @@
   .info-modal-container {
     width: 230.5px;
     height: 200px;
+    font-size: 14px;
+    padding: 10px;
   }
   .info-modal-image{
     width: 230.5px;
     height: 200px;
+  }
+  .info-modal-container .info-modal-title-container{
+    margin-top: 40px;
+    padding: 0 24px;
+  }
+  
+  .info-modal-container .info-modal-button-container{
+    margin-top: 50px;
+    color: white;
   }
 }
 
