@@ -32,14 +32,18 @@
         text-transform: uppercase;
         text-align: center;
         padding: 16px 48px;
-        background-color: #5fc3ca;
-        border: none;
+        background-color: white;
+        border: 1px solid black;
         letter-spacing: 1px;
         font-weight: 300px;
         font-size: 10px;
-        color: white;
+        color: black;
         width: 200px;
         cursor: pointer;
+      }
+      .cart-checkout-container:hover {
+        background-color: #5fc3ca;
+        color: white;
       }
     }
     margin-bottom: 50px;
@@ -65,10 +69,15 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 1px;
-      background-color: #5fc3ca;
-      color: white;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
       margin-top: 10px;
       cursor: pointer;
+    }
+    .empty-cart-shop:hover {
+      background-color: #5fc3ca;
+      color: white;
     }
   }
 }

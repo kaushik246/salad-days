@@ -22,12 +22,11 @@
 /* Note: Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
-
   .box-msg-data .box-msg-to-from {
     display: block;
   }
 
-  .box-msg-data .box-msg-to-from > div{
+  .box-msg-data .box-msg-to-from > div {
     width: 100%;
   }
 }

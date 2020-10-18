@@ -3,7 +3,7 @@ import {
   BOX_DETAIL_CLOSE_CARD_MODAL,
   BOX_DETAIL_SET_CARD,
   BOX_DETAIL_SET_BOX,
-  BOX_DETAIL_CLEAR_BOX
+  BOX_DETAIL_CLEAR_BOX,
 } from './actions'
 
 const defaultState = {
@@ -12,7 +12,7 @@ const defaultState = {
   boxSelected: '',
   boxImage: '',
   boxQuantity: '',
-  cardModal: false
+  cardModal: false,
 }
 
 const boxDetail = (state = defaultState, action) => {
@@ -20,33 +20,33 @@ const boxDetail = (state = defaultState, action) => {
     case BOX_DETAIL_OPEN_CARD_MODAL:
       return {
         ...state,
-        cardModal: true
+        cardModal: true,
       }
     case BOX_DETAIL_CLOSE_CARD_MODAL:
       return {
         ...state,
-        cardModal: false
+        cardModal: false,
       }
     case BOX_DETAIL_SET_CARD:
       return {
         ...state,
         cardSelected: action.cardTitle,
         cardImage: action.cardImage,
-        cardModal: false
+        cardModal: false,
       }
     case BOX_DETAIL_SET_BOX:
       return {
         ...state,
         boxSelected: action.box.title,
         boxImage: action.box.image,
-        cardModal: false
+        cardModal: false,
       }
     case BOX_DETAIL_CLEAR_BOX:
       return {
         ...state,
         boxSelected: '',
         cardSelected: '',
-        boxImage: ''
+        boxImage: '',
       }
     default:
       return state

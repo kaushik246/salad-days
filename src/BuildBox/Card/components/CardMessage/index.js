@@ -26,11 +26,11 @@ class CardMessage extends Component {
         to: to,
         from: from,
         message: message,
-        selectedCard: selectedCard
+        selectedCard: selectedCard,
       },
       selectedBox: selectedBox,
       selectedBoxImage: selectedBoxImage,
-      price: subTotal
+      price: subTotal,
     })
   }
 

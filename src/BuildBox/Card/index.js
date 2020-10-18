@@ -8,7 +8,7 @@ import {
   fetchCardList,
   addToBox,
   updateCardInBox,
-  updateMessageFields
+  updateMessageFields,
 } from './actions'
 
 import { setCurrentStep } from './../../Stepper/actions'
@@ -60,14 +60,11 @@ class Card extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    fetchCardList,
-    addToBox,
-    updateCardInBox,
-    updateMessageFields,
-    setCurrentStep,
-    addBoxToCart
-  }
-)(Card)
+export default connect(mapStateToProps, {
+  fetchCardList,
+  addToBox,
+  updateCardInBox,
+  updateMessageFields,
+  setCurrentStep,
+  addBoxToCart,
+})(Card)

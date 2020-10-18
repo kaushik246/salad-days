@@ -8,7 +8,7 @@ export const CARD_CLEAR_FROM_BOX = 'CARD_CLEAR_FROM_BOX'
 export const requestCardList = (dataIsFetching) => {
   return {
     type: CARD_REQUEST_PRODUCT_LIST,
-    dataIsFetching: dataIsFetching
+    dataIsFetching: dataIsFetching,
   }
 }
 
@@ -18,15 +18,15 @@ export const fetchCardList = (dataIsFetching = true) => {
       method: 'GET',
       credentials: 'include',
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     }
 
     dispatch(requestCardList(dataIsFetching))
     try {
       const json = {
         ok: true,
-        data: []
+        data: [],
       }
       if (json.ok) dispatch(receiveCardList(json.data))
       else throw new Error(json.err.msg)
@@ -40,20 +40,20 @@ export const receiveCardList = (cardList) => {
   return {
     type: CARD_REQUEST_PRODUCT_LIST,
     dataIsFetching: false,
-    cardList
+    cardList,
   }
 }
 
 export const addToBox = (card) => {
   return {
     type: CARD_ADD_TO_BOX,
-    card
+    card,
   }
 }
 
 export const updateCardInBox = () => {
   return {
-    type: UPDATE_CARD_IN_BOX
+    type: UPDATE_CARD_IN_BOX,
   }
 }
 
@@ -61,12 +61,12 @@ export const updateMessageFields = (fieldType, fieldValue) => {
   return {
     type: UPDATE_MESSAGE_FIELDS,
     fieldType,
-    fieldValue
+    fieldValue,
   }
 }
 
 export const clearCard = () => {
   return {
-    type: CARD_CLEAR_FROM_BOX
+    type: CARD_CLEAR_FROM_BOX,
   }
 }

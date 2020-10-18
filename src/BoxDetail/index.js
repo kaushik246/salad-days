@@ -13,13 +13,13 @@ import {
   closeCardModal,
   setCard,
   setBox,
-  clearBox
+  clearBox,
 } from './actions'
 import { fetchCardList } from './../BuildBox/Card/actions'
 import {
   fetchShopItemData,
   unsetShopItemData,
-  addItemToCart
+  addItemToCart,
 } from './../Shop/actions'
 
 import { requestAddLineItem } from './../Cart/actions'
@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
     items: state.items,
     shopItem: state.shop.shopItem,
     shop: state.shop,
-    cart: state.cart
+    cart: state.cart,
   }
 }
 
@@ -41,7 +41,7 @@ class BoxDetail extends Component {
   state = {
     shopItem: this.props.shopItem,
     seconds: 3,
-    infoModal: false
+    infoModal: false,
   }
   componentDidMount() {
     this.props.fetchShopItemData(this.props.match.params.id)
@@ -51,7 +51,7 @@ class BoxDetail extends Component {
       const { seconds } = this.state
       if (seconds > 0) {
         this.setState(({ seconds }) => ({
-          seconds: seconds - 1
+          seconds: seconds - 1,
         }))
       }
     }, 1000)
@@ -60,22 +60,23 @@ class BoxDetail extends Component {
   componentDidUpdate(prevProps) {
     if (!_.isEqual(prevProps.shopItem, this.props.shopItem)) {
       this.setState({
-        shopItem: this.props.shopItem
+        shopItem: this.props.shopItem,
       })
     }
   }
 
-  openInfoModal = (flag = "cartadded") => {
-    let title;
-    if (flag == "cardmiss"){
-      title = "Oops! You must choose a card before adding this gift to the cart.";
-    }else{
-      title = "Yayy! The gift & card details have been added to the cart.";
+  openInfoModal = (flag = 'cartadded') => {
+    let title
+    if (flag == 'cardmiss') {
+      title =
+        'Oops! You must choose a card before adding this gift to the cart.'
+    } else {
+      title = 'Yayy! The gift & card details have been added to the cart.'
     }
     this.setState({
       infoModal: true,
       title: title,
-      info: 'You must select a card before adding this box to your cart.'
+      info: 'You must select a card before adding this box to your cart.',
     })
   }
 
@@ -83,7 +84,7 @@ class BoxDetail extends Component {
     this.setState({
       infoModal: false,
       title: '',
-      info: ''
+      info: '',
     })
   }
 
@@ -148,18 +149,15 @@ class BoxDetail extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    openCardModal,
-    closeCardModal,
-    setCard,
-    fetchCardList,
-    setBox,
-    clearBox,
-    fetchShopItemData,
-    unsetShopItemData,
-    addItemToCart,
-    requestAddLineItem
-  }
-)(BoxDetail)
+export default connect(mapStateToProps, {
+  openCardModal,
+  closeCardModal,
+  setCard,
+  fetchCardList,
+  setBox,
+  clearBox,
+  fetchShopItemData,
+  unsetShopItemData,
+  addItemToCart,
+  requestAddLineItem,
+})(BoxDetail)
