@@ -70,7 +70,7 @@ const BoxAttributes = ({
           </div>
         )}
       </div>
-      {!enableColorSelection && <div className="box-selection-container">
+      {!false && <div className="box-selection-container">
         <div className="box-selection-title">BOX COLOR</div>
         <div className="box-image-selection">
           <div
