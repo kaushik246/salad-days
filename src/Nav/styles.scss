@@ -32,11 +32,17 @@
           color: #5fc3ca;
           cursor: pointer;
         }
+        &.highlight {
+          color: #5fc3ca;
+        }
       }
     }
   }
   .nav-right-sections {
     display: inline-flex;
+    &.highlight {
+      color: #5fc3ca;
+    }
     .salad-days-cart-section {
       padding-left: 15px;
       padding-right: 15px;
