@@ -5,7 +5,8 @@ import './responsive.css'
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart
+    cart: state.cart,
+    nav: state.nav
   }
 }
 
@@ -15,7 +16,6 @@ export class Nav extends Component {
   }
 
   render() {
-    console.log(window.location.pathname)
     const disable = false
     return (
       <div className="nav-main-container">
@@ -36,7 +36,12 @@ export class Nav extends Component {
               type="button"
               onClick={() => this.props.history.push('/shop')}
             >
-              <p className={`section-text ${window.location.pathname === '/shop' || window.location.pathname === '/' ? 'highlight' : ''}`}>SHOP A GIFT</p>
+              <p 
+                className={`section-text ${this.props.nav.page === 'shop' ? 'highlight' : ''}`}
+                key="shop"
+              >
+                SHOP A GIFT
+              </p>
             </div>
             {disable && (
               <div
@@ -52,7 +57,7 @@ export class Nav extends Component {
               type="button"
               onClick={() => this.props.history.push('/corporateGifting')}
             >
-              <p className={`section-text ${window.location.pathname === '/corporateGifting' ? 'highlight' : ''}`}>CORPORATE GIFTING</p>
+              <p className={`section-text ${this.props.nav.page === 'corporateGifting' ? 'highlight' : ''}`} key="corporate">CORPORATE GIFTING</p>
             </div>
           </div>
           <div className="nav-right-sections desktop">
@@ -128,7 +133,7 @@ export class Nav extends Component {
               </div>
               {this.props.cart.checkout &&
                 this.props.cart.checkout.totalPrice !== '0.00' && (
-                  <p className="section-price">
+                  <p className={`section-price ${this.props.nav.page === 'cart' ? 'highlight' : '' }`}>
                     (Rs. {this.props.cart.checkout.totalPrice})
                   </p>
                 )}

@@ -9,6 +9,7 @@ import Nav from './Nav'
 import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import { createCheckout, fetchCheckout, fetchCards } from './Shop/actions'
+import { setNavPage } from './Nav/actions'
 
 export class App extends Component {
   componentDidMount() {
@@ -46,7 +47,12 @@ export class App extends Component {
           {/*Shop*/}
           <Route exact path="/shop" component={Shop} />
           {/*Corporate Gifting*/}
-          <Route exact path="/corporateGifting" component={CorporateGifting} />
+          <Route exact path="/corporateGifting"
+            //component={CorporateGifting}
+            render={(props) => (
+              <CorporateGifting {...props} setNavPage={this.props.setNavPage} />
+            )}
+          />
           <Route path="*" component={Shop} />
         </Switch>
       </Fragment>
@@ -65,6 +71,6 @@ const mapStateToProps = (state) => {
 export default withRouter(
   connect(
     mapStateToProps,
-    { setCurrentStep, createCheckout, fetchCheckout, fetchCards }
+    { setCurrentStep, createCheckout, fetchCheckout, fetchCards, setNavPage }
   )(App)
 )

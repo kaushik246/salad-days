@@ -89,6 +89,9 @@
       }
       .section-price {
         letter-spacing: 1px;
+        &.highlight {
+          color: #5fc3ca;
+        }
       }
       .salad-days-cart-section {
         display: flex;
