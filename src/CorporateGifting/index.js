@@ -3,13 +3,14 @@ import { connect } from 'react-redux'
 import './styles.scss'
 import './responsive.css'
 
-const CorporateGifting = () => {
+const CorporateGifting = ({ setNavPage }) => {
   const [company, setCompany] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
+  setNavPage('corporateGifting')
   return (
     <div className="corporate-gifting-main-container">
       <div className="wrapper">

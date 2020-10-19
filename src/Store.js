@@ -9,6 +9,7 @@ import cart from './Cart/reducers'
 import stepper from './Stepper/reducers'
 import shop from './Shop/reducers'
 import boxDetail from './BoxDetail/reducers'
+import nav from './Nav/reducers'
 
 const appReducers = {
   app,
@@ -17,7 +18,8 @@ const appReducers = {
   cart,
   stepper,
   shop,
-  boxDetail
+  boxDetail,
+  nav
 }
 
 const rootReducer = combineReducers({

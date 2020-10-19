@@ -8,6 +8,7 @@ import CartItem from './CartItem'
 
 import { increaseQuantity, decreaseQuantity, removeItem } from './actions'
 import { removeLineItem, updateLineItems } from './../Shop/actions'
+import { setNavPage } from './../Nav/actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -16,6 +17,9 @@ const mapStateToProps = (state) => {
 }
 
 export class Cart extends Component {
+  componentDidMount() {
+    this.props.setNavPage('cart')
+  }
   render() {
     return this.props.cart.checkout &&
       this.props.cart.checkout.lineItems.length > 0 ? (
@@ -86,6 +90,7 @@ export default connect(
     decreaseQuantity,
     removeItem,
     removeLineItem,
-    updateLineItems
+    updateLineItems,
+    setNavPage
   }
 )(Cart)
