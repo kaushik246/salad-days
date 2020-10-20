@@ -2,6 +2,9 @@
 }
 
 @media only screen and (max-width: 1200px) {
+    .cart-main-container{
+        width: 95%;
+    }
 }
 
 /* #Tablet (Landscape)

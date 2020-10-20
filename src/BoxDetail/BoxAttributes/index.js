@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import './styles.scss'
+import './responsive.css'
 import BoxMessage from '../BoxMessage'
 import Moment from 'react-moment'
 import { random } from 'lodash'
