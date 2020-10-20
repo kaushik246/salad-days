@@ -7,6 +7,29 @@
 /* #Tablet (Landscape)
 ================================================== */
 @media only screen and (max-width: 1200px) {
+  .shop-main-container{
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .shop-main-container .shop-items-container {
+    display: flex;
+    width: 820px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  
+  .shop-main-container .shop-header-container{
+    width: 820px;
+    padding: 0;
+    margin: 70px auto;
+  }
+
+  .shop-main-container .shop-items-container .product-container{
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
@@ -14,6 +37,45 @@
 /* #Tablet (Portrait)
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+  }
+
+  
+  img.product-image {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 0;
+  }
+
+  .shop-main-container{
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .shop-main-container .shop-items-container .product-container{
+    padding: 0;
+  }
+
+  .shop-main-container .shop-items-container {
+    display: flex;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  
+  .shop-main-container .shop-header-container{
+    max-width: 90%;
+    padding: 0;
+    margin: 70px auto;
+  }
+
 }
 
 /*  #Mobile (Portrait)
@@ -24,15 +86,15 @@
 @media only screen and (max-width: 767px) {
   .container {
     position: relative;
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     cursor: pointer;
   }
 
   img.product-image {
     position: absolute;
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     left: 0;
   }
 
@@ -43,11 +105,16 @@
 
   .shop-main-container .shop-items-container {
     display: flex;
-    width: 360px;
+    width: 320px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
-}
+  }
+
+  .shop-main-container .shop-header-container{
+    width: 320px;
+    margin: 50px auto;
+  }
 }
 
 /* #Mobile (Landscape)
