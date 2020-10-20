@@ -31,9 +31,7 @@ export class CardModal extends Component {
             <div className="card-modal-header">
               <div className="card-modal-title">Choose Your Card</div>
               <div className="card-modal-summary">
-                Choose the perfect card for the occasion from our selection of
-                exclusive designs. Our team handwrites each and every note to
-                keep your gifts personal. (Plus, we have great handwriting.)
+Choose the perfect card that fits your occasion. We handwrite each note to make your gift personal. And, our handwriting isn’t bad either!
               </div>
             </div>
 

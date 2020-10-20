@@ -111,6 +111,7 @@ class BoxDetail extends Component {
             <div className="box-price">
               Rs. {this.props.shopItem.variants[0].price}
             </div>
+            <div cardSelected="box-terms">(Inclusive of all taxes & shipping)</div>
             <BoxInfo description={this.props.shopItem.description} />
             <ImageSlider images={this.props.shopItem.images} />
           </div>
