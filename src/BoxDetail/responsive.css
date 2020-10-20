@@ -42,6 +42,10 @@
     width: 320px;
     margin: auto;
   }
+  .box-detail-main-container{
+    width: 100%;
+    margin: auto;
+  }
   .box-detail-main-container .box-detail-slider-info > div {
     padding-left: 0px !important;
   }
