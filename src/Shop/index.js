@@ -20,6 +20,8 @@ export class Shop extends Component {
     return (
       <div className="shop-main-container">
         <div className="shop-header-container">Ready to Ship</div>
+        <div className="shop-header-subtitle">ANYWHERE IN INDIA.</div>
+        <div className="shop-header-subtitle-summary">Shop personalized, specially-curated and meaningful gifts for all occasions, relations and themes. To touch one’s feelings.</div>
         <div className="shop-items-container">
           {this.props.shop.shopItems &&
             this.props.shop.shopItems.map((item) => (

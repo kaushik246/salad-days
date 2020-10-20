@@ -8,16 +8,16 @@
     margin: auto;
     width: 340px;
     .corporate-gifting-title-container {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 24px;
       max-width: 500px;
     }
     .corporate-gifting-title-text {
-      margin-bottom: 20px;
       font-size: 10px;
     }
     .corporate-gifting-title-summary {
-      margin-bottom: 60px;
+      margin-top: 10px;
+      margin-bottom: 40px;
       font-size: 10px;
     }
     .corporate-gifting-field {
@@ -70,7 +70,7 @@
         letter-spacing: 2px;
       }
     }
-    .corporate-gifting-submit:hover{
+    .corporate-gifting-submit:hover {
       background-color: #5fc3ca;
       color: white;
     }

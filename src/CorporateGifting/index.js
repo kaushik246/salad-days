@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
+import emailjs from 'emailjs-com'
 import './styles.scss'
 import './responsive.css'
 
@@ -11,19 +11,30 @@ const CorporateGifting = ({ setNavPage }) => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
   setNavPage('corporateGifting')
+
+  const sendEmail = () => {
+    emailjs.sendForm().then(
+      (result) => {
+        console.log('Enquiry Sent')
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
+  }
+
   return (
     <div className="corporate-gifting-main-container">
       <div className="wrapper">
         <div className="corporate-gifting-title-container">
-          WE WOULD LOVE TO CONNECT
+           CONNECT
         </div>
         <div className="corporate-gifting-title-text">
-          Welcome to Salad Days Concierge! The ultimate, all-in-one portal built
-          to help you more effectively meet your gifting needs.
+Rest assured. We take pride in customizing, personalizing and executing hassle-free gifting on your behalf. Anywhere in India.
         </div>
         <div className="corporate-gifting-title-summary">
-          Please enter your contact information in the fields below and a
-          designated Salad Days Concierge will be in touch to show you around.
+Please enter your contact information in the fields below and a designated Salad Days Concierge will get in touch at the earliest.
+
         </div>
         <div className="corporate-gifting-field">
           <input
@@ -106,8 +117,9 @@ const CorporateGifting = ({ setNavPage }) => {
         <div
           className="corporate-gifting-submit"
           type="text"
-          onClick={() => {
+          onClick={(e) => {
             this.props.history.push('/shop')
+            sendEmail('service_1n28hyb', 'template_8e8wy2o', e.target, )
           }}
         >
           <div className="submit-button-text">REQUEST</div>

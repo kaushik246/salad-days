@@ -72,6 +72,7 @@ const BoxAttributes = ({
       </div>
       {!false && <div className="box-selection-container">
         <div className="box-selection-title">BOX COLOR</div>
+        <div className="box-selection-summary">Select the color of your gift box</div>
         <div className="box-image-selection">
           <div
             className={`box-info ${
@@ -85,7 +86,7 @@ const BoxAttributes = ({
               className="box-image"
               src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_brown.jpg?v=1601414146"
             />{' '}
-            <div className="box-title">ORIGINAL CRAFT BOX</div>
+            <div className="box-title">MATT KRAFT</div>
           </div>
           <div
             className={`box-info ${
@@ -99,7 +100,7 @@ const BoxAttributes = ({
               className="box-image"
               src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_blue.jpg?v=1601414145"
             />
-            <div className="box-title">TIL BLUE BOX</div>
+            <div className="box-title">TEAL BLUE</div>
           </div>
         </div>
       </div>}
