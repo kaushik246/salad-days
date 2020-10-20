@@ -20,11 +20,22 @@
     margin: auto;
   }
 
-  
+  .shop-main-container .shop-header-subtitle{
+    width: 820px;
+    padding: 0;
+    margin: 0 auto 10px auto;
+  }
+
+  .shop-main-container .shop-header-subtitle-summary{
+    width: 820px;
+    padding: 0;
+    margin: 0 auto 30px auto;
+  }
+
   .shop-main-container .shop-header-container{
     width: 820px;
     padding: 0;
-    margin: 70px auto;
+    margin: 70px auto 10px auto;
   }
 
   .shop-main-container .shop-items-container .product-container{
