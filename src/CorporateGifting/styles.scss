@@ -60,13 +60,19 @@
       }
     }
     .corporate-gifting-submit {
-      background-color: #5fc3ca;
+      border: 1px solid #cccccc;
+      background-color: white;
+      color: black;
+      cursor: pointer;
       .submit-button-text {
-        color: white;
         padding: 15px 0px;
         font-size: 10px;
         letter-spacing: 2px;
       }
+    }
+    .corporate-gifting-submit:hover{
+      background-color: #5fc3ca;
+      color: white;
     }
   }
 }
