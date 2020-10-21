@@ -21,21 +21,24 @@
   }
 
   .shop-main-container .shop-header-subtitle{
+    max-width: 90%;
     width: 820px;
     padding: 0;
     margin: 0 auto 10px auto;
   }
 
   .shop-main-container .shop-header-subtitle-summary{
+    max-width: 90%;
     width: 820px;
     padding: 0;
     margin: 0 auto 30px auto;
   }
 
   .shop-main-container .shop-header-container{
+    max-width: 90%;
     width: 820px;
     padding: 0;
-    margin: 70px auto 10px auto;
+    margin: 70px auto 20px auto;
   }
 
   .shop-main-container .shop-items-container .product-container{
@@ -71,6 +74,20 @@
   .shop-main-container .shop-items-container .product-container{
     padding: 0;
   }
+  
+  .shop-main-container .shop-header-subtitle{
+    max-width: 90%;
+    width: 820px;
+    padding: 0;
+    margin: 0 auto 10px auto;
+  }
+
+  .shop-main-container .shop-header-subtitle-summary{
+    max-width: 90%;
+    width: 820px;
+    padding: 0;
+    margin: 0 auto 30px auto;
+  }
 
   .shop-main-container .shop-items-container {
     display: flex;
@@ -84,7 +101,7 @@
   .shop-main-container .shop-header-container{
     max-width: 90%;
     padding: 0;
-    margin: 70px auto;
+    margin: 70px auto 20px auto;
   }
 
 }
@@ -123,8 +140,23 @@
   }
 
   .shop-main-container .shop-header-container{
+    max-width: unset;
     width: 320px;
-    margin: 50px auto;
+    margin: 50px auto 15px auto;
+  }
+
+  .shop-main-container .shop-header-subtitle{
+    max-width: unset;
+    width: 320px;
+    padding: 0;
+    margin: 0 auto 10px auto;
+  }
+
+  .shop-main-container .shop-header-subtitle-summary{
+    max-width: unset;
+    width: 320px;
+    padding: 0;
+    margin: 0 auto 30px auto;
   }
 }
 
