@@ -10,22 +10,13 @@ const CorporateGifting = ({ setNavPage }) => {
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
+  const [messageStatus, setMessageStatus] = useState(false)
   setNavPage('corporateGifting')
-
-  const sendEmail = () => {
-    emailjs.sendForm().then(
-      (result) => {
-        console.log('Enquiry Sent')
-      },
-      (error) => {
-        console.log(error.text)
-      }
-    )
-  }
 
   return (
     <div className="corporate-gifting-main-container">
       <div className="wrapper">
+        {!messageStatus && <>
         <div className="corporate-gifting-title-container">
            CONNECT
         </div>
@@ -118,12 +109,41 @@ Please enter your contact information in the fields below and a designated Salad
           className="corporate-gifting-submit"
           type="text"
           onClick={(e) => {
-            this.props.history.push('/shop')
-            sendEmail('service_1n28hyb', 'template_8e8wy2o', e.target, )
+            e.preventDefault()
+            try {
+                if ((firstName || message || company || lastName || phoneNumber) && email) {
+                  emailjs.send('service_1n28hyb', 'template_wicczmq', {
+                    from_name: firstName + ' ' + lastName,
+                    message: message,
+                    company: company,
+                    phone_number: phoneNumber,
+                    email: email
+                  }, 'user_awLjPGksRSyCcSeqn0oCS')
+                setMessageStatus(true);
+                }
+          } catch(e) {
+            setMessageStatus(false);
+          }
+        }}
+        >
+          <div className="submit-button-text">Request</div>
+        </div>
+        </>}
+        {messageStatus && <div
+          className="corporate-gifting-thanks successful"
+          type="text"
+          onClick={() => {
+            setMessageStatus(false)
+            setFirstName('')
+            setLastName('')
+            setPhoneNumber('')
+            setEmail('')
+            setMessage('')
+            setCompany('')
           }}
         >
-          <div className="submit-button-text">REQUEST</div>
-        </div>
+          <div className="submit-button-text">Successfully sent the Request</div>
+        </div>}
       </div>
     </div>
   )
