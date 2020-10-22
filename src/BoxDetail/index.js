@@ -103,7 +103,7 @@ class BoxDetail extends Component {
     this.props.clearBox()
   }
   render() {
-    return this.props.shopItem  ? (
+    return this.props.shopItem ? (
       <div className="box-detail-main-container">
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
