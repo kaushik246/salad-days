@@ -108,7 +108,7 @@ const BoxAttributes = ({
       <div className="card-selection-title">CARD SELECTION</div>
       {addLineItemInProgress ? (
         <div className="loading-icon">
-          <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-1s-200px.gif?v=1601548805" />
+          <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-Big.gif?v=1603209336" />
         </div>
       ) : cardSelected === '' ? (
         <div
