@@ -103,7 +103,7 @@ class BoxDetail extends Component {
     this.props.clearBox()
   }
   render() {
-    return this.props.shopItem ? (
+    return this.props.shopItem && false ? (
       <div className="box-detail-main-container">
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
@@ -154,7 +154,7 @@ class BoxDetail extends Component {
       </div>
     ) : (
       <div className="loading-icon">
-        <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-1s-200px.gif?v=1601548805" />
+        <img src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/Spinner-Big.gif?v=1603209336" />
       </div>
     )
   }
