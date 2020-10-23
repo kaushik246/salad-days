@@ -4,7 +4,8 @@ import './styles.scss'
 import './responsive.css'
 
 import Modal from 'react-modal'
-const imgsource = require('./finish-salad.png')
+const imgsource =
+  'https://cdn.shopify.com/s/files/1/0445/1313/2702/files/pop_up.png?v=1603414518'
 const customStyles = {
   content: {
     top: '150px',
@@ -15,8 +16,8 @@ const customStyles = {
     background: 'none',
     border: 'none',
     padding: '0px',
-    borderRadius: '0'
-  }
+    borderRadius: '0',
+  },
 }
 export class InfoModal extends Component {
   render() {
@@ -50,7 +51,4 @@ const mapStateToProps = (state) => {
   return {}
 }
 
-export default connect(
-  mapStateToProps,
-  {}
-)(InfoModal)
+export default connect(mapStateToProps, {})(InfoModal)

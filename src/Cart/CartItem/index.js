@@ -59,7 +59,7 @@ export class CartItem extends Component {
                 onClick={(e) => {
                   e.preventDefault()
                   this.props.removeLineItem(this.props.checkoutId, [
-                    this.props.id
+                    this.props.id,
                   ])
                 }}
               >
@@ -81,7 +81,10 @@ export class CartItem extends Component {
                     e.preventDefault()
                     if (this.props.quantity > 1)
                       this.props.updateLineItems(this.props.checkoutId, [
-                        { id: this.props.id, quantity: this.props.quantity - 1 }
+                        {
+                          id: this.props.id,
+                          quantity: this.props.quantity - 1,
+                        },
                       ])
                   }}
                 >
@@ -97,7 +100,7 @@ export class CartItem extends Component {
                   onClick={(e) => {
                     e.preventDefault()
                     this.props.updateLineItems(this.props.checkoutId, [
-                      { id: this.props.id, quantity: this.props.quantity + 1 }
+                      { id: this.props.id, quantity: this.props.quantity + 1 },
                     ])
                   }}
                 >
@@ -155,7 +158,7 @@ export class CartItem extends Component {
                   onClick={(e) => {
                     e.preventDefault()
                     this.props.removeLineItem(this.props.checkoutId, [
-                      this.props.id
+                      this.props.id,
                     ])
                   }}
                 >
@@ -188,8 +191,8 @@ export class CartItem extends Component {
                           this.props.updateLineItems(this.props.checkoutId, [
                             {
                               id: this.props.id,
-                              quantity: this.props.quantity - 1
-                            }
+                              quantity: this.props.quantity - 1,
+                            },
                           ])
                       }}
                     >
@@ -207,8 +210,8 @@ export class CartItem extends Component {
                         this.props.updateLineItems(this.props.checkoutId, [
                           {
                             id: this.props.id,
-                            quantity: this.props.quantity + 1
-                          }
+                            quantity: this.props.quantity + 1,
+                          },
                         ])
                       }}
                     >
