@@ -71,40 +71,44 @@ const BoxAttributes = ({
           </div>
         )}
       </div>
-      {!false && <div className="box-selection-container">
-        <div className="box-selection-title">BOX COLOR</div>
-        <div className="box-selection-summary">Select the color of your gift box</div>
-        <div className="box-image-selection">
-          <div
-            className={`box-info ${
-              selectedBox === 'ORIGINAL CRAFT BOX' ? 'box-selected' : ''
-            }`}
-            onClick={() => {
-              setSelectedBox('ORIGINAL CRAFT BOX')
-            }}
-          >
-            <img
-              className="box-image"
-              src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_brown.jpg?v=1601414146"
-            />{' '}
-            <div className="box-title">MATT KRAFT</div>
+      {!false && (
+        <div className="box-selection-container">
+          <div className="box-selection-title">BOX COLOR</div>
+          <div className="box-selection-summary">
+            Select the color of your gift box
           </div>
-          <div
-            className={`box-info ${
-              selectedBox === 'TIL BLUE BOX' ? 'box-selected' : ''
-            }`}
-            onClick={() => {
-              setSelectedBox('TIL BLUE BOX')
-            }}
-          >
-            <img
-              className="box-image"
-              src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_blue.jpg?v=1601414145"
-            />
-            <div className="box-title">TEAL BLUE</div>
+          <div className="box-image-selection">
+            <div
+              className={`box-info ${
+                selectedBox === 'ORIGINAL CRAFT BOX' ? 'box-selected' : ''
+              }`}
+              onClick={() => {
+                setSelectedBox('ORIGINAL CRAFT BOX')
+              }}
+            >
+              <img
+                className="box-image"
+                src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_brown.jpg?v=1601414146"
+              />{' '}
+              <div className="box-title">MATT KRAFT</div>
+            </div>
+            <div
+              className={`box-info ${
+                selectedBox === 'TIL BLUE BOX' ? 'box-selected' : ''
+              }`}
+              onClick={() => {
+                setSelectedBox('TIL BLUE BOX')
+              }}
+            >
+              <img
+                className="box-image"
+                src="https://cdn.shopify.com/s/files/1/0445/1313/2702/files/main_box_blue.jpg?v=1601414145"
+              />
+              <div className="box-title">TEAL BLUE</div>
+            </div>
           </div>
         </div>
-      </div>}
+      )}
       <div className="card-selection-title">CARD SELECTION</div>
       {addLineItemInProgress ? (
         <div className="loading-icon">

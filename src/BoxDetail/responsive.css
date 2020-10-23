@@ -2,14 +2,22 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .box-detail-main-container{
+  .box-detail-main-container {
     width: 90%;
     margin: auto;
   }
-  .box-detail-main-container .box-detail-slider-info .box-detail-slider{
+  .box-detail-main-container .box-detail-slider-info .box-detail-slider {
     padding: 0;
   }
 
+  .loading-icon img {
+    display: block;
+    margin: 80px auto 0px auto;
+  }
+
+  .loading-icon {
+    margin: unset;
+  }
 }
 
 /* #Tablet (Landscape)
@@ -22,12 +30,21 @@
 /* #Tablet (Portrait)
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .box-detail-main-container{
+  .box-detail-main-container {
     width: 90%;
     margin: auto;
   }
-  .box-detail-main-container .box-detail-slider-info .box-detail-slider{
+  .box-detail-main-container .box-detail-slider-info .box-detail-slider {
     padding: 0;
+  }
+
+  .loading-icon img {
+    display: block;
+    margin: 80px auto 0px auto;
+  }
+
+  .loading-icon {
+    margin: unset;
   }
 }
 
@@ -42,7 +59,7 @@
     width: 320px;
     margin: auto;
   }
-  .box-detail-main-container{
+  .box-detail-main-container {
     width: 100%;
     margin: auto;
   }
@@ -56,6 +73,15 @@
 
   .box-detail-main-container {
     margin-top: 30px;
+  }
+
+  .loading-icon img {
+    display: block;
+    margin: 80px auto 0px auto;
+  }
+
+  .loading-icon {
+    margin: unset;
   }
 }
 

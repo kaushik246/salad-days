@@ -88,12 +88,12 @@ class BoxDetail extends Component {
     })
   }
 
-   checkSingleBoxColourTag = (tags) => {
-    let colorFlag = false 
+  checkSingleBoxColourTag = (tags) => {
+    let colorFlag = false
     tags.map((tag) => {
-    if (tag.value === 'SingleColorBox') {
-      colorFlag = true
-    }
+      if (tag.value === 'SingleColorBox') {
+        colorFlag = true
+      }
     })
     return colorFlag
   }
@@ -111,7 +111,9 @@ class BoxDetail extends Component {
             <div className="box-price">
               Rs. {this.props.shopItem.variants[0].price}
             </div>
-            <div cardSelected="box-terms">(Inclusive of all taxes & shipping)</div>
+            <div cardSelected="box-terms">
+              (Inclusive of all taxes & shipping)
+            </div>
             <BoxInfo description={this.props.shopItem.description} />
             <ImageSlider images={this.props.shopItem.images} />
           </div>
