@@ -108,9 +108,13 @@ class BoxDetail extends Component {
         <div className="box-detail-slider-info">
           <div className="box-detail-slider">
             <div className="box-name">{this.props.shopItem.title}</div>
-            <div className="box-price">
+            {this.props.shopItem.variants[0].compareAtPrice && this.props.shopItem.variants[0].price !== this.props.shopItem.variants[0].compareAtPrice ? 
+            <div className="compare-price">
+              <p className="price">Rs. {this.props.shopItem.variants[0].price}</p>
+              <p className="actual-price">{this.props.shopItem.variants[0].compareAtPrice}</p>
+            </div> : <div className="box-price">
               Rs. {this.props.shopItem.variants[0].price}
-            </div>
+            </div>}
             <div cardSelected="box-terms">
               (Inclusive of all taxes & shipping)
             </div>

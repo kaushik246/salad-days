@@ -36,6 +36,23 @@
         font-size: 14px;
         margin-bottom: 20px;
       }
+      .compare-price {
+        display: inline-flex;
+        .price {
+          margin-bottom: 15px;
+          font-size: 10px;
+          text-align: left;
+        }
+        .actual-price {
+          text-align: left;
+          margin-bottom: 15px;
+          font-size: 10px;
+          color: #5fc3ca;
+          padding-left: 5px;
+          text-decoration: line-through;
+        }
+      }
+
       .box-price {
         font-size: 14px;
         letter-spacing: 1px;
