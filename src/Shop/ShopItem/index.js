@@ -29,7 +29,14 @@ class ShopItem extends Component {
         </div>
         <div className="product-details">
           <div className="title">{this.props.item.title}</div>
-          <div className="price">Rs. {this.props.item.variants[0].price}</div>
+          {(this.props.item.variants[0].compareAtPrice !== this.props.item.variants[0].price &&  this.props.item.variants[0].compareAtPrice) ? (
+            <div className="compare-price">
+              <p className="price">Rs. {this.props.item.variants[0].price}</p>
+              <p className="actual-price">{this.props.item.variants[0].compareAtPrice}</p>
+            </div>
+          ) : (
+            <div className="price">Rs. {this.props.item.variants[0].price}</div>)
+          }
           {!this.props.item.availableForSale && (
             <div className="title">Sold Out</div>
           )}
