@@ -134,6 +134,7 @@ class BoxDetail extends Component {
               addItemToCart={this.props.addItemToCart}
               checkoutId={this.props.cart.checkoutId}
               variantId={this.props.shopItem.variants[0].id}
+              title={this.props.shopItem.title}
               clearBox={this.props.clearBox}
               addLineItemInProgress={this.props.cart.addLineItemInProgress}
               requestAddLineItem={this.props.requestAddLineItem}
