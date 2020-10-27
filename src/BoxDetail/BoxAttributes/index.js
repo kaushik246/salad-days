@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import './styles.scss'
 import './responsive.css'
 import BoxMessage from '../BoxMessage'
-import Moment from 'react-moment'
-import { random } from 'lodash'
+import { variables } from './noBoxSelectionList'
 
 const BoxAttributes = ({
   cardSelected,
@@ -25,6 +24,7 @@ const BoxAttributes = ({
   price,
   openInfoModal,
   closeInfoModal,
+  title
 }) => {
   const [quantity, setQuantity] = useState(1)
   const [selectedBox, setSelectedBox] = useState('ORIGINAL CRAFT BOX')
@@ -43,6 +43,7 @@ const BoxAttributes = ({
     }
   }
   let customAttributes = []
+  console.log(variables)
   return (
     <div className="box-attributes-main-container">
       <div className="quantity-field-container">
@@ -71,7 +72,7 @@ const BoxAttributes = ({
           </div>
         )}
       </div>
-      {!false && (
+      {!variables.boxesList.includes(title) && (
         <div className="box-selection-container">
           <div className="box-selection-title">BOX COLOR</div>
           <div className="box-selection-summary">
