@@ -27,7 +27,7 @@ const BoxAttributes = ({
   title
 }) => {
   const [quantity, setQuantity] = useState(1)
-  const [selectedBox, setSelectedBox] = useState('MATT KRAFT')
+  const [selectedBox, setSelectedBox] = useState('MATT KRAFT BOX')
   const [to, changeTo] = useState('')
   const [from, changeFrom] = useState('')
   const [message, changeMessage] = useState('')
@@ -81,10 +81,10 @@ const BoxAttributes = ({
           <div className="box-image-selection">
             <div
               className={`box-info ${
-                selectedBox === 'MATT KRAFT' ? 'box-selected' : ''
+                selectedBox === 'MATT KRAFT BOX' ? 'box-selected' : ''
               }`}
               onClick={() => {
-                setSelectedBox('MATT KRAFT')
+                setSelectedBox('MATT KRAFT BOX')
               }}
             >
               <img
@@ -95,10 +95,10 @@ const BoxAttributes = ({
             </div>
             <div
               className={`box-info ${
-                selectedBox === 'TEAL BLUE' ? 'box-selected' : ''
+                selectedBox === 'TEAL BLUE BOX' ? 'box-selected' : ''
               }`}
               onClick={() => {
-                setSelectedBox('TEAL BLUE')
+                setSelectedBox('TEAL BLUE BOX')
               }}
             >
               <img
