@@ -10,6 +10,15 @@ import { setCurrentStep } from './Stepper/actions'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import { createCheckout, fetchCheckout, fetchCards } from './Shop/actions'
 import { setNavPage } from './Nav/actions'
+import ReactPixel from 'react-facebook-pixel';
+
+
+const advancedMatching = { em: 'aditya.kaushik246@gmail.com' };
+const options = {
+  autoConfig: true, // set pixel's autoConfig
+  debug: false, // enable logs
+};
+ReactPixel.init('795853594325842', advancedMatching, options);
 
 export class App extends Component {
   componentDidMount() {
@@ -21,6 +30,7 @@ export class App extends Component {
     if (!this.props.shop.cards) {
       this.props.fetchCards()
     }
+  ReactPixel.pageView();
   }
   state = {
     modalIsOpen: true
