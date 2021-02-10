@@ -23,8 +23,8 @@ ReactPixel.init('795853594325842', advancedMatching, options);
 export class App extends Component {
   componentDidMount() {
     if (!this.props.cart.checkoutId) {
-      if (localStorage.getItem('saladDaysCheckoutId')) {
-        this.props.fetchCheckout(localStorage.getItem('saladDaysCheckoutId'))
+      if (localStorage.getItem('saladDaysCheckoutId2')) {
+        this.props.fetchCheckout(localStorage.getItem('saladDaysCheckoutId2'))
       } else this.props.createCheckout()
     }
     if (!this.props.shop.cards) {
