@@ -23,14 +23,14 @@ ReactPixel.init('795853594325842', advancedMatching, options);
 export class App extends Component {
   componentDidMount() {
     if (!this.props.cart.checkoutId) {
-      if (localStorage.getItem('saladDaysCheckoutId2')) {
-        this.props.fetchCheckout(localStorage.getItem('saladDaysCheckoutId2'))
+      if (localStorage.getItem('saladDaysCheckoutId3')) {
+        this.props.fetchCheckout(localStorage.getItem('saladDaysCheckoutId3'))
       } else this.props.createCheckout()
     }
     if (!this.props.shop.cards) {
       this.props.fetchCards()
     }
-  ReactPixel.pageView();
+    ReactPixel.pageView();
   }
   state = {
     modalIsOpen: true
@@ -41,7 +41,7 @@ export class App extends Component {
     })
   }
 
-  afterOpenModal() {}
+  afterOpenModal() { }
 
   render() {
     return (
