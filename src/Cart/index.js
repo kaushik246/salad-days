@@ -51,7 +51,7 @@ export class Cart extends Component {
               </div>
             </div>
             <p className="cart-checkout-info">
-              <i>(Inclusive of all taxes & shipping)</i>
+              <i>( Inclusive of all taxes )</i>
             </p>
             <button
               className="cart-checkout-container"
